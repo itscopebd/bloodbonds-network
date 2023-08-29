@@ -1,11 +1,21 @@
+"use client";
+import Banner from '@/components/Banner/Banner';
+import ContactUs from '@/components/ContactUs/ContactUs';
+import EmpoweringDonors from '@/components/EmpoweringDonors/EmpoweringDonors';
+import GetInTouch from '@/components/GetInTouch/GetInTouch';
+import MedicalInsights from '@/components/MedicalInsights/MedicalInsights';
 import React from 'react';
 
-const page = () => {
+const BannerPage = () => {
     return (
         <div>
-              <h3 className=''>Home Page and vercel deploy </h3>  
+              <Banner></Banner>
+              <MedicalInsights></MedicalInsights> 
+              <EmpoweringDonors></EmpoweringDonors>
+              <ContactUs></ContactUs>
+              <GetInTouch></GetInTouch>
         </div>
     );
 };
 
-export default page;
+export default BannerPage;
