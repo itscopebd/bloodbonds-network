@@ -2,10 +2,10 @@
 
 import React, {useState} from 'react';
 import Image from 'next/image';
-import volunteer from '@/app/asset/volunteer.jpg';
-import volunteer2 from '@/app/asset/volunteer2.jpg';
-import doctor from '@/app/asset/Doctor.jpg'
-import doctor2 from '@/app/asset/Doctor2.jpg'
+import volunteer from '../asset/volunteer.jpg';
+import volunteer2 from '../asset/volunteer2.jpg';
+import doctor from '../asset/Doctor.jpg'
+import doctor2 from '../asset/Doctor2.jpg'
 
 const MeetTheTeam = () => {
 
