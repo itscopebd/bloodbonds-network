@@ -39,15 +39,15 @@ const Banner = () => {
       
      
       
-      <section className=" pt-12 container">
+      <section className=" pt-12 ">
         <AutoplaySlider
-        
+           
           animation="cubeAnimation"
           play={true}
           cancelOnInteraction={false} // should stop playing on user interaction
           interval={6000}
         >
-          <div className=' h-full w-full  relative'>
+          <div className=' h-full w-full  relative '>
 
         
           <img src= "https://i.ibb.co/9ZvZr5r/pic-3.jpg" className='absolute w-full h-full hover:opacity-90 hover:mix-blend-overlay object-cover' alt="" />
@@ -60,7 +60,7 @@ const Banner = () => {
             </div>
           </div>
           </div>
-          <div className=' h-full w-full  relative'>
+          <div className=' h-full w-full  relative '>
 
         
           <img src="https://i.ibb.co/GV7bvZ7/pic-4.jpg" className='absolute w-full h-full hover:opacity-90 hover:mix-blend-overlay object-cover' alt="" />
@@ -73,7 +73,7 @@ const Banner = () => {
             </div>
           </div>
           </div>
-          <div className=' h-full w-full  relative'>
+          <div className=' h-full w-full  relative '>
 
         
           <img src= "https://i.ibb.co/zr85Nds/pic-2.jpg" className='absolute w-full h-full hover:opacity-90 hover:mix-blend-overlay object-cover' alt="" />
@@ -86,7 +86,7 @@ const Banner = () => {
             </div>
           </div>
           </div>
-          <div className=' h-full w-full  relative'>
+          <div className=' h-full w-full  relative '>
 
         
           <img src="https://i.ibb.co/zm0HPrZ/pic-1.jpg" className='absolute w-full h-full hover:opacity-90 hover:mix-blend-overlay object-cover' alt="" />
@@ -99,7 +99,7 @@ const Banner = () => {
             </div>
           </div>
           </div>
-          <div className=' h-full w-full  relative'>
+          <div className=' h-full w-full  relative '>
 
         
           <img src="https://i.ibb.co/rkbNpFV/pic-5.jpg" className='absolute w-full h-full hover:opacity-90 hover:mix-blend-overlay object-cover' alt="" />
