@@ -1,21 +1,25 @@
+// "use client"
+
 import Link from 'next/link';
 import React from 'react';
 import { FaHistory, FaInfoCircle, FaSignOutAlt, FaUser, FaUserCheck, FaWpforms } from 'react-icons/fa';
 import { FaGlassWaterDroplet, FaHouse, FaTimeline, FaWater } from 'react-icons/fa6';
 
 const Sidebar = () => {
-    return (
-       
-            <aside className=' h-full bg-base-300 '>
-                <h1 className='text-xs md:text-xl font-bold uppercase p-2 md:p-4 md:text-center'> BloodBond <br className='md:hidden' />Network </h1>
+
+
+  return (
+
+    <aside className=' h-full bg-base-300 '>
+      <h1 className='text-xs md:text-xl font-bold uppercase p-2 md:p-4 md:text-center'> BloodBond <br className='md:hidden' />Network </h1>
       <div className=''>
         <ul className="menu p-1 md:p-4 w-30 md:w-80  text-base-content">
-        <li>
+          <li>
             <Link href={'/dashboard'}> <FaHouse /> Dashboard Home</Link>
           </li>
 
 
- <li>
+          <li>
             <Link href={'/dashboard/admin'}> <FaUser /> All user</Link>
           </li>
           <li>
@@ -52,8 +56,8 @@ const Sidebar = () => {
 
 
     </aside>
-      
-    );
+
+  );
 };
 
 export default Sidebar;
