@@ -15,6 +15,7 @@ const AutoImageGallery = ({ images }) => {
   }, [currentIndex, images]);
 
   return (
+    <section className='my-20'>
     <div className={styles.galleryContainer}>
       <div className={styles.gallery}>
         {images.map((image, index) => (
@@ -26,6 +27,7 @@ const AutoImageGallery = ({ images }) => {
         ))}
       </div>
     </div>
+    </section>
   );
 };
 
