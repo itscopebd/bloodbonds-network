@@ -99,8 +99,8 @@ const Loginitem = () => {
                 <input type="password" placeholder="Type here" className="input input-bordered  w-full max-w-xl lg:max-w-md"  {...register("password")} />
               </div>
               <div className='form-control'>
-                <label className='py-2 text-xs md:text-sm' >
-                  <Link href={'/'}>
+                <label className='py-2 text-xs md:text-sm font-extrabold' >
+                  <Link href={'/signup'}>
                     Create New Account
                   </Link>
                 </label>
