@@ -30,13 +30,13 @@ const ApplyDonor = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" placeholder="email" className="input input-bordered" defaultValue={user?.email}  {...register("email")} readOnly />
+                                <input type="text" placeholder="email" className="input input-bordered" disabled defaultValue={user?.email}  {...register("email")} readOnly />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Full Name</span>
                                 </label>
-                                <input type="text" placeholder="name"  {...register("name", { required: "Full Name is required" })} className="input input-bordered" />
+                                <input type="text" placeholder="name" defaultValue={user?.displayName} disabled  {...register("name", { required: "Full Name is required" })} className="input input-bordered" />
                                 {errors.name && <p className="text-error pt-1">{errors.name.message}</p>}
 
 
