@@ -1,12 +1,18 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { UserAuth } from '@/context/authContext';
 import { useForm } from 'react-hook-form';
+import { ColorRing } from 'react-loader-spinner';
+import { useRouter } from 'next/navigation';
 
 const SignupItem = () => {
+  const router = useRouter()
+  const [loading, setLoading] = useState(false)
+  const [googleLoading, setGoogleLoading] = useState(false)
+
   let { user, createUser, profileUpdate, googleLogin, facebookLogin } = UserAuth()
   const {
     register,
@@ -17,7 +23,7 @@ const SignupItem = () => {
   } = useForm()
 
   const onSubmit = async (data) => {
-
+    setLoading(true)
     try {
       await createUser(data.email, data.password)
 
@@ -27,73 +33,82 @@ const SignupItem = () => {
       })
 
 
+      const randomId = data.name + "_" + Math.floor(Math.random() * 100000)
+
       // user insert database 
       const response = await fetch("/api/user", {
         method: "POST",
         headers: {
           "content-type": "application/json"
         },
-        body: JSON.stringify({ name: data.name, email: data.email,role:"user" })
+        body: JSON.stringify({ name: data.name, email: data.email, role: "user", userId: randomId })
       })
+      if (response) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your Registration Success!',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        reset()
+        setLoading(false)
+        router.push("/login")
+      }
 
-      Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Your Registration Success!',
-        showConfirmButton: false,
-        timer: 1500
-      })
 
     } catch (error) {
+      console.log(error)
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Your Registration Not Success!',
+        text: 'User Already Exist!',
 
       })
-
+      setLoading(false)
     }
 
-    reset()
+
   }
 
 
   let handleGoogle = async () => {
+
+    setGoogleLoading(true)
     try {
       const logInData = await googleLogin()
 
-      if (logInData?.user) {
-    // user insert database 
+      // user insert database 
+      const randomId = logInData?.user?.displayName + "_" + Math.floor(Math.random() * 100000)
       const response = await fetch("/api/user", {
         method: "POST",
         headers: {
           "content-type": "application/json"
         },
-        body: JSON.stringify({ name: logInData?.user?.displayName, email: logInData?.user?.email,role:"user" })
+        body: JSON.stringify({ name: logInData?.user?.displayName, email: logInData?.user?.email, role: "user", userId: randomId })
       })
-
-      Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Your Registration Success!',
-        showConfirmButton: false,
-        timer: 1500
-      })
+      if (response) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your Registration Success!',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        setGoogleLoading(false)
+        router.push("/")
       }
 
 
-      
-
-    
-
-
     } catch (error) {
+      console.log(error)
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'Your Login Not Success!',
 
       })
+      setGoogleLoading(false)
     }
 
   }
@@ -174,7 +189,19 @@ const SignupItem = () => {
           <div className='text-center py-2'>
 
             <button className='btn btn-neutral md:w-full overflow-hidden '>
-              Register
+              {loading && loading ? <ColorRing
+                visible={true}
+                height="40"
+                width="80"
+                ariaLabel="blocks-loading"
+                wrapperStyle={{}}
+                wrapperClass="blocks-wrapper"
+                colors={['#F4F4F3', '#FFF', '#EB4249', '#abbd81', '#849b87']}
+              /> : "Register"
+
+
+              }
+
             </button>
           </div>
 
@@ -182,7 +209,20 @@ const SignupItem = () => {
         <div className=" divider  text-sm">OR Sign up with</div>
         <div className=' flex items-center justify-center py-1 '>
           <button className='btn btn-circle btn-outline btn-primary mx-2' onClick={handleGoogle}>
-            G
+            {googleLoading && googleLoading ? <ColorRing
+              visible={true}
+              height="40"
+              width="80"
+              ariaLabel="blocks-loading"
+              wrapperStyle={{}}
+              wrapperClass="blocks-wrapper"
+              colors={['#F4F4F3', '#FFF', '#EB4249', '#abbd81', '#849b87']}
+            /> : "G"
+
+
+            }
+
+
           </button>
           <button className='btn btn-circle btn-outline btn-primary mx-2'>
             in
