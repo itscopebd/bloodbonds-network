@@ -1,11 +1,9 @@
-"use client"
-
-import React, {useState} from 'react';
+import React from 'react';
 import Image from 'next/image';
-import volunteer from '../asset/volunteer.jpg';
-import volunteer2 from '../asset/volunteer2.jpg';
-import doctor from '../asset/Doctor.jpg'
-import doctor2 from '../asset/Doctor2.jpg'
+import volunteer from '../../app/asset/volunteer.jpg';
+import volunteer2 from '../../app/asset/volunteer2.jpg';
+import doctor from '../../app/asset/doctor.jpg';
+import doctor2 from '../../app/asset/doctor2.jpg';
 
 const MeetTheTeam = () => {
 
@@ -19,11 +17,11 @@ const MeetTheTeam = () => {
     return (
         <div className='mt-10'>
             <h2 className='text-2xl lg:text-3xl font-bold text-red-700 text-center lg:mb-5'>Meet Our Team</h2>
-            <div className='flex justify-center'>
+            <div className='flex justify-center '>
             <div className="cards grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <Image className=' rounded' src={volunteer} alt='volunteer'></Image>
+                    <Image className='rounded' src={volunteer} alt='volunteer'></Image>
                 </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Joe Keith</h2>
@@ -33,7 +31,7 @@ const MeetTheTeam = () => {
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <Image className=' rounded' src={volunteer2} alt='volunteer'></Image>
+                    <Image className='rounded' src={volunteer2} alt='volunteer'></Image>
                 </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Rosy Watson</h2>
@@ -43,7 +41,7 @@ const MeetTheTeam = () => {
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <Image className=' rounded' src={doctor} alt='volunteer'></Image>
+                    <Image className='rounded' src={doctor} alt='volunteer'></Image>
                 </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">John Keith</h2>
@@ -53,7 +51,7 @@ const MeetTheTeam = () => {
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <Image className=' rounded' src={doctor2} alt='volunteer'></Image>
+                    <Image className='rounded' src={doctor2} alt='volunteer'></Image>
                 </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Rosy Watson</h2>
@@ -63,7 +61,7 @@ const MeetTheTeam = () => {
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <Image className=' rounded' src={volunteer} alt='volunteer'></Image>
+                    <Image className='rounded' src={volunteer} alt='volunteer'></Image>
                 </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Joe Keith</h2>
@@ -73,7 +71,7 @@ const MeetTheTeam = () => {
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <Image className=' rounded' src={volunteer2} alt='volunteer'></Image>
+                    <Image className='rounded' src={volunteer2} alt='volunteer'></Image>
                 </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Rosy Watson</h2>
@@ -83,7 +81,7 @@ const MeetTheTeam = () => {
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <Image className=' rounded' src={volunteer} alt='volunteer'></Image>
+                    <Image className='rounded' src={volunteer} alt='volunteer'></Image>
                 </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">John Keith</h2>
@@ -93,7 +91,7 @@ const MeetTheTeam = () => {
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <Image className=' rounded' src={volunteer2} alt='volunteer'></Image>
+                    <Image className='rounded' src={volunteer2} alt='volunteer'></Image>
                 </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Rosy Watson</h2>
@@ -103,7 +101,7 @@ const MeetTheTeam = () => {
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <Image className=' rounded' src={doctor2} alt='volunteer'></Image>
+                    <Image className='rounded' src={doctor2} alt='volunteer'></Image>
                 </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Rosy Watson</h2>
@@ -113,7 +111,7 @@ const MeetTheTeam = () => {
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <Image className=' rounded' src={volunteer} alt='volunteer'></Image>
+                    <Image className='rounded' src={volunteer} alt='volunteer'></Image>
                 </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Joe Keith</h2>
@@ -123,7 +121,7 @@ const MeetTheTeam = () => {
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <Image className=' rounded' src={volunteer2} alt='volunteer'></Image>
+                    <Image className='rounded' src={volunteer2} alt='volunteer'></Image>
                 </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Rosy Watson</h2>
@@ -133,7 +131,7 @@ const MeetTheTeam = () => {
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <Image className=' rounded' src={volunteer} alt='volunteer'></Image>
+                    <Image className='rounded' src={volunteer} alt='volunteer'></Image>
                 </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">John Keith</h2>
