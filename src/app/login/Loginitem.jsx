@@ -43,15 +43,26 @@ const Loginitem = () => {
     
       let handleGoogle = async () => {
         try {
-          await googleLogin()
-          
-                Swal.fire({
-                  position: 'top-end',
-                  icon: 'success',
-                  title: 'Your Registration Success!',
-                  showConfirmButton: false,
-                  timer: 1500
-                })
+          const logInData = await googleLogin()
+
+          if (logInData?.user) {
+        // user insert database 
+          const response = await fetch("/api/user", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json"
+            },
+            body: JSON.stringify({ name: logInData?.user?.displayName, email: logInData?.user?.email,role:"user" })
+          })
+    
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your Registration Success!',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          }
             
     
         } catch (error) {
