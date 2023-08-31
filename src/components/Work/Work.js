@@ -12,15 +12,15 @@ const Work = () => {
 
 
                     <div className='flex'>
-                        <img className='rounded w-[600px] h-[600px]' src="https://i.ibb.co/Wy6zd03/1.jpg" alt="" />
+                        <img className='rounded w-[800px] h-[600px]' src="https://i.ibb.co/Wy6zd03/1.jpg" alt="" />
                     </div>
                     <div>
                         <div>
-                            <img className='rounded w-[600px] h-[300px]' src="https://i.ibb.co/X3zzVQx/5.jpg" alt="" />
+                            <img className='rounded w-[800px] h-[300px]' src="https://i.ibb.co/X3zzVQx/5.jpg" alt="" />
                         </div>
                         <div className='lg:flex'>
-                            <img className='rounded lg:w-[300px] h-[300px]' src="https://i.ibb.co/6ZZ5FX4/2.jpg" alt="" />
-                            <img className='rounded lg:w-[300px] h-[300px]' src="https://i.ibb.co/nwVYFYF/6.jpg" alt="" />
+                            <img className='rounded lg:w-[385px] h-[300px]' src="https://i.ibb.co/6ZZ5FX4/2.jpg" alt="" />
+                            <img className='rounded lg:w-[385px] h-[300px]' src="https://i.ibb.co/nwVYFYF/6.jpg" alt="" />
                         </div>
                     </div>
 
