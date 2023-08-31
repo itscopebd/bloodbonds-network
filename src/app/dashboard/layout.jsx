@@ -8,14 +8,19 @@ import { UserAuth } from '@/context/authContext';
 const Dashboard = ({ children }) => {
 
 
-  const { user } = UserAuth();
-
-
+  const { user,loading } = UserAuth();
   const { data: data = [], fefetch } = useQuery(['data'], async () => {
     const res = await fetch(`http://localhost:3000/api/user/${user?.email}`)
     return res.json()
   })
-  console.log(data)
+
+  if (loading) {
+
+    return <span className="loading loading-bars loading-lg"></span>
+    
+}
+  
+  console.log(user)
   return (
     <div>
 

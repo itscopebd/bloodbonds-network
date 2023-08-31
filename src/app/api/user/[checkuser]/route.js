@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 export const GET = async (request,{params}) => {
     const { checkuser } = params;
     const { db } = await connectToDatabase();
+
     try {
         const query = { email: checkuser };
         const result = await db.collection('users').find(query).toArray();

@@ -21,7 +21,7 @@ const Sidebar = ({ data }) => {
               <>
 
                 <li>
-                  <Link href={'/dashboard'}> <FaHouse /> Dashboard Admin</Link>
+                  <Link href={'/dashboard/admin'}> <FaHouse /> Dashboard Admin</Link>
                 </li>
 
                 <li>
@@ -37,13 +37,13 @@ const Sidebar = ({ data }) => {
               : role === "donar" ?
                 <>
                   <li>
-                    <Link href={'/dashboard'}> <FaHouse /> Dashboard Donar</Link>
+                    <Link href={'/dashboard/donar'}> <FaHouse /> Dashboard Donar</Link>
                   </li>
                   <li>
-                    <Link href={'/dashboard'}> <FaHistory /> Track Donation </Link>
+                    <Link href={'/dashboard/donar'}> <FaHistory /> Track Donation </Link>
                   </li>
                   <li>
-                    <Link href={'/dashboard'}> <FaInfoCircle /> Donor Info</Link>
+                    <Link href={'/dashboard/donar'}> <FaInfoCircle /> Donor Info</Link>
                   </li>
                 </>
                 :
