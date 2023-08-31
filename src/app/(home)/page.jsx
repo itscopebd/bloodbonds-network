@@ -23,7 +23,8 @@ const images =[
 "https://i.ibb.co/gVQFp6d/pic-77.jpg",
 "https://i.ibb.co/VYmCwt1/pic-88.jpg" ,
 "https://i.ibb.co/Bn1j250/pic-99.jpg",
-"https://i.ibb.co/Qj7NJhB/pic-10.jpg" 
+"https://i.ibb.co/Qj7NJhB/pic-10.jpg",
+ 
 ];
 
 const BannerPage = () => {
