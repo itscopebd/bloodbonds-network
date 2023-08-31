@@ -15,10 +15,10 @@ const MeetTheTeam = () => {
    
 
     return (
-        <div className='mt-10'>
+        <div className='mt-10 container mx-auto'>
             <h2 className='text-2xl lg:text-3xl font-bold text-red-700 text-center lg:mb-5'>Meet Our Team</h2>
             <div className='flex justify-center '>
-            <div className="cards grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
+            <div className="cards grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-7 mx-auto justify-between">
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <Image className='rounded' src={volunteer} alt='volunteer'></Image>
