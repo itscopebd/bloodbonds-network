@@ -50,25 +50,25 @@ const Banner = () => {
           <div className=' h-full w-full  relative '>
 
         
-          <img src= "https://i.ibb.co/9ZvZr5r/pic-3.jpg" className='absolute w-full h-full hover:opacity-90 hover:mix-blend-overlay object-cover' alt="" />
+          <img src= "https://i.ibb.co/Bn1j250/pic-99.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" />
         
-          <div className='  flex justify-center items-center'>
-            <div className='py-96'>
+          <div className='  flex justify-center items-center h-[70%] my-auto '>
+            <div>
 
-            <h1 className=' text-6xl font-light text-gray-300'>The bond of blood is stronger than anything.</h1>
-            <p className='font-light text-center text-gray-300 text-xl pt-2   '>A blood bag in time saves a life. </p>
+            <h1 className=' text-5xl font-light text-gray-300'>The bond of <span className='font-bold text-red-500'>blood</span> is stronger than anything.</h1>
+            <p className='font-light text-center text-gray-300 text-xl pt-2   '>A <span className='font-bold text-red-500'>blood</span> bag in time saves a life. </p>
             </div>
           </div>
           </div>
           <div className=' h-full w-full  relative '>
 
         
-          <img src="https://i.ibb.co/GV7bvZ7/pic-4.jpg" className='absolute w-full h-full hover:opacity-90 hover:mix-blend-overlay object-cover' alt="" />
+          <img src="https://i.ibb.co/GV7bvZ7/pic-4.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" />
         
-          <div className='  flex justify-center items-center'>
-            <div className='py-96'>
+          <div className='  flex justify-center items-center h-[70%] my-auto '>
+            <div>
 
-            <h1 className=' text-6xl font-light text-gray-300'>Donate blood and be the reason of someone's existence.</h1>
+            <h1 className=' text-5xl font-light text-gray-300'>Donate <span className='font-bold text-red-500'>blood</span> and be the reason of someone's existence.</h1>
             <p className='font-light text-center text-gray-300 text-xl pt-2   '>Don't be "A negative" Be "O positive".</p>
             </div>
           </div>
@@ -76,39 +76,42 @@ const Banner = () => {
           <div className=' h-full w-full  relative '>
 
         
-          <img src= "https://i.ibb.co/zr85Nds/pic-2.jpg" className='absolute w-full h-full hover:opacity-90 hover:mix-blend-overlay object-cover' alt="" />
+          <img src= "https://i.ibb.co/zr85Nds/pic-2.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" />
         
-          <div className='  flex justify-center items-center'>
-            <div className='py-96'>
+          <div className='  flex justify-center items-center h-[70%] my-auto '>
+            <div>
 
-            <h1 className=' text-6xl font-light text-gray-500'>The gift of blood is a gift of someone life.</h1>
-            <p className='font-light text-center text-gray-500 text-xl pt-2   '>You can became a super hero too.</p>
+            <h1 className=' text-5xl font-light text-gray-300'>The gift of <span className='font-bold text-red-500'>blood</span> is a gift of someone life.</h1>
+            <p className='font-light text-center text-gray-300 text-xl pt-2   '>You can became a super hero too.</p>
             </div>
           </div>
           </div>
           <div className=' h-full w-full  relative '>
 
         
-          <img src="https://i.ibb.co/zm0HPrZ/pic-1.jpg" className='absolute w-full h-full hover:opacity-90 hover:mix-blend-overlay object-cover' alt="" />
+          <img src="https://i.ibb.co/gVQFp6d/pic-77.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay   lg:object-cover' alt="" />
         
-          <div className='   flex justify-center items-center'>
-            <div className='py-96'>
+          <div className='   flex justify-center items-center h-[70%] my-auto '>
 
-            <h1 className=' text-6xl font-light text-gray-300'>A single drop of blood can make huge difference.</h1>
-            <p className='font-light text-center text-gray-300 text-xl pt-2 '> Donate blood</p>
+           
+            <div>
+
+            <h1 className=' text-5xl font-light text-gray-300'>A single drop of <span className='font-bold text-red-500'>blood</span> can make huge difference.</h1>
+            <p className='font-light text-center text-gray-300 text-xl pt-2 '> Donate <span className='font-bold text-red-500'>blood</span></p>
             </div>
-          </div>
+           
+            </div>
           </div>
           <div className=' h-full w-full  relative '>
 
         
-          <img src="https://i.ibb.co/rkbNpFV/pic-5.jpg" className='absolute w-full h-full hover:opacity-90 hover:mix-blend-overlay object-cover' alt="" />
+          <img src="https://i.ibb.co/xJHkNCn/pic-33.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" />
         
-          <div className=' flex justify-center items-center'>
-            <div className='py-96'>
+          <div className='flex justify-center items-center h-[70%] my-auto '>
+            <div>
 
-            <h1 className=' text-6xl font-light text-gray-500'>Be the reason for someone's heartbeat..</h1>
-            <p className='font-light text-center text-gray-500 text-xl pt-2   '>Stay fit and eat right and donate blood</p>
+            <h1 className=' text-5xl font-light text-gray-300'>Be the reason for someone's <span className='font-bold text-red-500'>heartbeat</span>..</h1>
+            <p className='font-light text-center text-gray-300 text-xl pt-2   '>Stay fit and eat right and donate <span className='font-bold text-red-500'>blood</span></p>
             </div>
           </div>
           </div>
@@ -131,16 +134,16 @@ const Banner = () => {
             About Us
           </h1>
           <p className="text-gray-500 pt-10">
-            Safe blood saves lives. Blood is needed by women with complications
+            Safe <span className='font-bold text-red-500'>blood</span> saves lives. Blood is needed by women with complications
             during pregnancy and childbirth, children with severe anaemia, often
             resulting from malaria or malnutrition, accident victims and
             surgical and cancer patients. There is a constant need for a regular
-            supply of blood because it can be stored only for a limited period
-            of time before use. Regular blood donation by a sufficient number of
-            healthy people is needed to ensure that blood will always be
-            available whenever and wherever it is needed. Blood is the most
+            supply of <span className='font-bold text-red-500'>blood</span> because it can be stored only for a limited period
+            of time before use. Regular <span className='font-bold text-red-500'>blood</span> donation by a sufficient number of
+            healthy people is needed to ensure that <span className='font-bold text-red-500'>blood</span> will always be
+            available whenever and wherever it is needed. <span className='font-bold text-red-500'>Blood</span> is the most
             precious gift that anyone can give to another person – the gift of
-            life. A decision to donate your blood can save a life, or even
+            life. A decision to donate your <span className='font-bold text-red-500'>blood</span> can save a life, or even
             several if your blood is separated into its components – red cells,
             platelets and plasma – which can be used individually for patients
             with specific conditions and support. <button className="btn btn-outline btn-error btn-xs">see more</button>
