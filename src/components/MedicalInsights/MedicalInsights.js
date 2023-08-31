@@ -8,7 +8,7 @@ const MedicalInsights = () => {
       </h1>
       <p className="text-gray-500 pt-10 text-center">
         Explore a handpicked collection of medical insights created by experts.
-        <br />Gain deeper insights into blood donation and its effects.{" "}
+        <br />Gain deeper insights into <span className='font-bold text-red-500'>blood</span> donation and its effects.{" "}
       </p>
       <div className="grid w-[90%] mx-auto gap-5 mt-10 md:grid-cols-2 lg:grid-cols-3 container ">
         <div className="card w-auto bg-base-100 shadow-xl">
@@ -18,9 +18,9 @@ const MedicalInsights = () => {
             </div>
           </div>{" "}
           <div className="card-body">
-          <h2 className="card-title">Understanding Blood Type Compatibility</h2>
-            <p>Explore the fascinating world of blood type and their compatibility.
-                Learn how matching blood types during transfusions can save lives ans ensure successful medical interventions
+          <h2 className="card-title">Understanding <span className='font-bold text-red-500'>Blood</span>Type.</h2>
+            <p>Explore the fascinating world of <span className='font-bold text-red-500'>blood</span> type and their compatibility.
+                Learn how matching <span className='font-bold text-red-500'>blood</span> types during transfusions can save lives ans ensure successful medical interventions
             </p>
             <div className="card-actions justify-end">
               <button className="btn btn-outline btn-error">Read more</button>
@@ -34,12 +34,12 @@ const MedicalInsights = () => {
             </div>
           </div>{" "}
           <div className="card-body">
-            <h2 className="card-title">Understanding Blood Type Compatibility</h2>
-            <p>Explore the fascinating world od blood type and their compatibility.
-                Learn how matching blood types during transfusions can save lives ans ensure successful medical interventions
+          <h2 className="card-title">Understanding <span className='font-bold text-red-500'>Blood</span>Type.</h2>
+            <p>Explore the fascinating world of <span className='font-bold text-red-500'>blood</span> type and their compatibility.
+                Learn how matching <span className='font-bold text-red-500'>blood</span> types during transfusions can save lives ans ensure successful medical interventions
             </p>
             <div className="card-actions justify-end">
-              <button className="btn btn-outline btn-error">Read More</button>
+              <button className="btn btn-outline btn-error">Read more</button>
             </div>
           </div>
         </div>
@@ -50,12 +50,12 @@ const MedicalInsights = () => {
             </div>
           </div>{" "}
           <div className="card-body">
-          <h2 className="card-title">Understanding Blood Type Compatibility</h2>
-            <p>Explore the fascinating world od blood type and their compatibility.
-                Learn how matching blood types during transfusions can save lives ans ensure successful medical interventions
+          <h2 className="card-title">Understanding <span className='font-bold text-red-500'>Blood</span>Type. </h2>
+            <p>Explore the fascinating world of <span className='font-bold text-red-500'>blood</span> type and their compatibility.
+                Learn how matching <span className='font-bold text-red-500'>blood</span> types during transfusions can save lives ans ensure successful medical interventions
             </p>
             <div className="card-actions justify-end">
-              <button className="btn btn-outline btn-error">Read More</button>
+              <button className="btn btn-outline btn-error">Read more</button>
             </div>
           </div>
         </div>

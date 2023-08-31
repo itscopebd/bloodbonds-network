@@ -9,7 +9,7 @@ const AutoImageGallery = ({ images }) => {
       // Calculate the index of the next image
       const nextIndex = (currentIndex + 1) % images.length;
       setCurrentIndex(nextIndex);
-    }, 3000); // Change image every 3 seconds
+    }, 1000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
   }, [currentIndex, images]);
@@ -18,7 +18,7 @@ const AutoImageGallery = ({ images }) => {
     <section className='my-20'>
     <div className={styles.galleryContainer}>
       <div className={styles.gallery}>
-        {images.map((image, index) => (
+        {images?.map((image, index) => (
           <div
             key={index}
             className={`${styles.galleryItem} ${index === currentIndex ? styles.active : ''}`}
