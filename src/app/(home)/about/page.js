@@ -11,7 +11,7 @@ const AboutUs = () => {
     return (
         <div className='w-full about'>
             <div className='banner'>
-                <Image className='w-full h-[600px]' src={banner} alt="banner"/>
+                <Image className='w-full h-[300] md:h-[600px]' src={banner} alt="banner"/>
                 <div className='overlay-text'>
                     <h1 className='heading text-2xl mt-5 md:text-4xl lg:text-5xl font-bold mb-5'>Our Commitment to Saving Lives</h1>
                     <p className='text text-md lg:text-2xl'>At BloodBond Network, we are on a mission to make a difference in the world of healthcare and well-being.</p>
