@@ -38,8 +38,8 @@ const BannerPage = () => {
             <Work></Work>
             <JoinUs></JoinUs>
             <ContactUs></ContactUs>
-            <GetInTouch></GetInTouch>
             <FaqSection></FaqSection>
+            <GetInTouch></GetInTouch>
 
 
 

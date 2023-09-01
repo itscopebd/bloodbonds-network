@@ -7,10 +7,12 @@ import Image from 'next/image';
 
 const Work = () => {
   return (
-    <section>
+    <section className='my-20'>
       <div className='container mx-auto'>
-        <h1 className='text-5xl text-center font-bold text-red-500 pt-12'>Our Works</h1>
-        <p className='text-gray-500 pt-10 text-center '>Discover the lives transformed and communities strengthened through our dedicated blood donation <br /> <br /> efforts. Explore our impactful stories, statistics, and partnerships that drive positive change.</p>
+        <h1 className="text-5xl text-center font-bold text-red-500 ">Work Us</h1>
+        <p className="text-gray-500 pt-10 text-center">Connect with us easily through our contact information or send us a message via our user-friendly contact form.
+          <br /> We are here to help and look forward to hearing from you.
+        </p>
 
         <div className='lg:flex justify-center mt-10'>
 
