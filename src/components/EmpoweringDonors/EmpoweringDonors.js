@@ -38,9 +38,9 @@ const EmpoweringDonors = () => {
           </div>
         </div>
       </div>
-      <div className="container px-[8%] mt-10">
-        <div className=" contain  ">
-          <div className="text">
+      <div className="container px-[8%] mx-auto mt-10">
+        <div className=" flex items-center    ">
+          <div className="">
             <div className="cards cards1">
               <h3 className="text-white shadow-md">Donate Blood</h3>
               <p></p>
@@ -59,7 +59,7 @@ const EmpoweringDonors = () => {
             </div>
           </div>
 
-          <div className="text">
+          <div className="">
             <h2 className="font-semibold text-xl">University Student</h2>
             <p>
               Explore the fascinating world of{" "}
@@ -73,9 +73,9 @@ const EmpoweringDonors = () => {
         </div>
       </div>
 
-      <div className="container px-[8%] mt-10">
-        <div className=" contain  ">
-          <div className="text">
+      <div className="container px-[8%] mx-auto mt-10">
+        <div className=" flex items-center  ">
+          <div className="">
             <h2 className="font-semibold text-xl">University Student</h2>
             <p>
               Explore the fascinating world of{" "}
@@ -87,7 +87,7 @@ const EmpoweringDonors = () => {
             </p>
           </div>
 
-          <div className="text">
+          <div className="">
             <div className="cards cards10">
               <h3 className="text-white shadow-md">Donate Blood</h3>
               <p></p>
