@@ -6,8 +6,7 @@ const FaqSection = () => {
   return (
     <section className="container mx-auto rounded-2xl p-16 mt-20">
       <h1 className="text-5xl text-center font-bold text-red-500 ">FAQ</h1>
-      <p className="text-gray-500 pt-10 text-center">Connect with us easily through our contact information or send us a message via our user-friendly contact form.
-        <br /> We are here to help and look forward to hearing from you.
+      <p className="text-gray-500 pt-10 text-center">We understand that you may have questions about the blood donation <br /> process, its importance, and how you can get involved.
       </p>
       <div className="lg:grid-cols-2 grid grid-cols-1 gap-16 mt-10">
         <div data-aos="fade-up" data-aos-duration="1000" className="md:order-last lg:order-first">

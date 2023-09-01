@@ -10,8 +10,7 @@ const Work = () => {
     <section className='my-20'>
       <div className='container mx-auto'>
         <h1 className="text-5xl text-center font-bold text-red-500 ">Work Us</h1>
-        <p className="text-gray-500 pt-10 text-center">Connect with us easily through our contact information or send us a message via our user-friendly contact form.
-          <br /> We are here to help and look forward to hearing from you.
+        <p className="text-gray-500 pt-10 text-center">As a vital part of the healthcare ecosystem, we connect compassionate donors with those in <br /> need, creating a  community of heroes who make a life-changing impact every day.
         </p>
 
         <div className='lg:flex justify-center mt-10'>
