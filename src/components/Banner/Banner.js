@@ -49,7 +49,6 @@ const Banner = () => {
       <section className=" pt-12 ">
         <AutoplaySlider
            
-          animation="cubeAnimation"
           play={true}
           cancelOnInteraction={false} // should stop playing on user interaction
           interval={6000}
@@ -60,14 +59,14 @@ const Banner = () => {
           
           {/* <img src= "https://i.ibb.co/Bn1j250/pic-99.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
         
-          <div className='  contain  '>
-            <div className='text'>
+          <div className=' flex items-center h-[88%]'>
+            <div className=''>
 
             <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span>.</h1>
             <p className=' text-white   '>The bond of <span className='font-bold text-red-500'>blood</span> is stronger than anything. </p>
             <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
             </div>
-            <div className='text'>
+            <div className=''>
               <div className='cards cards1'>
                 <h3 className='text-white shadow-md'>Donate Blood</h3>
                 <p></p>
@@ -94,15 +93,15 @@ const Banner = () => {
         
           {/* <img src="https://i.ibb.co/GV7bvZ7/pic-4.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
         
-          <div className=' contain '>
-            <div className='text'>
+          <div className=' flex items-center h-[88%] '>
+            <div className=''>
 
             <h1 className=' text-5xl font-light text-white'>Donate <span className='font-bold text-red-500'>blood</span>.</h1>
             <p className=' text-white     '>Don't be "A negative" Be "O positive".</p>
             <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
 
             </div>
-            <div className='text'>
+            <div className=''>
               <div className='cards cards10'>
                 <h3 className='text-white shadow-md'>Donate Blood</h3>
                 <p></p>
@@ -129,15 +128,15 @@ const Banner = () => {
         
           {/* <img src= "https://i.ibb.co/zr85Nds/pic-2.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
         
-          <div className='  contain'>
-            <div className='text'>
+          <div className='  flex items-center h-[88%]'>
+            <div className=''>
 
             <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span>.</h1>
             <p className=' text-white '>You can became a super hero too.</p>
             <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
 
             </div>
-            <div className='text'>
+            <div className=''>
               <div className='cards cards12'>
                 <h3 className='text-white shadow-md'>Donate Blood</h3>
                 <p></p>
@@ -164,17 +163,17 @@ const Banner = () => {
         
           {/* <img src="https://i.ibb.co/gVQFp6d/pic-77.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay   lg:object-cover' alt="" /> */}
         
-          <div className='   contain'>
+          <div className='   flex items-center h-[88%]'>
 
            
-            <div className='text'>
+            <div className=''>
 
             <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span></h1>
             <p className=' text-white'> A single drop of <span className='font-bold text-red-500'>blood</span> can make huge difference.</p>
             <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
 
             </div>
-            <div className='text'>
+            <div className=''>
               <div className='cards cards1'>
                 <h3 className='text-white shadow-md'>Donate Blood</h3>
                 <p></p>
@@ -201,15 +200,15 @@ const Banner = () => {
         
           {/* <img src="https://i.ibb.co/xJHkNCn/pic-33.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
         
-          <div className='contain '>
-            <div className='text'>
+          <div className='flex items-center h-[88%] '>
+            <div className=''>
 
             <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span></h1>
             <p className=' text-white  '>Stay fit and eat right and donate <span className='font-bold text-red-500'>blood</span></p>
             <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
 
             </div>
-            <div className='text'>
+            <div className=''>
               <div className='cards cards11'>
                 <h3 className='text-white shadow-md'>Donate Blood</h3>
                 <p></p>
@@ -236,15 +235,15 @@ const Banner = () => {
         
           {/* <img src="https://i.ibb.co/xJHkNCn/pic-33.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
         
-          <div className='contain '>
-            <div className='text'>
+          <div className='flex items-center h-[88%] '>
+            <div className=''>
 
             <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span></h1>
             <p className=' text-white  '>Stay fit and eat right and donate <span className='font-bold text-red-500'>blood</span></p>
             <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
 
             </div>
-            <div className='text'>
+            <div className=''>
               <div className='cards cards10'>
                 <h3 className='text-white shadow-md'>Donate Blood</h3>
                 <p></p>
@@ -270,11 +269,11 @@ const Banner = () => {
 
       {/* about section */}
 
-      <section className="mt-20 w-[90%] grid lg:grid-cols-2 gap-3 justify-items-center  container">
+      <section className="mt-20  grid lg:grid-cols-2 gap-3 justify-items-center  container">
         
           {/* <div className="avatar">
             <div className="w-auto rounded"> */}
-                <div className='lg:w-1/2'>
+                <div className='w-1/2'>
 
               <Image src={pic6} width='' ></Image>
                 </div>

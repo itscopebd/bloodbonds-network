@@ -10,7 +10,7 @@ const MedicalInsights = () => {
         Explore a handpicked collection of medical insights created by experts.
         <br />Gain deeper insights into <span className='font-bold text-red-500'>blood</span> donation and its effects.{" "}
       </p>
-      <div className="grid w-[90%] mx-auto gap-5 mt-10 md:grid-cols-2 lg:grid-cols-3 container ">
+      <div className="grid  mx-auto gap-5 mt-10 md:grid-cols-2 lg:grid-cols-3 container ">
         <div className="card w-auto bg-base-100 shadow-xl">
           <div className="avatar">
             <div className="w-auto rounded">
