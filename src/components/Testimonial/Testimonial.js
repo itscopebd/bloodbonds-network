@@ -1,54 +1,7 @@
-// import React from 'react';
-// import person from '@/app/asset/Volunteer.jpg';
-// import Image from 'next/image';
-
-// const TestimonialSection = () => {
-//     const testimonials = [
-//         {
-//             id: 1,
-//             name: 'John Doe',
-//             role: 'CEO, Company A',
-//             content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed velit efficitur, ut elementum nisi tristique.'
-//         },
-//         {
-//             id: 2,
-//             name: 'Jane Smith',
-//             role: 'Designer, Company B',
-//             content: 'Pellentesque commodo arcu non ante tincidunt, ut ultricies nisl finibus. Morbi scelerisque nibh ac tortor lacinia, non bibendum enim facilisis.'
-//         },
-//         // Add more testimonials
-//     ];
-
-//     return (
-//         <section className="testimonial-section bg-gray-100 py-10">
-//             <div className="container mx-auto">
-//                 <h2 className="text-3xl font-bold text-center mb-5">What People Say</h2>
-//                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-//                     {testimonials.map(testimonial => (
-//                         <div key={testimonial.id} className="testimonial-card bg-white shadow-md p-6 rounded-md">
-//                             <p className="text-gray-600 mb-4">{testimonial.content}</p>
-//                             <div className="flex items-center">
-//                                 <div className="flex-shrink-0">
-//                                     <Image className="h-20 w-20 rounded-full" src={person} alt={testimonial.name} />
-//                                 </div>
-//                                 <div className="ml-3">
-//                                     <p className="text-sm font-medium text-gray-800">{testimonial.name}</p>
-//                                     <p className="text-sm text-gray-500">{testimonial.role}</p>
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     ))}
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// };
-
-// export default TestimonialSection;
-
 
 import React from 'react';
-import person from '@/app/asset/Volunteer.jpg';
+// import person from '@/app/asset/Volunteer.jpg';
+import person from '../../app/asset/volunteer.jpg'
 import Image from 'next/image';
 
 const TestimonialSection = () => {

@@ -4,7 +4,8 @@ import Link from 'next/link';
 import React, { useContext } from 'react';
 import './Navbar.css';
 import Image from 'next/image';
-import logo from '@/app/asset/Blood (2).png'
+// import logo from '@/app/asset/Blood (2).png'
+import logo from '../../app/asset/Blood (2).png'
 import { AuthContext } from '@/context/authContext';
 
 const Navbar = () => {

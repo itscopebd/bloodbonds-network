@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import logo from '@/app/asset/Blood (2).png'
+// import logo from '@/app/asset/Blood (2).png'
+import logo from '../../app/asset/Blood (2).png'
 
 const Footer = () => {
     return (
