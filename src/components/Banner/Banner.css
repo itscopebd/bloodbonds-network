@@ -45,12 +45,122 @@
     background-color: rgb(255, 61, 61);
     border-radius: 0 2px 2px 0;
 }
-.awssld__bullet--active {
-    background: red;
+
+.bg{
+ 
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.bg1{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-55.jpg');
+
+}
+.bg2{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-66.jpg');
+
+}
+.bg3{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-44.jpg');
+
+}
+.bg4{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-77.jpg');
+
+}
+.bg5{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-11.jpg');
+
+}
+.bg6{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-33.jpg');
+
+}
+.contain{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+.text{
+    flex-basis: 50%;
+}
+.cards{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    margin: 10px 15px;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+.cards1{
+    background-image: url(../../app//asset/card-1.jpg);
+
+}
+.cards2{
+    background-image: url(../../app//asset/card-2.jpg);
+
+}
+.cards3{
+    background-image: url(../../app//asset/card-3.jpg);
+
+}
+.cards4{
+    background-image: url(../../app//asset/card-4.jpg);
+
+}
+.cards5{
+    background-image: url(../../app//asset/card-5.jpg);
+
+}
+.cards6{
+    background-image: url(../../app//asset/card-6.jpg);
+
+}
+.cards7{
+    background-image: url(../../app//asset/card-7.jpg);
+
+}
+.cards8{
+    background-image: url(../../app//asset/card-8.jpg);
+
+}
+.cards9{
+    background-image: url(../../app//asset/card-9.jpg);
+
+}
+.cards10{
+    background-image: url(../../app//asset/card-10.jpg);
+
+}
+.cards11{
+    background-image: url(../../app//asset/card-11.jpg);
+
+}
+.cards12{
+    background-image: url(../../app//asset/card-12.jpg);
+
+}
+.cards:hover{
+    transform: translateY(-10px);
+}
+.cards h3{
+    color: #fff;
+    text-shadow: 0 0 5px #999;
 }
 @media screen and (max-width:640px) {
     .search{
         width: auto;
+    }
+    .cards{
+        width: auto;
+        height: auto;
     }
     
 }

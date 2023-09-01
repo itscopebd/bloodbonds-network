@@ -7,6 +7,13 @@ import 'react-awesome-slider/dist/styles.css';
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
 import { FcSearch } from "react-icons/fc";
 import './Banner.css'
+import pic1 from '../../app/asset/pic-99.jpg';
+import pic2 from '../../app/asset/pic-77.jpg';
+import pic3 from '../../app/asset/pic-33.jpg';
+import pic4 from '../../app/asset/pic-44.jpg';
+import pic5 from '../../app/asset/pic-4.jpg';
+import pic6 from '../../app/asset/about-1.jpg'
+import Image from 'next/image';
 
 
 // import required modules
@@ -47,71 +54,213 @@ const Banner = () => {
           cancelOnInteraction={false} // should stop playing on user interaction
           interval={6000}
         >
-          <div className=' h-full w-full  relative '>
+          <div className='  bg-fixed w-full h-full   bg bg1'>
 
+          {/* <Image src={pic1} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
+          
+          {/* <img src= "https://i.ibb.co/Bn1j250/pic-99.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
         
-          <img src= "https://i.ibb.co/Bn1j250/pic-99.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" />
-        
-          <div className='  flex justify-center items-center h-[70%] my-auto '>
-            <div>
+          <div className='  contain  '>
+            <div className='text'>
 
-            <h1 className=' text-5xl font-light text-gray-300'>The bond of <span className='font-bold text-red-500'>blood</span> is stronger than anything.</h1>
-            <p className='font-light text-center text-gray-300 text-xl pt-2   '>A <span className='font-bold text-red-500'>blood</span> bag in time saves a life. </p>
+            <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span>.</h1>
+            <p className=' text-white   '>The bond of <span className='font-bold text-red-500'>blood</span> is stronger than anything. </p>
+            <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
+            </div>
+            <div className='text'>
+              <div className='cards cards1'>
+                <h3 className='text-white shadow-md'>Donate Blood</h3>
+                <p></p>
+              </div>
+              <div className='cards cards2'>
+                <h3 className='text-white shadow-md'>Be Hero</h3>
+                <p></p>
+              </div>
+              <div className='cards cards11'>
+                <h3 className='text-white shadow-md'>Life Good</h3>
+                <p></p>
+              </div>
+              <div className='cards cards6'>
+                <h3 className='text-white shadow-md'>Sacrifice</h3>
+                <p></p>
+              </div>
             </div>
           </div>
           </div>
-          <div className=' h-full w-full  relative '>
+          <div className=' h-full w-full bg-fixed  bg bg2 '>
+
+          {/* <Image src={pic2} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
 
         
-          <img src="https://i.ibb.co/GV7bvZ7/pic-4.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" />
+          {/* <img src="https://i.ibb.co/GV7bvZ7/pic-4.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
         
-          <div className='  flex justify-center items-center h-[70%] my-auto '>
-            <div>
+          <div className=' contain '>
+            <div className='text'>
 
-            <h1 className=' text-5xl font-light text-gray-300'>Donate <span className='font-bold text-red-500'>blood</span> and be the reason of someone's existence.</h1>
-            <p className='font-light text-center text-gray-300 text-xl pt-2   '>Don't be "A negative" Be "O positive".</p>
+            <h1 className=' text-5xl font-light text-white'>Donate <span className='font-bold text-red-500'>blood</span>.</h1>
+            <p className=' text-white     '>Don't be "A negative" Be "O positive".</p>
+            <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
+
+            </div>
+            <div className='text'>
+              <div className='cards cards10'>
+                <h3 className='text-white shadow-md'>Donate Blood</h3>
+                <p></p>
+              </div>
+              <div className='cards cards2'>
+                <h3 className='text-white shadow-md'>Be Hero</h3>
+                <p></p>
+              </div>
+              <div className='cards cards5'>
+                <h3 className='text-white shadow-md'>Life Good</h3>
+                <p></p>
+              </div>
+              <div className='cards cards8'>
+                <h3 className='text-white shadow-md'>Sacrifice</h3>
+                <p></p>
+              </div>
             </div>
           </div>
           </div>
-          <div className=' h-full w-full  relative '>
+          <div className=' h-full w-full  bg bg3 bg-fixed '>
+
+          {/* <Image src={pic3} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
 
         
-          <img src= "https://i.ibb.co/zr85Nds/pic-2.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" />
+          {/* <img src= "https://i.ibb.co/zr85Nds/pic-2.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
         
-          <div className='  flex justify-center items-center h-[70%] my-auto '>
-            <div>
+          <div className='  contain'>
+            <div className='text'>
 
-            <h1 className=' text-5xl font-light text-gray-300'>The gift of <span className='font-bold text-red-500'>blood</span> is a gift of someone life.</h1>
-            <p className='font-light text-center text-gray-300 text-xl pt-2   '>You can became a super hero too.</p>
+            <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span>.</h1>
+            <p className=' text-white '>You can became a super hero too.</p>
+            <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
+
+            </div>
+            <div className='text'>
+              <div className='cards cards12'>
+                <h3 className='text-white shadow-md'>Donate Blood</h3>
+                <p></p>
+              </div>
+              <div className='cards cards9'>
+                <h3 className='text-white shadow-md'>Be Hero</h3>
+                <p></p>
+              </div>
+              <div className='cards cards7'>
+                <h3 className='text-white shadow-md'>Life Good</h3>
+                <p></p>
+              </div>
+              <div className='cards cards4'>
+                <h3 className='text-white shadow-md'>Sacrifice</h3>
+                <p></p>
+              </div>
             </div>
           </div>
           </div>
-          <div className=' h-full w-full  relative '>
+          <div className=' h-full w-full  bg bg4 bg-fixed '>
+
+          {/* <Image src={pic4} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
 
         
-          <img src="https://i.ibb.co/gVQFp6d/pic-77.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay   lg:object-cover' alt="" />
+          {/* <img src="https://i.ibb.co/gVQFp6d/pic-77.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay   lg:object-cover' alt="" /> */}
         
-          <div className='   flex justify-center items-center h-[70%] my-auto '>
+          <div className='   contain'>
 
            
-            <div>
+            <div className='text'>
 
-            <h1 className=' text-5xl font-light text-gray-300'>A single drop of <span className='font-bold text-red-500'>blood</span> can make huge difference.</h1>
-            <p className='font-light text-center text-gray-300 text-xl pt-2 '> Donate <span className='font-bold text-red-500'>blood</span></p>
+            <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span></h1>
+            <p className=' text-white'> A single drop of <span className='font-bold text-red-500'>blood</span> can make huge difference.</p>
+            <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
+
             </div>
-           
+            <div className='text'>
+              <div className='cards cards1'>
+                <h3 className='text-white shadow-md'>Donate Blood</h3>
+                <p></p>
+              </div>
+              <div className='cards cards6'>
+                <h3 className='text-white shadow-md'>Be Hero</h3>
+                <p></p>
+              </div>
+              <div className='cards cards3'>
+                <h3 className='text-white shadow-md'>Life Good</h3>
+                <p></p>
+              </div>
+              <div className='cards cards5'>
+                <h3 className='text-white shadow-md'>Sacrifice</h3>
+                <p></p>
+              </div>
+            </div>
             </div>
           </div>
-          <div className=' h-full w-full  relative '>
+          <div className=' h-full w-full  bg bg5 bg-fixed  '>
+
+          {/* <Image src={pic5} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
 
         
-          <img src="https://i.ibb.co/xJHkNCn/pic-33.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" />
+          {/* <img src="https://i.ibb.co/xJHkNCn/pic-33.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
         
-          <div className='flex justify-center items-center h-[70%] my-auto '>
-            <div>
+          <div className='contain '>
+            <div className='text'>
 
-            <h1 className=' text-5xl font-light text-gray-300'>Be the reason for someone's <span className='font-bold text-red-500'>heartbeat</span>..</h1>
-            <p className='font-light text-center text-gray-300 text-xl pt-2   '>Stay fit and eat right and donate <span className='font-bold text-red-500'>blood</span></p>
+            <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span></h1>
+            <p className=' text-white  '>Stay fit and eat right and donate <span className='font-bold text-red-500'>blood</span></p>
+            <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
+
+            </div>
+            <div className='text'>
+              <div className='cards cards11'>
+                <h3 className='text-white shadow-md'>Donate Blood</h3>
+                <p></p>
+              </div>
+              <div className='cards cards2'>
+                <h3 className='text-white shadow-md'>Be Hero</h3>
+                <p></p>
+              </div>
+              <div className='cards cards3'>
+                <h3 className='text-white shadow-md'>Life Good</h3>
+                <p></p>
+              </div>
+              <div className='cards cards7'>
+                <h3 className='text-white shadow-md'>Sacrifice</h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div className=' h-full w-full  bg bg6 bg-fixed  '>
+
+          {/* <Image src={pic5} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
+
+        
+          {/* <img src="https://i.ibb.co/xJHkNCn/pic-33.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
+        
+          <div className='contain '>
+            <div className='text'>
+
+            <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span></h1>
+            <p className=' text-white  '>Stay fit and eat right and donate <span className='font-bold text-red-500'>blood</span></p>
+            <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
+
+            </div>
+            <div className='text'>
+              <div className='cards cards10'>
+                <h3 className='text-white shadow-md'>Donate Blood</h3>
+                <p></p>
+              </div>
+              <div className='cards cards3'>
+                <h3 className='text-white shadow-md'>Be Hero</h3>
+                <p></p>
+              </div>
+              <div className='cards cards5'>
+                <h3 className='text-white shadow-md'>Life Good</h3>
+                <p></p>
+              </div>
+              <div className='cards cards9'>
+                <h3 className='text-white shadow-md'>Sacrifice</h3>
+                <p></p>
+              </div>
             </div>
           </div>
           </div>
@@ -121,13 +270,17 @@ const Banner = () => {
 
       {/* about section */}
 
-      <section className="mt-16 w-[90%] grid lg:grid-cols-2 gap-5 mx-auto">
+      <section className="mt-20 w-[90%] grid lg:grid-cols-2 gap-3 justify-items-center  container">
         
-          <div className="avatar">
-            <div className="w-auto rounded">
-              <img src="https://i.ibb.co/3RRXjvG/about-1.jpg" />
-            </div>
-          </div>
+          {/* <div className="avatar">
+            <div className="w-auto rounded"> */}
+                <div className='lg:w-1/2'>
+
+              <Image src={pic6} width='' ></Image>
+                </div>
+              {/* <img src="https://i.ibb.co/3RRXjvG/about-1.jpg" /> */}
+            {/* </div>
+          </div> */}
         
         <div className='my-auto '>
           <h1 className="text-5xl text-center font-bold text-red-500 pt-12">

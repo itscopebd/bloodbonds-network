@@ -6,16 +6,18 @@
   .gallery {
     display: flex;
     animation: scroll 10s linear infinite;
+    
   }
   
   .galleryItem {
-    width: 100px; /* Adjust the image size */
+    width: 150px; /* Adjust the image size */
     height: 100px; /* Adjust the image size */
-    margin-right: 10px; /* Adjust the spacing between images */
+    margin-right: 20px; /* Adjust the spacing between images */
     background-size: cover;
     background-position: center;
     transition: opacity 0.5s ease-in-out;
-    opacity: 0.3;
+    opacity: 1;
+    
   }
   
   @keyframes scroll {
