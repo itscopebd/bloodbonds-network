@@ -93,7 +93,7 @@ const Banner = () => {
         
           {/* <img src="https://i.ibb.co/GV7bvZ7/pic-4.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
         
-          <div className=' flex items-center h-[88%] '>
+          <div className=' flex items-center h-[88%]'>
             <div className=''>
 
             <h1 className=' text-5xl font-light text-white'>Donate <span className='font-bold text-red-500'>blood</span>.</h1>
@@ -200,7 +200,7 @@ const Banner = () => {
         
           {/* <img src="https://i.ibb.co/xJHkNCn/pic-33.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
         
-          <div className='flex items-center h-[88%] '>
+          <div className='flex items-center h-[88%]'>
             <div className=''>
 
             <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span></h1>
@@ -235,7 +235,7 @@ const Banner = () => {
         
           {/* <img src="https://i.ibb.co/xJHkNCn/pic-33.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
         
-          <div className='flex items-center h-[88%] '>
+          <div className='flex items-center h-[88%]'>
             <div className=''>
 
             <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span></h1>
@@ -269,11 +269,11 @@ const Banner = () => {
 
       {/* about section */}
 
-      <section className="mt-20  grid lg:grid-cols-2 gap-3 justify-items-center  container">
+      <section className="mt-20 w-[90%] grid lg:grid-cols-2 gap-3 justify-items-center mx-auto  container">
         
           {/* <div className="avatar">
             <div className="w-auto rounded"> */}
-                <div className='w-1/2'>
+                <div className='w-3/4'>
 
               <Image src={pic6} width='' ></Image>
                 </div>
