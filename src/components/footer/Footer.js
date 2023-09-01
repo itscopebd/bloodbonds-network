@@ -13,9 +13,9 @@ const Footer = () => {
     <Image className='justify-center' src={logo} width={50} height={20} alt='logo'></Image>
     <p className='text-xl font-bold text-primaryColor'>BloodBond Network</p>
     </div>
-    <p className=' w-56 ms-5 '>Empowering lives through blood donation, one heartbeat at a time. Explore our mission to promote blood donation, share stories of impact, and inspire a community of positive change.</p>
+    <p className=' w-56 ms-5'>Empowering lives through blood donation, one heartbeat at a time. Explore our mission to promote blood donation, share stories of impact, and inspire a community of positive change.</p>
   </div> 
-  <div>
+  <div className='ms-5'>
     <span className="title text-base font-semibold  text-white  uppercase mb-2">About</span> 
     <a className="link link-hover">Home</a> 
     <a className="link link-hover">Donors</a> 
@@ -23,14 +23,14 @@ const Footer = () => {
     <a className="link link-hover">Join Us</a>
     <a className="link link-hover">Dashboard</a>
   </div> 
-  <div>
+  <div className='ms-5'>
     <span className="title text-base font-semibold  text-white  uppercase mb-2">Contact Us</span> 
     <a className="link link-hover">01234 567 891</a> 
     <a className="link link-hover mb-3">01234 567 891</a> 
     <a className="link link-hover">blood@gmail.com</a> 
     <a className="link link-hover">blood@gmail.com</a>
   </div> 
-  <div>
+  <div className='ms-5'>
     <span className="title text-base font-semibold  text-white  uppercase mb-2">Follow Us</span> 
     <p className='mb-3'>Join us on social media</p>
     <div className="grid grid-flow-col gap-4">
