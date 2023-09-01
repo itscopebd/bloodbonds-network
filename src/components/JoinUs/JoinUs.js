@@ -4,7 +4,8 @@ const JoinUs = () => {
     return (
         <div>
             <h1 className='text-5xl text-center font-bold text-red-500 pt-12'>Join US</h1>
-            <p className='text-gray-500 pt-10 text-center '>Join our volunteer team and play a vital role in supporting our blood donation mission. <br /> <br /> Together, we can create a meaningful impact and inspire positive change in our community.</p>
+            <p className='text-gray-500 pt-10 text-center'>Join our volunteer team and play a vital role in supporting our blood donation mission. <br /> <br /> Together, we can create a meaningful impact and inspire positive change in our community.</p>
+              
 
 
             <div className="hero lg:w-full h-[900px] mx-auto mt-10 rounded" style={{ backgroundImage: 'url(https://shorturl.at/egEG4)' }}>
