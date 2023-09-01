@@ -9,10 +9,10 @@ const OurStory = () => {
             <h2 className='text-center text-2xl md:text-3xl text-red-700 font-bold mb-5'>Our Story</h2>
             <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div className='flex justify-center items-center'>
-                    <Image src={story} alt='image' className='rounded-lg' width={680} height={500} />
+                    <Image src={story} alt='image' className='rounded-lg px-5 md:px-0' width={680} height={500} />
                 </div>
-                <div className='text-md pt-2 md:text-lg mx-auto'>
-                    <p className='w-12/12 md:w-12/12 text-justify'>
+                <div className='text-md pt-2 md:text-lg mx-auto px-5 md:px-0'>
+                    <p className='w-12/12 md:w-12/12 text-justify text-md md:text-lg'>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ea laboriosam perferendis
                         maiores cupiditate quibusdam deleniti voluptas, vitae qui repudiandae sit, odit eveniet debitis
                         placeat, aliquam nemo suscipit quo omnis quos? Perspiciatis et modi magnam, cumque distinctio
