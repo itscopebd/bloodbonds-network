@@ -76,6 +76,9 @@
 }
 .bg6{
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-33.jpg');
+}
+.bg7{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-44.jpg');
 
 }
 .contain{
