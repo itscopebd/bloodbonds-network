@@ -1,6 +1,5 @@
 
 import React from 'react';
-// import person from '@/app/asset/Volunteer.jpg';
 import person from '../../app/asset/volunteer.jpg'
 import Image from 'next/image';
 

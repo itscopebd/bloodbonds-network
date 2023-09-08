@@ -27,6 +27,8 @@ const AboutUs = () => {
                     <p className='italic text-center w-4/4 mx-auto border py-12 border-red-700 px-8 rounded-xl text-md lg:text-xl'>Empowering Lives Through Lifesaving Blood Donations. Our mission is to bridge hope with action, advocating for and facilitating lifesaving blood donations that impact countless lives. At the heart of our purpose lies the commitment to provide a lifeline of donated blood, driving positive change and saving lives.</p>
                 </div>
             </div>
+
+     
             <OurStory></OurStory>
             <MeetTheTeam></MeetTheTeam>
             <TestimonialSection></TestimonialSection>
