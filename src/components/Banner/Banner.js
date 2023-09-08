@@ -169,7 +169,7 @@ const Banner = () => {
             <div className=''>
 
             <h1 className=' text-5xl font-bold text-white'>Donate <span className='font-bold text-red-500'>blood</span></h1>
-            <p className=' text-white'> A single drop of <span className='font-bold text-red-500'>blood</span> can make huge difference.</p>
+            <p className=' text-white'> A drop of <span className='font-bold text-red-500'>blood</span> saves life. </p>
             <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl '>Donate</button>
 
             </div>
@@ -269,11 +269,11 @@ const Banner = () => {
 
       {/* about section */}
 
-      <section className="mt-20 w-[90%] grid lg:grid-cols-2 gap-3 justify-items-center mx-auto  container">
+      <section className="mt-20  grid lg:grid-cols-2 gap-3 justify-items-center  mx-auto  container">
         
           {/* <div className="avatar">
             <div className="w-auto rounded"> */}
-                <div className='w-3/4'>
+                <div className='w-1/2'>
 
               <Image src={pic6} width='' ></Image>
                 </div>

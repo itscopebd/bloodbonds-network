@@ -1,4 +1,8 @@
 import React from "react";
+import Image from "next/image";
+import pic1 from '../../app/asset/exp-1.jpg'
+import pic2 from '../../app/asset/ex-2.jpg'
+import pic3 from '../../app/asset/exp-3.jpg'
 
 const MedicalInsights = () => {
   return (
@@ -14,7 +18,7 @@ const MedicalInsights = () => {
         <div className="card w-auto bg-base-100 shadow-xl">
           <div className="avatar">
             <div className="w-auto rounded">
-              <img src="https://i.ibb.co/51kRCJT/ex-2.jpg" />
+              <Image src={pic1}></Image>
             </div>
           </div>{" "}
           <div className="card-body">
@@ -30,8 +34,8 @@ const MedicalInsights = () => {
         <div className="card w-auto bg-base-100 shadow-xl">
           <div className="avatar">
             <div className="w-auto rounded">
-              <img src="https://i.ibb.co/wWws4fq/exp-3.jpg" />
-            </div>
+          <Image src={pic2}></Image>    
+        </div>
           </div>{" "}
           <div className="card-body">
           <h2 className="card-title">Understanding <span className='font-bold text-red-500'>Blood</span>Type.</h2>
@@ -46,7 +50,7 @@ const MedicalInsights = () => {
         <div className="card w-auto bg-base-100 shadow-xl">
           <div className="avatar">
             <div className="w-auto rounded">
-              <img src="https://i.ibb.co/HzRWJsj/exp-1.jpg" />
+              <Image src={pic3}></Image>
             </div>
           </div>{" "}
           <div className="card-body">
