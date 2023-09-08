@@ -1,5 +1,4 @@
 "use client";
-import AutoImageGallery from '@/components/AutoImage/AutoImageGallery';
 import Banner from '@/components/Banner/Banner';
 import ContactUs from '@/components/ContactUs/ContactUs';
 import EmpoweringDonors from '@/components/EmpoweringDonors/EmpoweringDonors';
