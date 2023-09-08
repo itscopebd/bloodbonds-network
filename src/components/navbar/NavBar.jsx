@@ -4,14 +4,12 @@ import Link from 'next/link';
 import React, { useContext } from 'react';
 import './Navbar.css';
 import Image from 'next/image';
-// import logo from '@/app/asset/Blood (2).png'
 import logo from '../../app/asset/Blood (2).png'
 import { AuthContext } from '@/context/authContext';
+// import ActiveLink from './Activelink';
 
 const Navbar = () => {
-
   const {user}= useContext(AuthContext);
-
 
   console.log(user)
   const NavItems =   <>
@@ -22,11 +20,19 @@ const Navbar = () => {
   <li className='text-white font-semibold'><Link href="/donorlist">Donors</Link></li>
   <li className='text-white font-semibold'><Link href="/contact">Contact Us</Link></li>
 
+{/* 
+<ActiveLink className="font-semibold" href="/">Home</ActiveLink>
+<ActiveLink href="/about">About</ActiveLink>
+<ActiveLink href="/donorlist">Donors</ActiveLink>
+<ActiveLink href="/contact">Contact Us</ActiveLink> */}
+
+
   {/* when user registration then show dashboard  */}
   {
     user && <li className='text-white font-semibold'><Link href="/dashboard">Dashboard</Link></li> 
   }
-  
+
+{/* {user && <ActiveLink href="/dashboard">Dashboard</ActiveLink>} */}
 
   </> 
 

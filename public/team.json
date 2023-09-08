@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Joe Keith",
+        "role": "Director",
+        "description": "He is the director of our team. He is the one who first came up with this idea to create a team from where we can help people who needs blood.",
+        "imageSrc": "../src/app/asset/volunteer.jpg",
+        "type": "Donor"
+    },
+    {
+        "name": "Rosy Watson",
+        "role": "Manager",
+        "description": "She is the manager of our team. Managing the team very dedicatedly from the beginning.",
+        "imageSrc": "../src/app/asset/volunteer.jpg",
+        "type": "Donor"
+    },
+    {
+        "name": "John Keith",
+        "role": "Medical Advisor",
+        "description": "She is a doctor who gives all the medical advice to the team.",
+        "imageSrc": "../src/app/asset/volunteer2.jpg",
+        "type": "Donor"
+    },
+    {
+        "name": "Rosy Watson",
+        "role": "Medical Consultant",
+        "description": "He is a doctor who gives all the medical supports to the team.",
+        "imageSrc": "../src/app/asset/volunteer2.jpg",
+        "type": "Donor"
+    },
+    {
+        "name": "Joe Keith",
+        "role": "Donor",
+        "description": "Donating blood since 3 years and saved life of a lot of patients.",
+        "imageSrc": "../src/app/asset/doctor2.jpg",
+        "type": "Donor"
+    },
+    {
+        "name": "Rosy Watson",
+        "role": "Donor",
+        "description": "Donating blood since 3 years and saved life of a lot of patients.",
+        "imageSrc": "../src/app/asset/doctor2.jpg",
+        "type": "Donor"
+    },
+    {
+        "name": "John Keith",
+        "role": "Donor",
+        "description": "Donating blood since 3 years and saved life of a lot of patients.",
+        "imageSrc": "../src/app/asset/doctor.jpg",
+        "type": "Donor"
+    },
+    {
+        "name": "Rosy Watson",
+        "role": "Donor",
+        "description": "Donating blood since 3 years and saved life of a lot of patients.",
+        "imageSrc": "../src/app/asset/doctor.jpg",
+        "type": "Donor"
+    },
+    {
+        "name": "Rosy Watson",
+        "role": "Volunteer",
+        "description": "A university student.",
+        "imageSrc": "../src/app/asset/doctor.jpg",
+        "type": "Volunteer"
+    },
+    {
+        "name": "Joe Keith",
+        "role": "Volunteer",
+        "description": "A university student.",
+        "imageSrc": "../src/app/asset/doctor.jpg",
+        "type": "Volunteer"
+    },
+    {
+        "name": "Rosy Watson",
+        "role": "Volunteer",
+        "description": "A college student.",
+        "imageSrc": "../src/app/asset/doctor.jpg",
+        "type": "Volunteer"
+    },
+    {
+        "name": "John Keith",
+        "role": "Volunteer",
+        "description": "A job holder.",
+        "imageSrc": "../src/app/asset/doctor.jpg",
+        "type": "Volunteer"
+    }
+]
