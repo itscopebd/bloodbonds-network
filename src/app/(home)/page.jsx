@@ -23,8 +23,6 @@ const BannerPage = () => {
             <FaqSection></FaqSection>
             <GetInTouch></GetInTouch>
 
-
-
         </div>
     );
 };
