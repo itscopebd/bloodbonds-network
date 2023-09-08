@@ -22,7 +22,6 @@ const BannerPage = () => {
             <ContactUs></ContactUs>
             <FaqSection></FaqSection>
             <GetInTouch></GetInTouch>
-            
 
         </div>
     );

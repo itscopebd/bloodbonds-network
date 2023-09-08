@@ -5,6 +5,7 @@ import { FaBriefcaseMedical } from "react-icons/fa6";
 import { RxBlendingMode } from "react-icons/rx";
 import { TiUserAddOutline } from "react-icons/ti";
 import { PiPlusCircleBold } from "react-icons/pi";
+import Link from 'next/link';
 
 const DonationProcess = () => {
     return (
@@ -58,7 +59,7 @@ const DonationProcess = () => {
                         </div>
                     </div>
 
-                    <button className="btn btn-outline btn-error lg:mt-4">Donate Now</button>
+                    <Link href="/login" className="btn btn-outline btn-error lg:mt-4">Donate Now</Link>
 
                 </div>
 
