@@ -6,8 +6,6 @@ import './about.css'
 import MeetTheTeam from '@/components/MeetTheTeam/MeetTheTeam';
 import TestimonialSection from '@/components/Testimonial/Testimonial';
 import OurStory from '@/components/OurStory/OurStory';
-import DonorStories from '@/components/DonorStories/DonorStories';
-import PlasmaFAQ from '@/components/PlasmaFAQ/PlasmaFAQ';
 
 const AboutUs = () => {
     return (
@@ -30,8 +28,7 @@ const AboutUs = () => {
                 </div>
             </div>
 
-        <DonorStories></DonorStories>
-        <PlasmaFAQ></PlasmaFAQ>
+     
             <OurStory></OurStory>
             <MeetTheTeam></MeetTheTeam>
             <TestimonialSection></TestimonialSection>
