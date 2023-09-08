@@ -154,4 +154,70 @@ export default MeetTheTeam;
 
 
 
+// 'use client'
 
+// import React, { useEffect, useState } from 'react';
+
+// const MeetTheTeam = () => {
+//     const [items, setItems] = useState([]);
+//     const [visible, setVisible] = useState(3); 
+
+//     // useEffect(() => {
+//     //     fetch("team.json")
+//     //         .then((res) => res.json())
+//     //         .then((data) => setItems(data))
+//     // }, []);
+//     // useEffect(() => {
+//     //     fetch("/public/team.json")
+//     //         .then((res) => res.json())
+//     //         .then((data) => {
+//     //             console.log(data);
+//     //             setItems(data);
+//     //         })
+//     //         .catch((error) => {
+//     //             console.error("Error fetching data:", error);
+//     //         });
+//     // }, []);
+
+//     useEffect( () =>{
+//         fetch('/team.json')
+//         .then(res => res.json())
+//         .then(data => console.log(data))
+//     }, [])
+    
+
+//     const showMore = () => {
+//         setVisible(visible + 3); 
+//     };
+
+//     return (
+//         <div>
+//             <div className='mt-10 container mx-auto'>
+//                 <h2 className='text-2xl lg:text-3xl font-bold text-red-700 text-center lg:mb-5'>Meet Our Team</h2>
+//                 <div className='flex justify-center'>
+//                     <div className="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-7 mx-auto justify-between">
+//                         {items.slice(0, visible).map((item, index) => (
+//                             <div className="card bg-base-100 shadow-xl" key={index}>
+//                                 <figure className="px-10 pt-10">
+//                                     <img className='rounded' src={item.imageSrc} alt={item.name}></img>
+//                                 </figure>
+//                                 <div className="card-body items-center text-center">
+//                                     <h2 className="card-title">{item.name}</h2>
+//                                     <p>{item.role}</p>
+//                                     <p>{item.description}</p>
+//                                 </div>
+//                             </div>
+//                         ))}
+//                     </div>
+//                 </div>
+//                 {visible < items.length && (
+//                     <div className='flex justify-center mt-5'>
+//                         <button className='btn btn-error' onClick={showMore}>See More</button>
+//                     </div>
+//                 )}
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default MeetTheTeam;
