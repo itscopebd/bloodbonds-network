@@ -15,7 +15,6 @@ const BannerPage = () => {
     return (
         <div>
             <Banner></Banner>
-            <AutoImageGallery></AutoImageGallery>
             <MedicalInsights></MedicalInsights>
             <EmpoweringDonors></EmpoweringDonors>
             <Work></Work>
