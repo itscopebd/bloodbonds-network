@@ -178,10 +178,7 @@ const Banner = () => {
                 </button>
               </div>
               <div className="">
-                <div className="">
-                  <h3 className="text-white shadow-md">Donate Blood</h3>
-                  <p></p>
-                </div>
+                
                 <div className="cards cards6">
                   <h3 className="text-white shadow-md">Be Hero</h3>
                   <p></p>
