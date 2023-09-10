@@ -14,6 +14,7 @@
     "aos": "^2.3.4",
     "autoprefixer": "10.4.15",
     "firebase": "^10.3.0",
+    "jose": "^4.14.6",
     "mongodb": "^6.0.0",
     "next": "^13.4.19",
     "postcss": "8.4.28",
@@ -28,6 +29,7 @@
     "tailwindcss": "3.3.3"
   },
   "devDependencies": {
-    "daisyui": "^3.6.3"
+    "daisyui": "^3.6.3",
+    "encoding": "^0.1.13"
   }
 }
