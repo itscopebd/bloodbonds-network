@@ -16,7 +16,7 @@ const ApplyDonor = () => {
   } = useForm();
   const hostUrl = `https://api.imgbb.com/1/upload?key=${image_secrect__key}`;
   const onSubmit = async (data) => {
-    setLoading(true)
+    setLoading(true);
 
     //  donar image host
     const formData = new FormData();
@@ -29,8 +29,8 @@ const ApplyDonor = () => {
       .then((res) => res.json())
       .then((imgResponse) => {
         // const imgUrl= imgResponse.
-        const imgUrl = imgResponse.data.display_url;
-
+        const imgUrl = imgResponse?.data?.display_url;
+       
         const savedDonor = {
           name: user?.displayName,
           email: user?.email,
@@ -51,26 +51,25 @@ const ApplyDonor = () => {
           },
           body: JSON.stringify(savedDonor),
         })
-          .then(res => res.json())
-          .then(data => {
-            if (data.message==="You Already applied !") {
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.message === "You Already applied !") {
               Swal.fire({
                 icon: "error",
                 title: "Oops...",
                 text: "You Already applied!",
               });
-              setLoading(false)
+              setLoading(false);
+            } else {
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Your Registration Success!",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              setLoading(false);
             }
-           else{
-            Swal.fire({
-              position: "top-end",
-              icon: "success",
-              title: "Your Registration Success!",
-              showConfirmButton: false,
-              timer: 1500,
-            });
-            setLoading(false)
-           }
           });
       });
   };
@@ -290,23 +289,25 @@ const ApplyDonor = () => {
 
               <div className="form-control mt-6">
                 <button className="btn btn-secondary">
-                  
-                {loading && loading ? (
-              <ColorRing
-                visible={true}
-                height="40"
-                width="80"
-                ariaLabel="blocks-loading"
-                wrapperStyle={{}}
-                wrapperClass="blocks-wrapper"
-                colors={["#F4F4F3", "#FFF", "#EB4249", "#abbd81", "#849b87"]}
-              />
-            ) : (
-              "Submit"
-            )}
-                  
-                  
-                
+                  {loading && loading ? (
+                    <ColorRing
+                      visible={true}
+                      height="40"
+                      width="80"
+                      ariaLabel="blocks-loading"
+                      wrapperStyle={{}}
+                      wrapperClass="blocks-wrapper"
+                      colors={[
+                        "#F4F4F3",
+                        "#FFF",
+                        "#EB4249",
+                        "#abbd81",
+                        "#849b87",
+                      ]}
+                    />
+                  ) : (
+                    "Submit"
+                  )}
                 </button>
               </div>
             </form>
