@@ -1,15 +1,14 @@
 "use client";
 
 import Link from 'next/link';
-import React, { useContext } from 'react';
 import './Navbar.css';
 import Image from 'next/image';
 import logo from '../../app/asset/Blood (2).png'
-import { AuthContext } from '@/context/authContext';
+import {  UserAuth } from '@/context/authContext';
 // import ActiveLink from './Activelink';
 
 const Navbar = () => {
-  const {user}= useContext(AuthContext);
+  const {user}= UserAuth();
 
   console.log(user)
   const NavItems =   <>
@@ -62,9 +61,8 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <button className="btn">
-          <Link href={'/login'}>Sign in</Link>
-
-        </button>
+        <Link href={'/login'}>Sign in</Link>
+      </button>
       </div>
       </div>
       </div>
