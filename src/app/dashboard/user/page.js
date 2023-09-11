@@ -1,19 +1,23 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import { UserAuth } from '@/context/authContext';
-import { useQuery } from '@tanstack/react-query';
 
 const Userpage = () => {
     const { user,loading } = UserAuth();
-    if (loading) {
+    const [data,setData]= useState([])
+  
+    useEffect(() => {
+        fetch(`/api/user/${user?.email}`)
+        .then(res=>res.json())
+        .then(data=>{
+          setData(data)
+        })
+    }, []);
 
-        return <span className="loading loading-bars loading-lg"></span>
-        
+    if (loading) {
+        return <div className='absolute top-1/2 left-1/2'><span className="loading loading-bars loading-lg"></span></div>
     }
-    const { data: data = [], fefetch } = useQuery(['data'], async () => {
-        const res = await fetch(`/api/user/${user?.email}`)
-        return res.json()
-    })
+
 
     return (
         <div className='flex justify-center items-center mt-20'>
