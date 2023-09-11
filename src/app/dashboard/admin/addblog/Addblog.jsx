@@ -14,7 +14,7 @@ const Addblog = () => {
       console.log(data);
 let {img,date,title,author,content}=data
        try {
-        const result= await fetch('http://localhost:3000/api/blog',
+        const result= await fetch('/api/blog',
         {
             method:"POST",
             headers: {

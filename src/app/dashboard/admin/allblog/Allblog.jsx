@@ -1,25 +1,11 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import DeletButton from './DeletButton';
-import { FaEdit } from 'react-icons/fa';
 
-const getAllblog= async ()=>{
-    try {
-        let res= await fetch("http://localhost:3000/api/blog",{
-          cache:'no-cache'
-        })
-      if (!res.ok) {
-        throw  new Error("data load failed")
-      }
-      return res.json()
-      } catch (error) {
-        console.log(error);
-      }
-}
+import React from 'react';
+
+
+
 
 const Allblog = async() => {
-let allblogdata= await getAllblog()
+
 
     return (
         <div >
@@ -30,33 +16,22 @@ let allblogdata= await getAllblog()
             </div>
             <div className='place-items-center'>
 
-            
-                      
- {
-  allblogdata.map(i =>(
-    <div key={i._id}  >
-<div className="alert shadow-lg mb-4 mx-auto">
+            <div className="alert shadow-lg mb-4 mx-auto">
 <div className="avatar">
   <div className="w-8 rounded">
-   <Image src={i.img} width={50} height={50} alt='blogs'></Image>
+    a
   </div>
 </div>
   <div>
-    <h3 className="font-bold">{i.title}</h3>
-    <div className="text-xs">Author:{i.author}</div>
+    <h3 className="font-bold"></h3>
+    <div className="text-xs">Author</div>
   </div>
-  <DeletButton id={i._id}></DeletButton>
-      
-      <button className='btn md:btn-xs'>
-          <Link href={`/dashboard/admin/updateblog/${i._id}`}> 
-          <FaEdit/>
-          </Link>
-       </button>
-       <button>{i.status}</button>
+ 
+     
+       
 </div>
-    </div>
-  ))
- }
+                      
+ 
 
       </div>  </div>
     );

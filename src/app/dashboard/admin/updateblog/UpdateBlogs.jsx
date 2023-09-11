@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { FaArrowLeft } from 'react-icons/fa';
-import Swal from 'sweetalert2';
 
 const UpdateBlogs = ({id ,Singleblog}) => {
     let {user}=UserAuth()
@@ -16,29 +15,7 @@ const UpdateBlogs = ({id ,Singleblog}) => {
 
 let {Newstatus,Newimg,Newdate,Newauthor,Newcontent,Newtitle,Newemail}=data
 
-try {
-    let res= await fetch(`http://localhost:3000/api/blog/${id}`,{
-        method: "PUT",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(data),
-    })
-    if (!res.ok) {
-        throw new Error("Failed to update topic");
-      }
-      Swal.fire({
-        position: 'top-center',
-        icon: 'success',
-        title: 'Your blog has been updated',
-        showConfirmButton: false,
-        timer: 1500
-      })
-      router.refresh();
-    
-} catch (error) {
-    console.log(error);
-}
+
     }
 
 
@@ -75,7 +52,7 @@ try {
                                 <label className="label">
                                     <span className="label-text">Image url</span>
                                 </label>
-                                <input type="text" defaultValue={img} placeholder="author"  {...register("Newimg")} className="input input-bordered" />
+                                <input type="text" placeholder="author"  {...register("Newimg")} className="input input-bordered" />
                              
                             </div>
                      
@@ -83,7 +60,7 @@ try {
                                 <label className="label">
                                     <span className="label-text">Author</span>
                                 </label>
-                                <input type="text" defaultValue={author} placeholder="author"  {...register("Newauthor")} className="input input-bordered" />
+                                <input type="text" placeholder="author"  {...register("Newauthor")} className="input input-bordered" />
                              
                             </div>
 
@@ -92,7 +69,7 @@ try {
                                 <label className="label">
                                     <span className="label-text">stock_quantity</span>
                                 </label>
-                                <input type="date" defaultValue={date} placeholder="stock_quantity"  {...register("Newdate")} className="input input-bordered" />
+                                <input type="date"  placeholder="stock_quantity"  {...register("Newdate")} className="input input-bordered" />
                                
                             </div>
                             <div>
@@ -100,7 +77,7 @@ try {
                                     <label className="label">
                                         <span className="label-text">Select Category</span>
                                     </label>
-                                    <select defaultValue={status} className="select select-bordered w-full  "  {...register("Newstatus")}>
+                                    <select className="select select-bordered w-full  "  {...register("Newstatus")}>
                 <option value="" selected>Select Category</option>
   <option value="pending">pending</option>
   <option value="active">active</option>
