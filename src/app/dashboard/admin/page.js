@@ -1,10 +1,13 @@
 import React from 'react';
-import Manageuser from './Manageuser';
+import AdminDetail from './AdminDetail';
+import Admininfo from './Admininfo';
+
 
 const ADminPage = () => {
     return (
         <div>
-           <Manageuser></Manageuser> 
+         <Admininfo/>
+          <AdminDetail></AdminDetail>
         </div>
     );
 };

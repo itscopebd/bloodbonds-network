@@ -4,6 +4,7 @@ import React from 'react';
 import Sidebar from './Sidebar';
 import { useQuery } from '@tanstack/react-query';
 import { UserAuth } from '@/context/authContext';
+import Topnav from './Topnav';
 
 const Dashboard = ({ children }) => {
 
@@ -16,7 +17,7 @@ const Dashboard = ({ children }) => {
 
   if (loading) {
 
-    return <span className="loading loading-bars loading-lg"></span>
+    return <span className="loading loading-bars loading-lg "></span>
     
 }
   
@@ -27,7 +28,13 @@ const Dashboard = ({ children }) => {
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col ">
-
+        <div className="w-full navbar  bg-[#d8ded6]   ">
+     
+      <div className="flex-1 lg:px-2 lg:mx-2 hidden lg:block font-bold uppercase dark:text-black">Welcome to DashBoard</div>
+      <div className="flex-none block">
+       <Topnav></Topnav>
+      </div>
+    </div>
 
           {children}
 
