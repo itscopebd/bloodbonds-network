@@ -19,14 +19,16 @@ export const POST = async (request) => {
   }
 };
 
+// donor get all 
 export const GET = async () => {
-
   const { db } = await connectToDatabase();
   try {
-      const result = await db.collection('donors').find().toArray();
-      return NextResponse.json(result);
-
+    const result = await db.collection("donors").find().toArray();
+    return NextResponse.json(result);
   } catch (err) {
-      return NextResponse.json({ message: err.toString() });
+    return NextResponse.json({ message: err.toString() });
   }
-}
+};
+
+
+
