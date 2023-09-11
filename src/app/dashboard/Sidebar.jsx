@@ -2,19 +2,19 @@
 
 import Link from 'next/link';
 import React from 'react';
-import { FaBlog, FaHistory, FaInfoCircle, FaPen, FaSignOutAlt, FaUser, FaUserCheck, FaWpforms } from 'react-icons/fa';
-import {  FaHouse, FaTimeline } from 'react-icons/fa6';
+import { FaBlog, FaDonate, FaHistory, FaInfoCircle, FaPen, FaSignOutAlt, FaUser, FaUserCheck, FaWpforms } from 'react-icons/fa';
+import {  FaChartBar, FaHouse, FaTimeline } from 'react-icons/fa6';
 
 const Sidebar = ({ data }) => {
   const role = data[0]?.role
 
   return (
 
-    <aside className='  h-screen bg-base-300 '>
+    <aside className='  h-screen  bg-[#000000] text-white dark:text-white ' >
       <h1 className='font-extrabold p-10 text-center text-2xl uppercase'>Dahsboard</h1>
      
       <div>
-        <ul className="  menu menu-vertical lg:min-w-max  rounded-box">
+        <ul className="  menu menu-vertical lg:min-w-max  rounded-box uppercase">
       
       <li>
         <Link href={'/dashboard'}> <FaHouse /> Dashboard Home</Link>
@@ -25,7 +25,7 @@ const Sidebar = ({ data }) => {
     <>
 
       <li>
-        <Link href={'/dashboard/admin'}> <FaHouse /> Dashboard Admin</Link>
+        <Link href={'/dashboard/admin'}> <FaChartBar /> Anylisis</Link>
       </li>
 
       <li>
@@ -40,6 +40,9 @@ const Sidebar = ({ data }) => {
       </li>
       <li>
         <Link href={'/dashboard/admin/addblog'}><FaPen /> Add Blog</Link>
+      </li>
+      <li>
+        <Link href={'/dashboard/admin/applieddonor'}><FaDonate/> Applied Donor</Link>
       </li>
 
     </>
