@@ -22,7 +22,7 @@ const ApplyDonor = () => {
     const formData = new FormData();
     formData.append("image", data.image[0]);
 
-    fetch(hostUrl, {
+    await fetch(hostUrl, {
       method: "POST",
       body: formData,
     })
@@ -44,7 +44,7 @@ const ApplyDonor = () => {
           gender: data.gender,
           hivStatus: data.hivStatus,
         };
-        fetch("/api/donor", {
+         fetch("/api/donor", {
           method: "POST",
           headers: {
             "content-type": "application/json",
