@@ -1,11 +1,30 @@
-// "use client"
+"use client"
 
+import { UserAuth } from '@/context/authContext';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaBlog, FaDonate, FaHistory, FaInfoCircle, FaPen, FaSignOutAlt, FaUser, FaUserCheck, FaWpforms } from 'react-icons/fa';
 import {  FaChartBar, FaHouse, FaTimeline } from 'react-icons/fa6';
 
-const Sidebar = ({ data }) => {
+const Sidebar = () => {
+
+
+  const {user,loading}= UserAuth();
+  const [data,setData]= useState([])
+  useEffect(() => {
+      const fetchUser= async ()=>{
+        await fetch(`/api/user/${user?.email}`)
+      .then(res=>res.json())
+      .then(data=>{
+        setData(data)
+      })
+      }
+      fetchUser()
+  }, []);
+  if (loading) {
+    return <div className='absolute top-1/2 left-1/2'><span className="loading loading-bars loading-lg"></span></div>
+  }
+  console.log(user)
   const role = data[0]?.role
 
   return (
@@ -59,7 +78,7 @@ const Sidebar = ({ data }) => {
           <Link href={'/dashboard/donar'}> <FaInfoCircle /> Donor Info</Link>
         </li>
       </>
-      :
+      : role==="user"?
       <>
 
         <li><Link href={'/dashboard/user'}> <FaUserCheck /> User Dashboard</Link></li>
@@ -70,6 +89,7 @@ const Sidebar = ({ data }) => {
           <Link href={'/dashboard/user/applydonor'}> <FaWpforms />Apply Donor</Link>
         </li>
       </>
+      :  <div className='absolute top-1/2 left-1/2'><span className="loading loading-bars loading-lg"></span></div>
 }
 
 
