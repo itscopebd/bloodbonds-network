@@ -27,15 +27,15 @@ const AppliedDonor = () => {
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         confirmButtonText: "Yes, Approved it!",
-      }).then((result) => {
+      }).then( async(result) => {
         if (result.isConfirmed) {
-          fetch(`/api/donor/${id}`, {
+          await fetch(`/api/donor/${id}`, {
             method: "PATCH",
             body: JSON.stringify(value),
           })
             .then((res) => res.json())
-            .then((data) => {
-              fetch("/api/donor/pending")
+            .then(async(data) => {
+              await fetch("/api/donor/pending")
                 .then((res) => res.json())
                 .then((data) => setDonors(data));
             });
@@ -43,32 +43,7 @@ const AppliedDonor = () => {
           Swal.fire("Approved!", "This Donor is Approved.", "success");
         }
       });
-    } else {
-      Swal.fire({
-        title: "Are you sure?",
-        text: "This Donor is Pending!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, Pending it!",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          fetch(`/api/donor/${id}`, {
-            method: "PATCH",
-            body: JSON.stringify(value),
-          })
-            .then((res) => res.json())
-            .then((data) => {
-              fetch("/api/donor/pending")
-                .then((res) => res.json())
-                .then((data) => setDonors(data));
-            });
-
-          Swal.fire("Pending!", "This Donor is Pending.", "success");
-        }
-      });
-    }
+    } 
   };
 
   // handle delete donor
