@@ -43,6 +43,7 @@ const ApplyDonor = () => {
           blood: data.blood,
           gender: data.gender,
           hivStatus: data.hivStatus,
+          status:"Pending"
         };
          fetch("/api/donor", {
           method: "POST",
@@ -62,7 +63,7 @@ const ApplyDonor = () => {
               setLoading(false);
             } else {
               Swal.fire({
-                position: "top-end",
+              
                 icon: "success",
                 title: "Your Registration Success!",
                 showConfirmButton: false,
