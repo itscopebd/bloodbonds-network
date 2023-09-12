@@ -7,9 +7,12 @@ const AppliedDonor = () => {
   const [donors, setDonors] = useState([]);
 
   useEffect(() => {
-    fetch("/api/donor/pending")
-      .then((res) => res.json())
-      .then((data) => setDonors(data));
+    const appliedDonor = async () => {
+      await fetch("/api/donor/pending")
+        .then((res) => res.json())
+        .then((data) => setDonors(data));
+    };
+    appliedDonor()
   }, []);
 
   // handle donor approve and pending
@@ -33,8 +36,8 @@ const AppliedDonor = () => {
             .then((res) => res.json())
             .then((data) => {
               fetch("/api/donor/pending")
-              .then((res) => res.json())
-              .then((data) => setDonors(data));
+                .then((res) => res.json())
+                .then((data) => setDonors(data));
             });
 
           Swal.fire("Approved!", "This Donor is Approved.", "success");
@@ -56,10 +59,10 @@ const AppliedDonor = () => {
             body: JSON.stringify(value),
           })
             .then((res) => res.json())
-            .then((data) =>{
+            .then((data) => {
               fetch("/api/donor/pending")
-              .then((res) => res.json())
-              .then((data) => setDonors(data));
+                .then((res) => res.json())
+                .then((data) => setDonors(data));
             });
 
           Swal.fire("Pending!", "This Donor is Pending.", "success");
