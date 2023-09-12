@@ -12,70 +12,89 @@ const AppliedDonor = () => {
       .then((data) => setDonors(data));
   }, []);
 
-// handle donor approve and pending 
+  // handle donor approve and pending
 
   const handleDonor = async (value, id) => {
+    if (value == "Approve") {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "This Donor is Approve!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Approved it!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          fetch(`/api/donor/${id}`, {
+            method: "PATCH",
+            body: JSON.stringify(value),
+          })
+            .then((res) => res.json())
+            .then((data) => console.log(data));
 
-if (value=="Approve") {
-  Swal.fire({
-    title: 'Are you sure?',
-    text: "This Donor is Approve!",
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Yes, Approved it!'
-  }).then((result) => {
-    if (result.isConfirmed) {
+          Swal.fire("Approved!", "This Donor is Approved.", "success");
+        }
+      });
+    } else {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "This Donor is Pending!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Pending it!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          fetch(`/api/donor/${id}`, {
+            method: "PATCH",
+            body: JSON.stringify(value),
+          })
+            .then((res) => res.json())
+            .then((data) => console.log(data));
 
-      console.log(value, id);
-       fetch(`/api/donor/${id}`, {
-        method: "PATCH",
-        body: JSON.stringify(value),
-      })
-        .then((res) => res.json())
-        .then((data) => console.log(data));
-
-      Swal.fire(
-        'Approved!',
-        'This Donor is Approved.',
-        'success'
-      )
+          Swal.fire("Pending!", "This Donor is Pending.", "success");
+        }
+      });
     }
-  })
-}
-else{
-
-  Swal.fire({
-    title: 'Are you sure?',
-    text: "This Donor is Pending!",
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Yes, Pending it!'
-  }).then((result) => {
-    if (result.isConfirmed) {
-
-      console.log(value, id);
-       fetch(`/api/donor/${id}`, {
-        method: "PATCH",
-        body: JSON.stringify(value),
-      })
-        .then((res) => res.json())
-        .then((data) => console.log(data));
-
-      Swal.fire(
-        'Pending!',
-        'This Donor is Pending.',
-        'success'
-      )
-    }
-  })
-}
   };
 
-  
+  // handle delete donor
+
+  const hamdleDeleteDonor = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "This Donor is Delete!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`/api/donor/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            fetch("/api/donor")
+              .then((res) => res.json())
+              .then((data) => setDonors(data));
+          });
+
+        Swal.fire("Yes!", "This Donor is Delete.", "success");
+      }
+    });
+  };
+
+  if (donors.length === 0) {
+    return (
+      <div className="absolute top-1/2 left-1/2">
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    );
+  }
   return (
     <div className="p-4">
       <div className="">
@@ -145,16 +164,17 @@ else{
                     </select>
                   </td>
                   <td>
-                    {" "}
                     <button className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor">
                       <FaComments className="w-full h-full p-2" />
-                    </button>{" "}
+                    </button>
                   </td>
                   <td>
-                    {" "}
-                    <button className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor">
+                    <button
+                      onClick={() => hamdleDeleteDonor(donor._id)}
+                      className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor"
+                    >
                       <FaTrash className="w-full h-full p-2" />
-                    </button>{" "}
+                    </button>
                   </td>
                 </tr>
               </>
