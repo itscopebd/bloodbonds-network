@@ -27,15 +27,15 @@ const AllDonor = () => {
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         confirmButtonText: "Yes, Approved it!",
-      }).then((result) => {
+      }).then( async(result) => {
         if (result.isConfirmed) {
-          fetch(`/api/donor/${id}`, {
+          await fetch(`/api/donor/${id}`, {
             method: "PATCH",
             body: JSON.stringify(value),
           })
             .then((res) => res.json())
-            .then((data) => {
-              fetch("/api/donor/approve")
+            .then( async(data) => {
+             await fetch("/api/donor/approve")
               .then((res) => res.json())
               .then(data => setDonors(data));
             });
