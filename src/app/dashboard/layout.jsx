@@ -7,14 +7,7 @@ import Topnav from "./Topnav";
 
 const Dashboard = ({ children }) => {
   const { user, loading } = UserAuth();
-const [data,setData]= useState([])
-  useEffect(() => {
-      fetch(`/api/user/${user?.email}`)
-      .then(res=>res.json())
-      .then(data=>{
-        setData(data)
-      })
-  }, []);
+
 
   if (loading) {
     return <div className='absolute top-1/2 left-1/2'><span className="loading loading-bars loading-lg"></span></div>
@@ -46,7 +39,7 @@ const [data,setData]= useState([])
         <div className="drawer-side  ">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
-          <Sidebar data={data}></Sidebar>
+          <Sidebar></Sidebar>
         </div>
       </div>
     </div>
