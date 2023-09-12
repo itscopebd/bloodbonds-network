@@ -137,6 +137,13 @@ const Sidebar = () => {
                   Apply Donor
                 </Link>
               </li>
+              <li>
+                <Link href={"/dashboard/user/userhistory"}>
+                  {" "}
+                  <FaWpforms />
+                  Activity log
+                </Link>
+              </li>
             </>
           ) : (
             <div className="absolute top-1/2 left-1/2">
