@@ -8,7 +8,7 @@ const AllDonor = () => {
 
   useEffect(() => {
   const allApproveDonor= async()=>{
-    await fetch("/api/donor/approve")
+    await fetch("/api/donor/approve",{ cache: 'no-store' })
     .then((res) => res.json())
     .then((data) => setDonors(data));
   }
@@ -30,12 +30,13 @@ const AllDonor = () => {
       }).then( async(result) => {
         if (result.isConfirmed) {
           await fetch(`/api/donor/${id}`, {
+            cache: 'no-store',
             method: "PATCH",
             body: JSON.stringify(value),
           })
             .then((res) => res.json())
             .then( async(data) => {
-             await fetch("/api/donor/approve")
+             await fetch("/api/donor/approve",{ cache: 'no-store' })
               .then((res) => res.json())
               .then(data => setDonors(data));
             });
