@@ -64,11 +64,12 @@ const Sidebar = ({ data }) => {
 
         <li><Link href={'/dashboard/user'}> <FaUserCheck /> User Dashboard</Link></li>
         <li>
-          <Link href={'/dashboard/user'}> <FaUserCheck /> User Info</Link>
+          <Link href={'/dashboard/user/userhistory'}> <FaHistory /> Your Activity</Link>
         </li>
         <li>
           <Link href={'/dashboard/user/applydonor'}> <FaWpforms />Apply Donor</Link>
         </li>
+        
       </>
 }
 
