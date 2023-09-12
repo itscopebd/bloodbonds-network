@@ -1,15 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
-// import story from '@/app/asset/Our story.jpg';
 import story from '../../app/asset/Our story.jpg';
 
 const OurStory = () => {
     return (
         <div className='mt-10 container mx-auto'>
             <h2 className='text-center text-2xl md:text-3xl text-red-700 font-bold mb-5'>Our Story</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-5'>
                 <div className='flex justify-center items-center'>
-                    <Image src={story} alt='image' className='rounded-lg px-5 md:px-0' width={680} height={500} />
+                    <Image src={story} alt='image' className='rounded-lg px-0 w-full' height={500} />
                 </div>
                 <div className='text-md pt-2 md:text-lg mx-auto px-5 md:px-0'>
                     <p className='w-12/12 md:w-12/12 text-justify text-md md:text-lg'>
@@ -31,4 +30,3 @@ const OurStory = () => {
 };
 
 export default OurStory;
-

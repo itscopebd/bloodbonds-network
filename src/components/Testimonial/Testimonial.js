@@ -1,6 +1,7 @@
-
 import React from 'react';
 import person from '../../app/asset/volunteer.jpg'
+import person2 from '../../app/asset/person2.jpg'
+import person3 from '../../app/asset/person3.jpg'
 import Image from 'next/image';
 
 const TestimonialSection = () => {
@@ -9,21 +10,23 @@ const TestimonialSection = () => {
             id: 1,
             name: 'John Doe',
             role: 'CEO, Company A',
+            img: person,
             content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed velit efficitur, ut elementum nisi tristique.'
         },
         {
             id: 2,
             name: 'Jane Smith',
             role: 'Designer, Company B',
+            img: person2,
             content: 'Pellentesque commodo arcu non ante tincidunt, ut ultricies nisl finibus. Morbi scelerisque nibh ac tortor lacinia, non bibendum enim facilisis.'
         },
         {
             id: 3,
             name: 'Mary Smith',
             role: 'Designer, Company B',
+            img: person3,
             content: 'Pellentesque commodo arcu non ante tincidunt, ut ultricies nisl finibus. Morbi scelerisque nibh ac tortor lacinia, non bibendum enim facilisis.'
         },
-        // Add more testimonials
     ];
 
     return (
@@ -40,15 +43,15 @@ const TestimonialSection = () => {
                                 </svg>
                                 </div>
                                 
-                                <p className="text-gray-600">{testimonial.content}</p>
+                                <p className="text-gray-600 italic">{testimonial.content}</p>
                             </div>
                             <div className="flex items-center">
                                 <div className="flex-shrink-0">
-                                    <Image className="h-10 w-10 rounded-full" src={person} alt={testimonial.name} />
+                                    <Image className="h-16 w-16 rounded-full" src={testimonial.img} alt={testimonial.name} />
                                 </div>
                                 <div className="ml-3">
                                     <p className="text-sm font-medium text-gray-800">{testimonial.name}</p>
-                                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                                    <p className="text-sm text-gray-500 ">{testimonial.role}</p>
                                 </div>
                             </div>
                         </div>
