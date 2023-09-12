@@ -17,25 +17,35 @@ const AdminDetail = () => {
         .then((data) => setAllDonor(data));
     };
     allDonorApprove();
-  },[]);
-  // all donor
 
-  useEffect(() => {
     const allDonorPending = async () => {
       await fetch("/api/donor/pending")
         .then((res) => res.json())
         .then((data) => setPendingDonor(data));
     };
     allDonorPending();
-  },[]);
-  useEffect(() => {
-    const allUser = async () => {
+
+   const allUser = async () => {
       await fetch("/api/user")
         .then((res) => res.json())
         .then((data) => setAllUser(data));
     };
     allUser();
+
   },[]);
+  // all donor
+
+  // useEffect(() => {
+  
+  // },[]);
+  // useEffect(() => {
+  //   const allUser = async () => {
+  //     await fetch("/api/user")
+  //       .then((res) => res.json())
+  //       .then((data) => setAllUser(data));
+  //   };
+  //   allUser();
+  // },[]);
 
   return (
     <div>
