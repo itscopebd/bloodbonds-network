@@ -7,15 +7,18 @@ import Swal from "sweetalert2";
 const AllAdminPage = () => {
   const [allAdmin, setAllAdmin] = useState([]);
   const router = useRouter();
+
   useEffect(() => {
-    const allAdmin = async () => {
+    const getAllAdmin = async () => {
       await fetch("/api/admin")
         .then((res) => res.json())
-        .then((data) => setAllAdmin(data));
+        .then((data) => {
+          setAllAdmin(data);
+          console.log(data);
+        });
     };
-    allAdmin();
+    getAllAdmin();
   }, [allAdmin]);
-
   // handle delete donor
 
   const hamdleDeleteAdmin = (id) => {
@@ -52,8 +55,8 @@ const AllAdminPage = () => {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, User it!",
-    }).then(async (result) => {
-      if (result.isConfirmed) {
+    }).then(async (response) => {
+      if (response.isConfirmed) {
         const data = "user";
         const res = await fetch(`/api/admin/${id}`, {
           cache: "no-store",
