@@ -5,11 +5,13 @@ import img2 from "../../asset/DonationProcess/download1.png";
 import img3 from "../../asset/DonationProcess/download3.png";
 import img4 from "../../asset/DonationProcess/download4.png";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 const AdminDetail = () => {
   // all donor
   const [allDonor, setAllDonor] = useState([]);
   const [pendingDonor, setPendingDonor] = useState([]);
   const [allUser, setAllUser] = useState([]);
+  const router= useRouter()
   useEffect(() => {
     const allDonorApprove = async () => {
       await fetch("/api/donor/approve",
@@ -32,6 +34,7 @@ const AdminDetail = () => {
       { cache: 'no-store' })
         .then((res) => res.json())
         .then((data) => setAllUser(data));
+        
     };
     allUser();
 
