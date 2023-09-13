@@ -37,11 +37,14 @@ const AppliedDonor = () => {
             body: JSON.stringify(value),
           })
             .then((res) => res.json())
-            .then(async(data) => {
+            .then(async(response) => {
               await fetch('/api/donor/pending',{ cache: 'no-store' })
                 .then((res) => res.json())
-                .then((data) => setDonors(data));
-               
+                .then((data) =>{
+                 setDonors(data)
+                  
+                  console.log("Update data applied page insde", data)
+                })
             });
             router.refresh()
           Swal.fire("Approved!", "This Donor is Approved.", "success");
@@ -49,7 +52,7 @@ const AppliedDonor = () => {
       });
     } 
   };
-
+console.log("applied page outsite", donors)
   // handle delete donor
 
   const hamdleDeleteDonor = (id) => {
