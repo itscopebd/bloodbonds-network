@@ -31,8 +31,8 @@ const AllDonor = () => {
       }).then( async(result) => {
         if (result.isConfirmed) {
           await fetch(`/api/donor/${id}`, {
-            cache: 'no-store',
-            method: "PATCH",
+            cache: 'no-store', 
+            method: "PUT",
             body: JSON.stringify(value),
           })
             .then((res) => res.json())
@@ -40,9 +40,9 @@ const AllDonor = () => {
              await fetch("/api/donor/approve",{ cache: 'no-store' })
               .then((res) => res.json())
               .then(data => setDonors(data));
-              router.refresh()
+            
             });
-
+            router.refresh()
           Swal.fire("Approved!", "This Donor is Approved.", "success");
         }
       });

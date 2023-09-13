@@ -33,20 +33,17 @@ const AppliedDonor = () => {
         if (result.isConfirmed) {
           await fetch(`/api/donor/${id}`, {
             cache: 'no-store' ,
-            method: "PATCH",
+            method: "PUT",
             body: JSON.stringify(value),
           })
             .then((res) => res.json())
             .then(async(data) => {
-              await fetch('/api/donor/pending',
-              {
-                cache: 'no-store' 
-              })
+              await fetch('/api/donor/pending',{ cache: 'no-store' })
                 .then((res) => res.json())
                 .then((data) => setDonors(data));
-                router.refresh()
+               
             });
-
+            router.refresh()
           Swal.fire("Approved!", "This Donor is Approved.", "success");
         }
       });
