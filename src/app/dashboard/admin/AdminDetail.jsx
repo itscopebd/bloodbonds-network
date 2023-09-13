@@ -12,21 +12,24 @@ const AdminDetail = () => {
   const [allUser, setAllUser] = useState([]);
   useEffect(() => {
     const allDonorApprove = async () => {
-      await fetch("/api/donor/approve")
+      await fetch("/api/donor/approve",
+      { cache: 'no-store' })
         .then((res) => res.json())
         .then((data) => setAllDonor(data));
     };
     allDonorApprove();
 
     const allDonorPending = async () => {
-      await fetch("/api/donor/pending")
+      await fetch("/api/donor/pending",
+      { cache: 'no-store' })
         .then((res) => res.json())
         .then((data) => setPendingDonor(data));
     };
     allDonorPending();
 
    const allUser = async () => {
-      await fetch("/api/user")
+      await fetch("/api/user",
+      { cache: 'no-store' })
         .then((res) => res.json())
         .then((data) => setAllUser(data));
     };
@@ -35,17 +38,6 @@ const AdminDetail = () => {
   },[]);
   // all donor
 
-  // useEffect(() => {
-  
-  // },[]);
-  // useEffect(() => {
-  //   const allUser = async () => {
-  //     await fetch("/api/user")
-  //       .then((res) => res.json())
-  //       .then((data) => setAllUser(data));
-  //   };
-  //   allUser();
-  // },[]);
 
   return (
     <div>
