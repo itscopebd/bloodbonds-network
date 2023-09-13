@@ -3,11 +3,11 @@
 import React, { useEffect, useState } from "react";
 import { FaBeer, FaComments, FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
-const AppliedDonor = () => {
+const AllDonor = () => {
   const [donors, setDonors] = useState([]);
 
   useEffect(() => {
-    fetch("/api/donor/pending")
+    fetch("/api/donor/approve")
       .then((res) => res.json())
       .then((data) => setDonors(data));
   }, []);
@@ -32,7 +32,7 @@ const AppliedDonor = () => {
           })
             .then((res) => res.json())
             .then((data) => {
-              fetch("/api/donor/pending")
+              fetch("/api/donor/approve")
               .then((res) => res.json())
               .then((data) => setDonors(data));
             });
@@ -57,7 +57,7 @@ const AppliedDonor = () => {
           })
             .then((res) => res.json())
             .then((data) =>{
-              fetch("/api/donor/pending")
+              fetch("/api/donor/approve")
               .then((res) => res.json())
               .then((data) => setDonors(data));
             });
@@ -86,7 +86,7 @@ const AppliedDonor = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            fetch("/api/donor/pending")
+            fetch("/api/donor/approve")
               .then((res) => res.json())
               .then((data) => setDonors(data));
           });
@@ -96,17 +96,17 @@ const AppliedDonor = () => {
     });
   };
 
-  // if (donors.length === 0) {
-  //   return (
-  //     <div className="absolute top-1/2 left-1/2">
-  //       <span className="loading loading-bars loading-lg"></span>
-  //     </div>
-  //   );
-  // }
+  if (donors.length === 0) {
+    return (
+      <div className="absolute top-1/2 left-1/2">
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    );
+  }
   return (
     <div className="p-4">
       <div className="">
-        <h1 className="font-bold text-3xl uppercase py-4">All Aplied Donor</h1>
+        <h1 className="font-bold text-3xl uppercase py-4">All Donor</h1>
       </div>
       <div className="overflow-x-auto">
         <table className="table table-xs text-center">
@@ -193,4 +193,4 @@ const AppliedDonor = () => {
   );
 };
 
-export default AppliedDonor;
+export default AllDonor;
