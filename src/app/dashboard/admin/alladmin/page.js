@@ -2,13 +2,13 @@
 
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import {FaTrash, FaUser } from "react-icons/fa";
+import { FaTrash, FaUser } from "react-icons/fa";
 import Swal from "sweetalert2";
-const AppliedDonor = () => {
+const AllAdminPage = () => {
   const [allAdmin, setAllAdmin] = useState([]);
   const router = useRouter();
   useEffect(() => {
-    const allAdmin= async () => {
+    const allAdmin = async () => {
       await fetch("/api/admin")
         .then((res) => res.json())
         .then((data) => setAllAdmin(data));
@@ -42,33 +42,33 @@ const AppliedDonor = () => {
     });
   };
 
-//   make admin 
-const hamdleMakeUser=(id)=>{
+  //   make admin
+  const hamdleMakeUser = (id) => {
     Swal.fire({
-        title: "Are you sure?",
-        text: "This Admin is User!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, User it!",
-      }).then(async (result) => {
-        if (result.isConfirmed) {
-            const data="user"
-          const res = await fetch(`/api/admin/${id}`, {
-            cache: "no-store",
-            method: "PUT",
-            body:JSON.stringify(data)
-          });
-          Swal.fire("Yes!", "This Admin is User.", "success");
-          console.log(res);
-          if (res.ok) {
-            router.refresh();
-          }
+      title: "Are you sure?",
+      text: "This Admin is User!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, User it!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        const data = "user";
+        const res = await fetch(`/api/admin/${id}`, {
+          cache: "no-store",
+          method: "PUT",
+          body: JSON.stringify(data),
+        });
+        Swal.fire("Yes!", "This Admin is User.", "success");
+
+        if (res.ok) {
+          router.refresh();
         }
-      });  
-}
-if (allAdmin.length===0) {
+      }
+    });
+  };
+  if (allAdmin.length === 0) {
     return (
       <div className="absolute top-1/2 left-1/2">
         <span className="loading loading-bars loading-lg"></span>
@@ -116,11 +116,13 @@ if (allAdmin.length===0) {
                       className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor"
                     >
                       <FaTrash className="w-full h-full p-2" />
-                    </button> <span className="text-black font-bold">Or</span>
+                    </button>{" "}
+                    <span className="text-black font-bold">Or</span>
                     <button
                       onClick={() => hamdleMakeUser(admin._id)}
                       className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor"
-                    title="Make a user">
+                      title="Make a user"
+                    >
                       <FaUser className="w-full h-full p-2" />
                     </button>
                   </td>
@@ -134,4 +136,4 @@ if (allAdmin.length===0) {
   );
 };
 
-export default AppliedDonor;
+export default AllAdminPage;
