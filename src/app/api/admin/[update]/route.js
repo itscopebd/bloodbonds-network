@@ -16,7 +16,7 @@ export const PUT= async (request, { params })=> {
         role:data
       },
     });
-    return NextResponse.json(result, { message: "Updated" });
+    return NextResponse.json(result);
   }
   
   
