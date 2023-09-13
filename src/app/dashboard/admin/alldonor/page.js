@@ -14,7 +14,7 @@ const AllDonor = () => {
     .then((data) => setApproveDonor(data));
   }
   allApproveDonor()
-  }, []);
+  }, [approveDonor]);
 
   // handle donor approve and pending
 
@@ -30,29 +30,22 @@ const AllDonor = () => {
         confirmButtonText: "Yes, Approved it!",
       }).then( async(result) => {
         if (result.isConfirmed) {
-          await fetch(`/api/donor/${id}`, {
+         const res= await fetch(`/api/donor/${id}`, {
             cache: 'no-store', 
             method: "PUT",
             body: JSON.stringify(value),
           })
-            .then((res) => res.json())
-            .then( async(response) => {
-             await fetch("/api/donor/approve",{ cache: 'no-store' })
-              .then((res) => res.json())
-              .then(data =>{ setApproveDonor(data)
-              console.log("update Change Pending Data all donor page inside ",data)
-              
-            });
-            
-            });
+          if (res.ok) {
+            Swal.fire("Approved!", "This Donor is Approved.", "success");
             router.refresh()
-          Swal.fire("Approved!", "This Donor is Approved.", "success");
+          }
+           
+          
         }
       });
     }
   };
-  console.log("update Change Pending Data all donor page outside ",approveDonor)
-
+  
   // handle delete donor
 
   const hamdleDeleteDonor = (id) => {
@@ -64,19 +57,18 @@ const AllDonor = () => {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, Delete it!",
-    }).then((result) => {
+    }).then( async(result) => {
       if (result.isConfirmed) {
-        fetch(`/api/donor/${id}`, {
+        const res=fetch(`/api/donor/${id}`, {
+          cache:"no-store",
           method: "DELETE",
         })
-          .then((res) => res.json())
-          .then((data) => {
-            fetch("/api/donor/approve")
-              .then((res) => res.json())
-              .then((data) => setApproveDonor(data));
-          });
+          if (res.ok) {
+            Swal.fire("Yes!", "This Donor is Delete.", "success");
+            router.refresh() 
+          }
 
-        Swal.fire("Yes!", "This Donor is Delete.", "success");
+       
       }
     });
   };

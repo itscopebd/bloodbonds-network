@@ -2,26 +2,26 @@
 
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { FaTrash, FaUserGraduate } from "react-icons/fa";
+import {FaTrash, FaUser } from "react-icons/fa";
 import Swal from "sweetalert2";
 const AppliedDonor = () => {
-  const [allUser, setAllUser] = useState([]);
+  const [allAdmin, setAllAdmin] = useState([]);
   const router = useRouter();
   useEffect(() => {
-    const allUser = async () => {
-      await fetch("/api/user")
+    const allAdmin= async () => {
+      await fetch("/api/admin")
         .then((res) => res.json())
-        .then((data) => setAllUser(data));
+        .then((data) => setAllAdmin(data));
     };
-    allUser();
-  }, [allUser]);
+    allAdmin();
+  }, [allAdmin]);
 
   // handle delete donor
 
-  const hamdleDeleteUser = (id) => {
+  const hamdleDeleteAdmin = (id) => {
     Swal.fire({
       title: "Are you sure?",
-      text: "This User is Delete!",
+      text: "This Admin is Delete!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -29,11 +29,11 @@ const AppliedDonor = () => {
       confirmButtonText: "Yes, Delete it!",
     }).then(async (result) => {
       if (result.isConfirmed) {
-        const res = await fetch(`/api/user/${id}`, {
+        const res = await fetch(`/api/admin/${id}`, {
           cache: "no-store",
           method: "DELETE",
         });
-        Swal.fire("Yes!", "This User is Delete.", "success");
+        Swal.fire("Yes!", "This Admin is Delete.", "success");
         console.log(res);
         if (res.ok) {
           router.refresh();
@@ -43,24 +43,24 @@ const AppliedDonor = () => {
   };
 
 //   make admin 
-const hamdleMakeAdmin=(id)=>{
+const hamdleMakeUser=(id)=>{
     Swal.fire({
         title: "Are you sure?",
-        text: "This User is Admin!",
+        text: "This Admin is User!",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, Admin it!",
+        confirmButtonText: "Yes, User it!",
       }).then(async (result) => {
         if (result.isConfirmed) {
-            const data="admin"
-          const res = await fetch(`/api/user/${id}`, {
+            const data="user"
+          const res = await fetch(`/api/admin/${id}`, {
             cache: "no-store",
             method: "PUT",
             body:JSON.stringify(data)
           });
-          Swal.fire("Yes!", "This User is Admin.", "success");
+          Swal.fire("Yes!", "This Admin is User.", "success");
           console.log(res);
           if (res.ok) {
             router.refresh();
@@ -68,19 +68,18 @@ const hamdleMakeAdmin=(id)=>{
         }
       });  
 }
-
-if (allUser.length===0) {
-  return (
-    <div className="absolute top-1/2 left-1/2">
-      <span className="loading loading-bars loading-lg"></span>
-    </div>
-  );
-}
+if (allAdmin.length===0) {
+    return (
+      <div className="absolute top-1/2 left-1/2">
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    );
+  }
 
   return (
     <div className="p-4">
       <div className="">
-        <h1 className="font-bold text-3xl uppercase py-4">All User</h1>
+        <h1 className="font-bold text-3xl uppercase py-4">All Admin</h1>
       </div>
       <div className="overflow-x-auto">
         <table className="table table-xs text-center">
@@ -94,7 +93,7 @@ if (allUser.length===0) {
             </tr>
           </thead>
           <tbody>
-            {allUser.map((user, index) => (
+            {allAdmin.map((admin, index) => (
               <>
                 <tr key={index}>
                   <td className="flex items-center">
@@ -104,25 +103,25 @@ if (allUser.length===0) {
                         height: "100px",
                         borderRadius: "50px",
                       }}
-                      src={user?.image}
+                      src={admin?.image}
                       alt="User image not found!"
                     />
                   </td>
-                  <td className="text-black font-bold">{user?.name}</td>
-                  <td className="text-black font-bold">{user?.email}</td>
-                  <td className="text-black font-bold">{user?.userId}</td>
+                  <td className="text-black font-bold">{admin?.name}</td>
+                  <td className="text-black font-bold">{admin?.email}</td>
+                  <td className="text-black font-bold">{admin?.userId}</td>
                   <td className="">
                     <button
-                      onClick={() => hamdleDeleteUser(user._id)}
+                      onClick={() => hamdleDeleteAdmin(admin._id)}
                       className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor"
                     >
                       <FaTrash className="w-full h-full p-2" />
                     </button> <span className="text-black font-bold">Or</span>
                     <button
-                      onClick={() => hamdleMakeAdmin(user._id)}
+                      onClick={() => hamdleMakeUser(admin._id)}
                       className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor"
-                    title="Make a admin">
-                      <FaUserGraduate className="w-full h-full p-2" />
+                    title="Make a user">
+                      <FaUser className="w-full h-full p-2" />
                     </button>
                   </td>
                 </tr>
