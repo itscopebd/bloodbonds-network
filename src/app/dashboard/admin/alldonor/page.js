@@ -5,13 +5,13 @@ import React, { useEffect, useState } from "react";
 import { FaBeer, FaComments, FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
 const AllDonor = () => {
-  const [donors, setDonors] = useState([]);
+  const [approveDonor, setApproveDonor] = useState([]);
   const router= useRouter()
   useEffect(() => {
   const allApproveDonor= async()=>{
     await fetch("/api/donor/approve",{ cache: 'no-store' })
     .then((res) => res.json())
-    .then((data) => setDonors(data));
+    .then((data) => setApproveDonor(data));
   }
   allApproveDonor()
   }, []);
@@ -36,10 +36,13 @@ const AllDonor = () => {
             body: JSON.stringify(value),
           })
             .then((res) => res.json())
-            .then( async(data) => {
+            .then( async(response) => {
              await fetch("/api/donor/approve",{ cache: 'no-store' })
               .then((res) => res.json())
-              .then(data => setDonors(data));
+              .then(data =>{ setApproveDonor(data)
+              console.log("update Change Pending Data all donor page inside ",data)
+              
+            });
             
             });
             router.refresh()
@@ -48,6 +51,7 @@ const AllDonor = () => {
       });
     }
   };
+  console.log("update Change Pending Data all donor page outside ",approveDonor)
 
   // handle delete donor
 
@@ -69,7 +73,7 @@ const AllDonor = () => {
           .then((data) => {
             fetch("/api/donor/approve")
               .then((res) => res.json())
-              .then((data) => setDonors(data));
+              .then((data) => setApproveDonor(data));
           });
 
         Swal.fire("Yes!", "This Donor is Delete.", "success");
@@ -77,7 +81,7 @@ const AllDonor = () => {
     });
   };
 
-  if (donors.length === 0) {
+  if (approveDonor.length === 0) {
     return (
       <div className="absolute top-1/2 left-1/2">
         <span className="loading loading-bars loading-lg"></span>
@@ -109,7 +113,7 @@ const AllDonor = () => {
             </tr>
           </thead>
           <tbody>
-            {donors.map((donor) => (
+            {approveDonor.map((donor) => (
               <>
                 <tr>
                   <td>
