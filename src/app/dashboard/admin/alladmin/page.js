@@ -9,12 +9,12 @@ const AllAdminPage = () => {
   const router = useRouter();
 
   useEffect(() => {
- 
     fetch("/api/admin")
-    .then(res=> res.json())
-    .then(data=>setAllAdmin(data))
-  
-   
+      .then((res) => res.json())
+      .then((data) => setAllAdmin(data))
+      .catch((err) => {
+        console.log(err);
+      });
   }, [allAdmin]);
   // handle delete donor
 
@@ -38,7 +38,12 @@ const AllAdminPage = () => {
         if (res.ok) {
           router.refresh();
         }
+        
       }
+      await fetch("/api/admin")
+      .then((res) => res.json())
+      .then((data) => setAllAdmin(data))
+      
     });
   };
 
