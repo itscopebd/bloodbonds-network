@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaTrash, FaUserGraduate } from "react-icons/fa";
 import Swal from "sweetalert2";
-const AppliedDonor = () => {
+const AllUserPage = () => {
   const [allUser, setAllUser] = useState([]);
   const router = useRouter();
   useEffect(() => {
@@ -61,7 +61,6 @@ const hamdleMakeAdmin=(id)=>{
             body:JSON.stringify(data)
           });
           Swal.fire("Yes!", "This User is Admin.", "success");
-          console.log(res);
           if (res.ok) {
             router.refresh();
           }
@@ -135,4 +134,4 @@ if (allUser.length===0) {
   );
 };
 
-export default AppliedDonor;
+export default AllUserPage;
