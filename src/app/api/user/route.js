@@ -17,6 +17,7 @@ export const POST = async (request) => {
 
 
 export const GET =async ()=>{
+  
 const { db } = await connectToDatabase();
 
 try {

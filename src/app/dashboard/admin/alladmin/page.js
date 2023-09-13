@@ -9,15 +9,12 @@ const AllAdminPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const getAllAdmin = async () => {
-      await fetch("/api/admin")
-        .then((res) => res.json())
-        .then((data) => {
-          setAllAdmin(data);
-          console.log(data);
-        });
-    };
-    getAllAdmin();
+ 
+    fetch("/api/admin")
+    .then(res=> res.json())
+    .then(data=>setAllAdmin(data))
+  
+   
   }, [allAdmin]);
   // handle delete donor
 
