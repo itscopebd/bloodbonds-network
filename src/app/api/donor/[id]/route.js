@@ -3,7 +3,7 @@ import { connectToDatabase } from "@/utils/database";
 import { ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
 
-export const PATCH = async (request, {params}) =>{
+export const PUT = async (request, {params}) =>{
     const {id}= params;
    const body = await request.json();
    const query ={_id: new ObjectId(id)}
