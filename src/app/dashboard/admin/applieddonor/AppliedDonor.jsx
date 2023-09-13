@@ -15,7 +15,7 @@ const AppliedDonor = () => {
         .then((data) => setDonors(data));
     };
     appliedDonor()
-  }, []);
+  }, [donors]);
 
   // handle donor approve and pending
 
@@ -31,28 +31,23 @@ const AppliedDonor = () => {
         confirmButtonText: "Yes, Approved it!",
       }).then( async(result) => {
         if (result.isConfirmed) {
-          await fetch(`/api/donor/${id}`, {
+          const res= await fetch(`/api/donor/${id}`, {
             cache: 'no-store' ,
             method: "PUT",
             body: JSON.stringify(value),
           })
-            .then((res) => res.json())
-            .then(async(response) => {
-              await fetch('/api/donor/pending',{ cache: 'no-store' })
-                .then((res) => res.json())
-                .then((data) =>{
-                 setDonors(data)
-                  
-                  console.log("Update data applied page insde", data)
-                })
-            });
+          if (res.ok) {
+            
+            Swal.fire("Approved!", "This Donor is Approved.", "success");  
             router.refresh()
-          Swal.fire("Approved!", "This Donor is Approved.", "success");
+          }
+           
+        
         }
       });
     } 
   };
-console.log("applied page outsite", donors)
+
   // handle delete donor
 
   const hamdleDeleteDonor = (id) => {
@@ -66,28 +61,25 @@ console.log("applied page outsite", donors)
       confirmButtonText: "Yes, Delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`/api/donor/${id}`, {
+        const res= fetch(`/api/donor/${id}`, {
           method: "DELETE",
         })
-          .then((res) => res.json())
-          .then((data) => {
-            fetch("/api/donor/pending")
-              .then((res) => res.json())
-              .then((data) => setDonors(data));
-          });
-
-        Swal.fire("Yes!", "This Donor is Delete.", "success");
+        if (res.ok) {
+          Swal.fire("Yes!", "This Donor is Delete.", "success");
+          router.refresh()
+        }
+       
       }
     });
   };
 
-  // if (donors.length === 0) {
-  //   return (
-  //     <div className="absolute top-1/2 left-1/2">
-  //       <span className="loading loading-bars loading-lg"></span>
-  //     </div>
-  //   );
-  // }
+  if (donors.length === 0) {
+    return (
+      <div className="absolute top-1/2 left-1/2">
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    );
+  }
   return (
     <div className="p-4">
       <div className="">

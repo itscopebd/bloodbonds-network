@@ -63,6 +63,12 @@ const Sidebar = () => {
               </li>
 
               <li>
+                <Link href={"/dashboard/admin/alladmin"}>
+                  {" "}
+                  <FaUser /> All Admin
+                </Link>
+              </li>
+              <li>
                 <Link href={"/dashboard/admin/alluser"}>
                   {" "}
                   <FaUser /> All user
