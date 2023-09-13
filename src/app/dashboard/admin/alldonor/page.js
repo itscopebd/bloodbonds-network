@@ -1,11 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaBeer, FaComments, FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
 const AllDonor = () => {
   const [donors, setDonors] = useState([]);
-
+  const router= useRouter()
   useEffect(() => {
   const allApproveDonor= async()=>{
     await fetch("/api/donor/approve",{ cache: 'no-store' })
@@ -39,6 +40,7 @@ const AllDonor = () => {
              await fetch("/api/donor/approve",{ cache: 'no-store' })
               .then((res) => res.json())
               .then(data => setDonors(data));
+              router.refresh()
             });
 
           Swal.fire("Approved!", "This Donor is Approved.", "success");
