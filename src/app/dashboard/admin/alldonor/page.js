@@ -51,7 +51,7 @@ const AllDonor = () => {
       });
     }
   };
-  console.log("update Change Pending Data all donor page outside ",donors)
+  console.log("update Change Pending Data all donor page outside ",approveDonor)
 
   // handle delete donor
 
