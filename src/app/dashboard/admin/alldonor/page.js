@@ -9,7 +9,7 @@ const AllDonor = () => {
   const router= useRouter()
   useEffect(() => {
   const allApproveDonor= async()=>{
-    await fetch("/api/donor/approve",{ cache: 'no-store' })
+    await fetch("/api/donor/approve")
     .then((res) => res.json())
     .then((data) => setApproveDonor(data));
   }
@@ -35,8 +35,9 @@ const AllDonor = () => {
             method: "PUT",
             body: JSON.stringify(value),
           })
+          Swal.fire("Approved!", "This Donor is Approved.", "success");
           if (res.ok) {
-            Swal.fire("Approved!", "This Donor is Approved.", "success");
+           
             router.refresh()
           }
            
@@ -63,8 +64,9 @@ const AllDonor = () => {
           cache:"no-store",
           method: "DELETE",
         })
+        Swal.fire("Yes!", "This Donor is Delete.", "success");
           if (res.ok) {
-            Swal.fire("Yes!", "This Donor is Delete.", "success");
+          
             router.refresh() 
           }
 
