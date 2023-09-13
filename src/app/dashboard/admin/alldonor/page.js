@@ -7,15 +7,18 @@ const AllDonor = () => {
   const [donors, setDonors] = useState([]);
 
   useEffect(() => {
-    fetch("/api/donor/approve")
-      .then((res) => res.json())
-      .then((data) => setDonors(data));
+  const allApproveDonor= async()=>{
+    await fetch("/api/donor/approve")
+    .then((res) => res.json())
+    .then((data) => setDonors(data));
+  }
+  allApproveDonor()
   }, []);
 
   // handle donor approve and pending
 
   const handleDonor = async (value, id) => {
-    if (value == "Approve") {
+    if (value == "Pending") {
       Swal.fire({
         title: "Are you sure?",
         text: "This Donor is Approve!",
@@ -34,35 +37,10 @@ const AllDonor = () => {
             .then((data) => {
               fetch("/api/donor/approve")
               .then((res) => res.json())
-              .then((data) => setDonors(data));
+              .then(data => setDonors(data));
             });
 
           Swal.fire("Approved!", "This Donor is Approved.", "success");
-        }
-      });
-    } else {
-      Swal.fire({
-        title: "Are you sure?",
-        text: "This Donor is Pending!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, Pending it!",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          fetch(`/api/donor/${id}`, {
-            method: "PATCH",
-            body: JSON.stringify(value),
-          })
-            .then((res) => res.json())
-            .then((data) =>{
-              fetch("/api/donor/approve")
-              .then((res) => res.json())
-              .then((data) => setDonors(data));
-            });
-
-          Swal.fire("Pending!", "This Donor is Pending.", "success");
         }
       });
     }
