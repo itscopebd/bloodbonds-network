@@ -5,16 +5,16 @@ import React, { useEffect, useState } from "react";
 import { FaBeer, FaComments, FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
 const AllDonor = () => {
-  const [donors, setDonors] = useState([]);
+  const [approveDonor, setApproveDonor] = useState([]);
   const router= useRouter()
   useEffect(() => {
   const allApproveDonor= async()=>{
-    await fetch("/api/donor/approve",{ cache: 'no-store' })
+    await fetch("/api/donor/approve")
     .then((res) => res.json())
-    .then((data) => setDonors(data));
+    .then((data) => setApproveDonor(data));
   }
   allApproveDonor()
-  }, []);
+  }, [approveDonor]);
 
   // handle donor approve and pending
 
@@ -30,25 +30,23 @@ const AllDonor = () => {
         confirmButtonText: "Yes, Approved it!",
       }).then( async(result) => {
         if (result.isConfirmed) {
-          await fetch(`/api/donor/${id}`, {
-            cache: 'no-store',
-            method: "PATCH",
+         const res= await fetch(`/api/donor/${id}`, {
+            cache: 'no-store', 
+            method: "PUT",
             body: JSON.stringify(value),
           })
-            .then((res) => res.json())
-            .then( async(data) => {
-             await fetch("/api/donor/approve",{ cache: 'no-store' })
-              .then((res) => res.json())
-              .then(data => setDonors(data));
-              router.refresh()
-            });
-
           Swal.fire("Approved!", "This Donor is Approved.", "success");
+          if (res.ok) {
+           
+            router.refresh()
+          }
+           
+          
         }
       });
     }
   };
-
+  
   // handle delete donor
 
   const hamdleDeleteDonor = (id) => {
@@ -60,24 +58,24 @@ const AllDonor = () => {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, Delete it!",
-    }).then((result) => {
+    }).then( async(result) => {
       if (result.isConfirmed) {
-        fetch(`/api/donor/${id}`, {
+        const res=fetch(`/api/donor/${id}`, {
+          cache:"no-store",
           method: "DELETE",
         })
-          .then((res) => res.json())
-          .then((data) => {
-            fetch("/api/donor/approve")
-              .then((res) => res.json())
-              .then((data) => setDonors(data));
-          });
-
         Swal.fire("Yes!", "This Donor is Delete.", "success");
+          if (res.ok) {
+          
+            router.refresh() 
+          }
+
+       
       }
     });
   };
 
-  if (donors.length === 0) {
+  if (approveDonor.length === 0) {
     return (
       <div className="absolute top-1/2 left-1/2">
         <span className="loading loading-bars loading-lg"></span>
@@ -109,7 +107,7 @@ const AllDonor = () => {
             </tr>
           </thead>
           <tbody>
-            {donors.map((donor) => (
+            {approveDonor.map((donor) => (
               <>
                 <tr>
                   <td>

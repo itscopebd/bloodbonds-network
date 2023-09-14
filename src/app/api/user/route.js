@@ -17,15 +17,15 @@ export const POST = async (request) => {
 
 
 export const GET =async ()=>{
+  
 const { db } = await connectToDatabase();
 
 try {
 
-    const result= await db.collection('users').find().toArray();
+    const result= await db.collection('users').find({role:"user"}).toArray();
     return NextResponse.json(result);
 } catch (error) {
     return NextResponse.json({ message: err.toString() });
 }
-
-
 }
+
