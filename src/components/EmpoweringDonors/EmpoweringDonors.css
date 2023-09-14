@@ -1,0 +1,10 @@
+@media screen and (max-width:1535px) {
+   
+    .res{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .tx{
+        padding-bottom: 50px;
+    }
+}
