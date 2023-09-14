@@ -12,7 +12,10 @@ const AllAdminPage = () => {
     const getAllAdmin = async () => {
       await fetch("/api/admin")
         .then((res) => res.json())
-        .then((data) => setAllAdmin(data));
+        .then((data) => {
+          setAllAdmin(data);
+          console.log(data);
+        });
     };
     getAllAdmin();
   }, [allAdmin]);
@@ -56,7 +59,7 @@ const AllAdminPage = () => {
       if (response.isConfirmed) {
         const data = "user";
         const res = await fetch(`/api/admin/${id}`, {
-         cache:"no-store",
+          cache: "no-store",
           method: "PUT",
           body: JSON.stringify(data),
         });
