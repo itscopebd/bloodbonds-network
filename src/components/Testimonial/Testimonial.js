@@ -1,6 +1,7 @@
-
 import React from 'react';
 import person from '../../app/asset/volunteer.jpg'
+import person2 from '../../app/asset/person2.jpg'
+import person3 from '../../app/asset/person3.jpg'
 import Image from 'next/image';
 
 const TestimonialSection = () => {
@@ -8,22 +9,24 @@ const TestimonialSection = () => {
         {
             id: 1,
             name: 'John Doe',
-            role: 'CEO, Company A',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed velit efficitur, ut elementum nisi tristique.'
+            role: 'Patient, CEO, Company A',
+            img: person,
+            content: 'BloodBond Network has been a true lifesaver for my family. When my son needed a blood transfusion, we were overwhelmed and did not know where to turn. The network connected us with a donor in our community, and it made all the difference. Thank you for giving us hope when we needed it most'
         },
         {
             id: 2,
             name: 'Jane Smith',
-            role: 'Designer, Company B',
-            content: 'Pellentesque commodo arcu non ante tincidunt, ut ultricies nisl finibus. Morbi scelerisque nibh ac tortor lacinia, non bibendum enim facilisis.'
+            role: 'Regular Blood Donor, Designer, Company B',
+            img: person2,
+            content: 'I have been a regular blood donor for years, and BloodBond Network has made the process incredibly easy. Knowing that my donations are making a direct impact on saving lives in my community is incredibly rewarding. It is more than just a network; it is a lifeline.'
         },
         {
             id: 3,
             name: 'Mary Smith',
-            role: 'Designer, Company B',
-            content: 'Pellentesque commodo arcu non ante tincidunt, ut ultricies nisl finibus. Morbi scelerisque nibh ac tortor lacinia, non bibendum enim facilisis.'
-        },
-        // Add more testimonials
+            role: 'Volunteer, Designer, Company B',
+            img: person3,
+            content: 'I have seen firsthand the dedication and compassion of the BloodBond Network team. Their commitment to ensuring that no one faces a medical crisis without access to donated blood is truly inspiring. It is a privilege to volunteer with such a wonderful organization that is making a real difference in the world.'
+        }
     ];
 
     return (
@@ -40,15 +43,15 @@ const TestimonialSection = () => {
                                 </svg>
                                 </div>
                                 
-                                <p className="text-gray-600">{testimonial.content}</p>
+                                <p className="text-gray-600 italic">{testimonial.content}</p>
                             </div>
                             <div className="flex items-center">
                                 <div className="flex-shrink-0">
-                                    <Image className="h-10 w-10 rounded-full" src={person} alt={testimonial.name} />
+                                    <Image className="h-16 w-16 rounded-full" src={testimonial.img} alt={testimonial.name} />
                                 </div>
                                 <div className="ml-3">
                                     <p className="text-sm font-medium text-gray-800">{testimonial.name}</p>
-                                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                                    <p className="text-sm text-gray-500 ">{testimonial.role}</p>
                                 </div>
                             </div>
                         </div>

@@ -1,29 +1,25 @@
 import React from 'react';
 import Image from 'next/image';
-// import story from '@/app/asset/Our story.jpg';
 import story from '../../app/asset/Our story.jpg';
 
 const OurStory = () => {
     return (
         <div className='mt-10 container mx-auto'>
             <h2 className='text-center text-2xl md:text-3xl text-red-700 font-bold mb-5'>Our Story</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-5'>
                 <div className='flex justify-center items-center'>
-                    <Image src={story} alt='image' className='rounded-lg px-5 md:px-0' width={680} height={500} />
+                    <Image src={story} alt='image' className='rounded-lg px-0 w-full' height={500} />
                 </div>
                 <div className='text-md pt-2 md:text-lg mx-auto px-5 md:px-0'>
                     <p className='w-12/12 md:w-12/12 text-justify text-md md:text-lg'>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ea laboriosam perferendis
-                        maiores cupiditate quibusdam deleniti voluptas, vitae qui repudiandae sit, odit eveniet debitis
-                        placeat, aliquam nemo suscipit quo omnis quos? Perspiciatis et modi magnam, cumque distinctio
-                        repellat earum rem quibusdam, atque cupiditate nulla asperiores. Maiores ipsa qui obcaecati
-                        perferendis similique error officiis ullam facere dolores, ea officia, quas quasi. Nobis rem ea
-                        alias et eum maxime, atque, sed natus animi optio maiores repellendus! Voluptatibus excepturi
-                        nostrum nisi! Consequatur, accusantium culpa. Id a sed velit? Odio accusamus pariatur labore?
-                        Nam consequatur iste sint? Nam cum vel velit, doloremque magnam quas.
+                    BloodBond Network is the result of a dedicated team united by a common purpose – saving lives through the gift of blood. Our journey began when a group of passionate individuals came together, inspired by the incredible impact of blood donations. <br />
+                    Since our humble beginnings, BloodBond Network has grown beyond our wildest dreams. We've partnered with hospitals, communities, and dedicated volunteers to organize countless blood drives, saving countless lives in the process. We've faced challenges along the way, but each obstacle only strengthened our resolve.
                     </p>
-                    <p className='w-12/12 md:w-12/12 text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta similique reiciendis est! Nulla obcaecati quasi assumenda, vitae qui corrupti sequi, tempore quos laudantium, perspiciatis similique distinctio voluptates. Totam numquam eius blanditiis. Rem architecto ad nesciunt voluptatum nemo tempore facilis minima aliquid minus odit sint accusamus, assumenda nobis atque quos voluptas?</p>
-                    <p className='w-12/12 md:w-12/12 text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta similique reiciendis est! Nulla obcaecati quasi assumenda, vitae qui corrupti sequi, tempore quos laudantium, perspiciatis similique distinctio voluptates. Totam numquam eius blanditiis. Rem architecto ad nesciunt voluptatum nemo tempore facilis minima aliquid minus odit sint accusamus, assumenda nobis atque quos voluptas?</p>
+                    <p className='w-12/12 md:w-12/12 text-justify'>But we're not just a network; we're a family. Our team and community of donors and supporters are the lifeblood of our organization, and together, we're making a difference.</p>
+                    <p className='w-12/12 md:w-12/12 text-justify'>We've witnessed countless moments of hope and resilience on this journey. From patients who survived critical surgeries to donors who found purpose in giving, the stories of impact continue to inspire us every day. <br />
+                    As a team, we share a vision of a world where the act of giving blood transcends boundaries and prejudices. Our collective dream is a world where no one ever suffers due to a shortage of blood, where compassion knows no bounds, and where the BloodBond Network continues to grow and impact lives. <br />
+                    We invite you to become a part of our story. Your support, whether through donating, volunteering, or spreading awareness, is a vital chapter in our journey to make the world a healthier and more compassionate place.
+                    </p>
                 </div>
             </div>
         </div>
@@ -31,4 +27,3 @@ const OurStory = () => {
 };
 
 export default OurStory;
-

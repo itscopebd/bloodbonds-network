@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { ColorRing } from "react-loader-spinner";
 import Swal from "sweetalert2";
 
@@ -13,10 +14,13 @@ const Loginitem = () => {
   const form = useSearch.get("redirectUrl") || "/";
 
   const { replace } = useRouter();
-
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
-  let { user, googleLogin, signIn, facebookLogin } = UserAuth();
+  let { user, googleLogin, signIn } = UserAuth();
   const {
     register,
     handleSubmit,
@@ -99,24 +103,7 @@ const Loginitem = () => {
       setGoogleLoading(false);
     }
   };
-  let handleFacebook = async () => {
-    try {
-      await facebookLogin();
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Sign in SuccessFull",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    } catch (error) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Your Login Not Success!",
-      });
-    }
-  };
+
   return (
     <div>
       <div className="justify-center">
@@ -126,20 +113,26 @@ const Loginitem = () => {
             <input
               type="email"
               placeholder="Type here"
-              className="input input-bordered w-full max-w-xl lg:max-w-md"
+              className="input input-bordered w-full max-w-full lg:max-w-md"
               required
               {...register("email")}
             />
           </div>
-          <div className="form-control">
+          <div className="relative">
+  <div className="form-control ">
             <label className="py-2 text-xs md:text-sm">Password</label>
             <input
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               placeholder="Type here"
-              className="input input-bordered  w-full max-w-xl lg:max-w-md"
-              {...register("password")}
+              className="input input-bordered  w-full max-w-full lg:max-w-md"
+              {...register("password")} required
             />
+             <span className='   absolute top-3/4 right-3 transform -translate-y-1/2 cursor-pointer ' onClick={togglePasswordVisibility}>
+        {showPassword ?  <FaRegEyeSlash/>:<FaRegEye/>}
+      </span> 
           </div>
+          </div>
+        
           <div className="form-control">
             <label className="py-2 text-xs md:text-sm font-extrabold">
               <Link href={"/signup"}>Create New Account</Link>
@@ -167,7 +160,7 @@ const Loginitem = () => {
         <div className=" divider  text-sm">OR LogIn with </div>
         <div className=" flex items-center justify-center py-1 ">
           <button
-            className="btn btn-circle btn-outline btn-primary mx-2"
+            className="btn btn-circle btn-outline  mx-2"
             onClick={handleGoogle}
           >
             {googleLoading && googleLoading ? (
@@ -181,15 +174,10 @@ const Loginitem = () => {
                 colors={["#F4F4F3", "#FFF", "#EB4249", "#abbd81", "#849b87"]}
               />
             ) : (
-              "G"
+              <FaGoogle/>
             )}
           </button>
-          <button className="btn btn-circle btn-outline btn-primary mx-2">
-            in
-          </button>
-          <button className="btn btn-circle btn-outline mx-2 btn-primary ">
-            F
-          </button>
+         
         </div>
       </div>
     </div>

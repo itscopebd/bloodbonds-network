@@ -8,7 +8,6 @@ import logo from "../../app/asset/Blood (2).png";
 import { AuthContext } from "@/context/authContext";
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
-// import ActiveLink from './Activelink';
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
@@ -28,11 +27,11 @@ const Navbar = () => {
         <Link href="/contact">Contact Us</Link>
       </li>
 
-      {/* 
-<ActiveLink className="font-semibold" href="/">Home</ActiveLink>
+      
+{/* <ActiveLink className="font-semibold" href="/">Home</ActiveLink>
 <ActiveLink href="/about">About</ActiveLink>
 <ActiveLink href="/donorlist">Donors</ActiveLink>
-<ActiveLink href="/contact">Contact Us</ActiveLink> */}
+<ActiveLink href="/contact">Contact Us</ActiveLink>  */}
 
       {/* when user registration then show dashboard  */}
       {user && (
