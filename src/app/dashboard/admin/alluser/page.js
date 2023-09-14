@@ -14,7 +14,7 @@ const AllUserPage = () => {
         .then((data) => setAllUser(data));
     };
     allUser();
-  }, [allUser]);
+  }, []);
 
   // handle delete donor
 
@@ -30,7 +30,7 @@ const AllUserPage = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await fetch(`/api/user/${id}`, {
-          cache: "no-store",
+          cache: "no-cache",
           method: "DELETE",
         });
         Swal.fire("Yes!", "This User is Delete.", "success");
@@ -94,7 +94,7 @@ if (allUser.length===0) {
           </thead>
           <tbody>
             {allUser.map((user, index) => (
-              <>
+              
                 <tr key={index}>
                   <td className="flex items-center">
                     <img
@@ -125,7 +125,7 @@ if (allUser.length===0) {
                     </button>
                   </td>
                 </tr>
-              </>
+              
             ))}
           </tbody>
         </table>

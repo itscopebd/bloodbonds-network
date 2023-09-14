@@ -15,7 +15,7 @@ const AllAdminPage = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [allAdmin]);
+  }, []);
   // handle delete donor
 
   const hamdleDeleteAdmin = (id) => {
@@ -30,7 +30,7 @@ const AllAdminPage = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await fetch(`/api/admin/${id}`, {
-          cache: "no-store",
+          cache: "no-cache",
           method: "DELETE",
         });
         Swal.fire("Yes!", "This Admin is Delete.", "success");
@@ -38,11 +38,8 @@ const AllAdminPage = () => {
         if (res.ok) {
           router.refresh();
         }
-        
+
       }
-      await fetch("/api/admin")
-      .then((res) => res.json())
-      .then((data) => setAllAdmin(data))
       
     });
   };
@@ -99,8 +96,8 @@ const AllAdminPage = () => {
           </thead>
           <tbody>
             {allAdmin.map((admin, index) => (
-              <>
-                <tr key={index}>
+              
+                <tr key={admin._id}>
                   <td className="flex items-center">
                     <img
                       style={{
@@ -115,6 +112,7 @@ const AllAdminPage = () => {
                   <td className="text-black font-bold">{admin?.name}</td>
                   <td className="text-black font-bold">{admin?.email}</td>
                   <td className="text-black font-bold">{admin?.userId}</td>
+                  
                   <td className="">
                     <button
                       onClick={() => hamdleDeleteAdmin(admin._id)}
@@ -132,7 +130,7 @@ const AllAdminPage = () => {
                     </button>
                   </td>
                 </tr>
-              </>
+              
             ))}
           </tbody>
         </table>
