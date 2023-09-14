@@ -1,7 +1,5 @@
-import Image from "next/image";
 import React from "react";
-import img1 from '../../app/asset/pic-44.jpg'
-
+import './EmpoweringDonors.css'
 const EmpoweringDonors = () => {
   return (
     <>
@@ -22,7 +20,7 @@ const EmpoweringDonors = () => {
       
       <section>
         <div className="container px-[8%] mx-auto mt-10">
-          <div className=" flex items-center    ">
+          <div className=" flex items-center res   ">
             <div className="">
               <div className="cards cards1">
                 <h3 className="text-white shadow-md">Donate Blood</h3>
@@ -44,7 +42,7 @@ const EmpoweringDonors = () => {
 
             <div className="">
               <h2 className="font-semibold text-xl">University Student</h2>
-              <p>
+              <p className="tx">
                 Explore the fascinating world of{" "}
                 <span className="font-bold text-red-500">blood</span> type and
                 their compatibility. Learn how matching{" "}
@@ -59,9 +57,7 @@ const EmpoweringDonors = () => {
         
      
       </section>
-      <div className="flex justify-center mt-16">
-          <button className="btn btn-outline btn-error">See more</button>
-        </div>
+     
     </>
   );
 };

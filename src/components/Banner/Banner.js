@@ -7,11 +7,7 @@ import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
 import { FcSearch } from "react-icons/fc";
 import "./Banner.css";
-import pic1 from "../../app/asset/pic-99.jpg";
-import pic2 from "../../app/asset/pic-77.jpg";
-import pic3 from "../../app/asset/pic-33.jpg";
-import pic4 from "../../app/asset/pic-44.jpg";
-import pic5 from "../../app/asset/pic-4.jpg";
+
 import pic6 from "../../app/asset/about-1.jpg";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,7 +18,19 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 const Banner = () => {
   return (
     <>
-      <div className="field sm:w-auto ">
+      
+
+      {/* banner section */}
+
+      <section className=" ">
+        <AutoplaySlider
+          play={true}
+          cancelOnInteraction={false} // should stop playing on user interaction
+          interval={6000}
+        >
+          {/* banner section */}
+          <div className="   w-full h-full   bg bg1">
+          <div className="field sm:w-auto ">
         <div className="headSearch ">
           <input
             type="text"
@@ -37,16 +45,6 @@ const Banner = () => {
           </button>
         </div>
       </div>
-
-      {/* banner section */}
-
-      <section className=" pt-12 ">
-        <AutoplaySlider
-          play={true}
-          cancelOnInteraction={false} // should stop playing on user interaction
-          interval={6000}
-        >
-          <div className="   w-full h-full   bg bg1">
             {/* <Image src={pic1} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
 
             {/* <img src= "https://i.ibb.co/Bn1j250/pic-99.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
@@ -61,11 +59,11 @@ const Banner = () => {
                   <span className="font-bold text-red-500">blood</span> is
                   stronger than anything.{" "}
                 </p>
-                <button className="w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl ">
+                <button className="w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl ">
                   <Link href="/plasma">Donate</Link>
                 </button>
               </div>
-              <div className="">
+              <div className="mod">
                 <div className="cards cards1">
                   <h3 className="text-white shadow-md">Donate Blood</h3>
                   <p></p>
@@ -86,23 +84,38 @@ const Banner = () => {
             </div>
           </div>
           <div className=" h-full w-full   bg bg2 ">
+          <div className="field sm:w-auto ">
+        <div className="headSearch ">
+          <input
+            type="text"
+            placeholder="Search Your Location"
+            className="search"
+          />
+        </div>
+
+        <div className="btn-field">
+          <button className="btn-search">
+            <FcSearch className=" text-3xl"></FcSearch>
+          </button>
+        </div>
+      </div>
             {/* <Image src={pic2} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
 
             {/* <img src="https://i.ibb.co/GV7bvZ7/pic-4.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
 
             <div className=" contain">
               <div className="">
-                <h1 className=" text-5xl font-light text-white">
+                <h1 className=" text-5xl font-bold text-white">
                   Donate <span className="font-bold text-red-500">blood</span>.
                 </h1>
                 <p className=" text-white     ">
                   Don't be "A negative" Be "O positive".
                 </p>
-                <button className="w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl ">
+                <button className="w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl ">
                   <Link href="/plasma">Donate</Link>
                 </button>
               </div>
-              <div className="">
+              <div className="mod">
                 <div className="cards cards10">
                   <h3 className="text-white shadow-md">Donate Blood</h3>
                   <p></p>
@@ -123,6 +136,21 @@ const Banner = () => {
             </div>
           </div>
           <div className=" h-full w-full  bg bg3  ">
+          <div className="field sm:w-auto ">
+        <div className="headSearch ">
+          <input
+            type="text"
+            placeholder="Search Your Location"
+            className="search"
+          />
+        </div>
+
+        <div className="btn-field">
+          <button className="btn-search">
+            <FcSearch className=" text-3xl"></FcSearch>
+          </button>
+        </div>
+      </div>
             {/* <Image src={pic3} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
 
             {/* <img src= "https://i.ibb.co/zr85Nds/pic-2.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
@@ -133,11 +161,11 @@ const Banner = () => {
                   Donate <span className="font-bold text-red-500">blood</span>.
                 </h1>
                 <p className=" text-white ">You can became a super hero too.</p>
-                <button className="w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl ">
+                <button className="w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl ">
                   <Link href="/plasma">Donate</Link>
                 </button>
               </div>
-              <div className="">
+              <div className="mod">
                 <div className="cards cards12">
                   <h3 className="text-white shadow-md">Donate Blood</h3>
                   <p></p>
@@ -157,41 +185,51 @@ const Banner = () => {
               </div>
             </div>
           </div>
-          <div className=" h-full w-full  bg bg4  ">
-            {/* <Image src={pic4} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
+         
+                <div className=" h-full w-full  bg bg4  ">
+          <div className="field sm:w-auto ">
+        <div className="headSearch ">
+          <input
+            type="text"
+            placeholder="Search Your Location"
+            className="search"
+          />
+        </div>
 
-            {/* <img src="https://i.ibb.co/gVQFp6d/pic-77.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay   lg:object-cover' alt="" /> */}
+        <div className="btn-field">
+          <button className="btn-search">
+            <FcSearch className=" text-3xl"></FcSearch>
+          </button>
+        </div>
+      </div>
+            {/* <Image src={pic3} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
 
-            <div className="   contain">
+            {/* <img src= "https://i.ibb.co/zr85Nds/pic-2.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
+
+            <div className=" contain">
               <div className="">
                 <h1 className=" text-5xl font-bold text-white">
-                  Donate <span className="font-bold text-red-500">blood</span>
+                  Donate <span className="font-bold text-red-500">blood</span>.
                 </h1>
-                <p className=" text-white">
-                 
-                  A drop of
-                  <span className="font-bold text-red-500">blood</span> saves
-                  life.
-                </p>
-                <button className="w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl ">
+                <p className=" text-white ">You can became a super hero too.</p>
+                <button className="w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl ">
                   <Link href="/plasma">Donate</Link>
                 </button>
               </div>
-              <div className="">
-                
+              <div className="mod">
                 <div className="cards cards6">
-                  <h3 className="text-white shadow-md">Be Hero</h3>
+                  <h3 className="text-white shadow-md">Donate Blood</h3>
                   <p></p>
                 </div>
                 <div className="cards cards3">
+                  <h3 className="text-white shadow-md">Be Hero</h3>
+                  <p></p>
+                </div>
+                <div className="cards cards11">
                   <h3 className="text-white shadow-md">Life Good</h3>
                   <p></p>
                 </div>
-                <div className="cards cards5">
-                  <h3 className="text-white shadow-md">Sacrifice</h3>
-                  <p></p>
-                </div>
-                <div className="cards cards10">
+                <div className="cards cards8">
                   <h3 className="text-white shadow-md">Sacrifice</h3>
                   <p></p>
                 </div>
@@ -199,6 +237,21 @@ const Banner = () => {
             </div>
           </div>
           <div className=" h-full w-full  bg bg5   ">
+          <div className="field sm:w-auto ">
+        <div className="headSearch ">
+          <input
+            type="text"
+            placeholder="Search Your Location"
+            className="search"
+          />
+        </div>
+
+        <div className="btn-field">
+          <button className="btn-search">
+            <FcSearch className=" text-3xl"></FcSearch>
+          </button>
+        </div>
+      </div>
             {/* <Image src={pic5} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
 
             {/* <img src="https://i.ibb.co/xJHkNCn/pic-33.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
@@ -206,17 +259,17 @@ const Banner = () => {
             <div className="contain">
               <div className="">
                 <h1 className=" text-5xl font-bold text-white">
-                  Donate <span className="font-bold text-red-500">blood</span>
+                  Donate <span className="font-bold text-red-500">blood</span>.
                 </h1>
                 <p className=" text-white  ">
                   Stay fit and eat right and donate{" "}
                   <span className="font-bold text-red-500">blood</span>
                 </p>
-                <button className="w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl ">
+                <button className="w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl ">
                   <Link href="/plasma">Donate</Link>
                 </button>
               </div>
-              <div className="">
+              <div className="mod">
                 <div className="cards cards11">
                   <h3 className="text-white shadow-md">Donate Blood</h3>
                   <p></p>
@@ -237,6 +290,21 @@ const Banner = () => {
             </div>
           </div>
           <div className=" h-full w-full  bg bg6   ">
+          <div className="field sm:w-auto ">
+        <div className="headSearch ">
+          <input
+            type="text"
+            placeholder="Search Your Location"
+            className="search"
+          />
+        </div>
+
+        <div className="btn-field">
+          <button className="btn-search">
+            <FcSearch className=" text-3xl"></FcSearch>
+          </button>
+        </div>
+      </div>
             {/* <Image src={pic5} width={800} className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" ></Image>  */}
 
             {/* <img src="https://i.ibb.co/xJHkNCn/pic-33.jpg" className='absolute w-full h-full opacity-90 mix-blend-overlay object-cover' alt="" /> */}
@@ -244,17 +312,17 @@ const Banner = () => {
             <div className="contain">
               <div className="">
                 <h1 className=" text-5xl font-bold text-white">
-                  Donate <span className="font-bold text-red-500">blood</span>
+                  Donate <span className="font-bold text-red-500">blood</span>.
                 </h1>
                 <p className=" text-white  ">
                   Stay fit and eat right and donate{" "}
                   <span className="font-bold text-red-500">blood</span>
                 </p>
-                <button className="w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] mt-8 rounded-xl ">
+                <button className="w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl ">
                   <Link href="/plasma">Donate</Link>
                 </button>
               </div>
-              <div className="">
+              <div className="mod">
                 <div className="cards cards10">
                   <h3 className="text-white shadow-md">Donate Blood</h3>
                   <p></p>
@@ -279,17 +347,17 @@ const Banner = () => {
 
       {/* about section */}
 
-      <section className="mt-20  grid lg:grid-cols-2 gap-3 justify-items-center  mx-auto  container">
+      <section className="mt-20  grid md:grid-cols-1 lg:grid-cols-2 gap-3 justify-items-center  mx-auto  container">
         {/* <div className="avatar">
             <div className="w-auto rounded"> */}
-        <div className="w-1/2">
+        <div className="w-1/2 lg:w-1/2 md:w-3/4">
           <Image src={pic6} width=""></Image>
         </div>
         {/* <img src="https://i.ibb.co/3RRXjvG/about-1.jpg" /> */}
         {/* </div>
           </div> */}
 
-        <div className="my-auto ">
+        <div className="lg:my-auto  ">
           <h1 className="text-5xl text-center font-bold text-red-500 pt-12">
             About Us
           </h1>
@@ -313,7 +381,8 @@ const Banner = () => {
             – red cells, platelets and plasma – which can be used individually
             for patients with specific conditions and support.{" "}
             <button className="btn btn-outline btn-error btn-xs">
-              see more
+              <Link href='/about'>see more</Link>
+              
             </button>
           </p>
         </div>
