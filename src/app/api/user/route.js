@@ -22,7 +22,7 @@ const { db } = await connectToDatabase();
 
 try {
 
-    const result= await db.collection('users').find({role:"user"}).toArray();
+    const result= await db.collection('users').find({role:"admin"}).toArray();
     return NextResponse.json(result);
 } catch (error) {
     return NextResponse.json({ message: err.toString() });
