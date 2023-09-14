@@ -76,7 +76,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-black px-5 ">
+    <div className="bg-black px-5 fixed z-10 w-full bg-opacity-10   ">
       <div className="container mx-auto">
         <div className="navbar">
           <div className="navbar-start">
@@ -120,7 +120,7 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1">{NavItems}</ul>
           </div>
           <div className="navbar-end">
-            <button className="btn">
+            <button className="btn ">
               {user && user ? (
                 <span onClick={handleLogout}>Logout</span>
               ) : (

@@ -37,6 +37,7 @@ const ContactUs = () => {
                         <p className=''>Dhaka, Bangladesh</p>
                     </div>
                 </div>
+            
         </section>
     );
 };
