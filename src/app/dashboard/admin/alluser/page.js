@@ -14,7 +14,7 @@ const AllUserPage = () => {
         .then((data) => setAllUser(data));
     };
     allUser();
-  }, []);
+  }, [allUser]);
 
   // handle delete donor
 
@@ -30,7 +30,7 @@ const AllUserPage = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await fetch(`/api/user/${id}`, {
-          cache: "no-cache",
+          cache: "no-store",
           method: "DELETE",
         });
         Swal.fire("Yes!", "This User is Delete.", "success");
