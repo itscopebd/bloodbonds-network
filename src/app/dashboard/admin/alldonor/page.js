@@ -14,7 +14,7 @@ const AllDonor = () => {
     .then((data) => setApproveDonor(data));
   }
   allApproveDonor()
-  }, [approveDonor]);
+  }, []);
 
   // handle donor approve and pending
 
