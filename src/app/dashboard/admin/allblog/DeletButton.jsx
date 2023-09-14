@@ -1,7 +1,7 @@
 "use client"
 import { useRouter } from 'next/navigation';
 import React from 'react';
-import { TiDelete } from 'react-icons/ti';
+import { MdDelete } from 'react-icons/md';
 import Swal from 'sweetalert2';
 
 const DeletButton = ({id}) => {
@@ -29,7 +29,7 @@ if (res.ok) {
     return (
         <div>
             <button onClick={handleDElete} className='btn  btn-xs'>
-                <TiDelete/>
+                <MdDelete/>
             </button>
         </div>
     );
