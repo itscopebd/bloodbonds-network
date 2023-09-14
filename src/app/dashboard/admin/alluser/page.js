@@ -56,15 +56,16 @@ const hamdleMakeAdmin=(id)=>{
         confirmButtonText: "Yes, Admin it!",
       }).then(async (result) => {
         if (result.isConfirmed) {
-            const data="admin"
+          
           const res = await fetch(`/api/user/${id}`, {
             cache: "no-store",
             method: "PUT",
-            body:JSON.stringify(data)
+            
           });
-          Swal.fire("Yes!", "This User is Admin.", "success");
+        
           if (res.ok) {
             router.refresh();
+            Swal.fire("Yes!", "This User is Admin.", "success");
           }
         }
       });  
