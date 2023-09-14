@@ -9,12 +9,14 @@ const AllUserPage = () => {
   const router = useRouter();
   useEffect(() => {
     const allUser = async () => {
-      await fetch("/api/user")
+      await fetch("/api/user",{
+        cache:"no-store"
+      })
         .then((res) => res.json())
         .then((data) => setAllUser(data));
     };
     allUser();
-  }, [allUser]);
+  }, []);
 
   // handle delete donor
 
@@ -94,7 +96,7 @@ if (allUser.length===0) {
           </thead>
           <tbody>
             {allUser.map((user, index) => (
-              <>
+              
                 <tr key={index}>
                   <td className="flex items-center">
                     <img
@@ -125,7 +127,7 @@ if (allUser.length===0) {
                     </button>
                   </td>
                 </tr>
-              </>
+              
             ))}
           </tbody>
         </table>
