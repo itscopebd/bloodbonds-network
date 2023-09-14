@@ -1,7 +1,9 @@
 "use client";
 import AutoImageGallery from '@/components/AutoImage/AutoImageGallery';
 import Banner from '@/components/Banner/Banner';
+import BenefitsOfPlasma from '@/components/BenefitsOfPlasma/BenefitsOfPlasma';
 import ContactUs from '@/components/ContactUs/ContactUs';
+import DonationProcess from '@/components/DonationProcess/DonationProcess';
 import EmpoweringDonors from '@/components/EmpoweringDonors/EmpoweringDonors';
 import FaqSection from '@/components/FaqSection/FaqSection';
 import GetInTouch from '@/components/GetInTouch/GetInTouch';
