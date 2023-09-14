@@ -18,3 +18,17 @@ export const POST = async (request) => {
     return NextResponse.json({ message: error.toString() });
   }
 };
+
+// donor get all 
+export const GET = async () => {
+  const { db } = await connectToDatabase();
+  try {
+    const result = await db.collection("donors").find().toArray();
+    return NextResponse.json(result);
+  } catch (err) {
+    return NextResponse.json({ message: err.toString() });
+  }
+};
+
+
+

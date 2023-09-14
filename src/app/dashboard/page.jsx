@@ -7,6 +7,7 @@ const DashboardPage = () => {
  
     return (
         <div>
+            
             <DashBoardHome />
         </div>
     );

@@ -21,11 +21,11 @@ const AboutUs = () => {
             <div className="mission-vision container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4	mt-10">
                 <div className="mission px-5" data-aos="fade-right">
                     <h2 className='text-center text-2xl lg:text-3xl text-red-700 font-bold mb-2'>Our Mission</h2>
-                    <p className='italic text-md lg:text-xl text-center w-4/4 mx-auto px-8 border border-red-700 py-12 rounded-2xl'>Empowering Lives Through Lifesaving Blood Donations. Our mission is to bridge hope with action, advocating for and facilitating lifesaving blood donations that impact countless lives. At the heart of our purpose lies the commitment to provide a lifeline of donated blood, driving positive change and saving lives.</p>
+                    <p className='italic text-md lg:text-xl text-center w-4/4 mx-auto px-8 border border-red-700 py-12 rounded-2xl'>Our mission is to bridge hope with action, advocating for and facilitating lifesaving blood donations that impact countless lives. At the heart of our purpose lies the commitment to provide a lifeline of donated blood, driving positive change and saving lives. Empowering Lives Through Lifesaving Blood Donations.</p>
                 </div>
                 <div className="vision px-5" data-aos="fade-left">
                     <h2 className='text-center text-2xl lg:text-3xl text-red-700 font-bold mb-2'>Our Vision</h2>
-                    <p className='italic text-center w-4/4 mx-auto border py-12 border-red-700 px-8 rounded-xl text-md lg:text-xl'>Empowering Lives Through Lifesaving Blood Donations. Our mission is to bridge hope with action, advocating for and facilitating lifesaving blood donations that impact countless lives. At the heart of our purpose lies the commitment to provide a lifeline of donated blood, driving positive change and saving lives.</p>
+                    <p className='italic text-center w-4/4 mx-auto border py-12 border-red-700 px-8 rounded-xl text-md lg:text-xl'>Our vision is To create a world where lifesaving blood donations are readily available, providing a ray of hope and saving countless lives through our commitment to compassion. Creating a world where lifesaving blood donations are universally accessible, nurturing hope and saving lives with compassion.</p>
                 </div>
             </div>
 

@@ -10,21 +10,21 @@ const stories = [
         name: 'John Doe',
         role: 'Job Holder',
         img: volunteer1,
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed velit efficitur, ut elementum nisi tristique.'
+        content: 'I started donating plasma when a close friend needed plasma-based treatment. Seeing the immediate impact it had on their health motivated me to become a regular donor. BloodBond Network has made the process convenient, and I am honored to contribute to saving lives.'
     },
     {
         id: 2,
         name: 'Jane Smith',
         role: 'University Student',
         img: volunteer2,
-        content: 'Pellentesque commodo arcu non ante tincidunt, ut ultricies nisl finibus. Morbi scelerisque nibh ac tortor lacinia, non bibendum enim facilisis.'
+        content: 'Donating plasma through BloodBond Network has become a regular part of my life. Knowing that my plasma can help treat patients with critical illnesses is incredibly rewarding. It is a simple way to make a big difference, and I am proud to be a part of it.'
     },
     {
         id: 3,
         name: 'Mary Smith',
         role: 'University Student',
         img: volunteer3,
-        content: 'Pellentesque commodo arcu non ante tincidunt, ut ultricies nisl finibus. Morbi scelerisque nibh ac tortor lacinia, non bibendum enim facilisis.'
+        content: 'I never realized how crucial plasma donations were until my own family member required a plasma transfusion. Thanks to BloodBond Network and generous donors, they received the treatment they needed. Now, I am committed to giving back and helping others in need.'
     }
 ];
 
