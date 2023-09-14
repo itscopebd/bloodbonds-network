@@ -15,7 +15,7 @@ const AllAdminPage = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [allAdmin]);
   // handle delete donor
 
   const hamdleDeleteAdmin = (id) => {
