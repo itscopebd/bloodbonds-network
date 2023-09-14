@@ -7,13 +7,21 @@ import { useForm } from "react-hook-form";
 import { ColorRing } from "react-loader-spinner";
 import { useRouter } from "next/navigation";
 import CreateJWT from "@/utils/createJWT";
+import { FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 const SignupItem = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
-
-  let { user, createUser, profileUpdate, googleLogin, facebookLogin } =
+  const [showPassword, setShowPassword] = useState(false);
+  const [conshowPassword, setConShowPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+  const togglePasswordVisibility2 = () => {
+    setConShowPassword(!conshowPassword);
+  };
+  let { user, createUser, profileUpdate, googleLogin} =
     UserAuth();
   const {
     register,
@@ -112,24 +120,7 @@ const SignupItem = () => {
       setGoogleLoading(false);
     }
   };
-  let handleFacebook = async () => {
-    try {
-      await facebookLogin();
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Sign in SuccessFull",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    } catch (error) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Your Login Not Success!",
-      });
-    }
-  };
+
 
   return (
     <div>
@@ -142,7 +133,7 @@ const SignupItem = () => {
                 type="text"
                 placeholder="Type here"
                 {...register("name", { required: "name is required" })}
-                className="input input-bordered w-full max-w-xl lg:max-w-xl"
+                className="input input-bordered w-full max-w-full lg:max-w-xl"
               />
               {errors.name && (
                 <p className="text-sm pt-1">{errors.name.message}</p>
@@ -155,17 +146,25 @@ const SignupItem = () => {
               type="email"
               placeholder="Type here"
               {...register("email", { required: " Email is required " })}
-              className="input input-bordered w-full max-w-xl lg:max-w-xl "
+              className="input input-bordered w-full max-w-full lg:max-w-xl "
             />
             {errors.email && (
               <p className="text-sm pt-1">{errors.email.message}</p>
             )}
           </div>
           <div className="lg:flex justify-between">
+
+          <div className="relative">
+
+         
+             
+        
+         
+
             <div className="form-control">
               <label className="py-2 text-xs md:text-sm">Password</label>
               <input
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 placeholder="Type here"
                 {...register("password", {
                   required: "enter password",
@@ -174,36 +173,47 @@ const SignupItem = () => {
                     message: "Password must be at least 8 characters",
                   },
                 })}
-                className="input input-bordered  w-full max-w-xl lg:max-w-md"
+                className="input input-bordered  w-full max-w-full lg:max-w-md"
               />
-
+<span className='   absolute top-14 md:top-16  right-3 transform -translate-y-1/2 cursor-pointer ' onClick={togglePasswordVisibility}>
+        {showPassword ?  <FaRegEyeSlash/>:<FaRegEye/>}
+      </span> 
               {errors.password && (
                 <p className=" text-sm lg:text-xs xl:text-sm pt-1">
                   {errors.password.message}
                 </p>
               )}
             </div>
+            </div>
+<div className="relative">
             <div className="form-control">
               <label className="py-2 text-xs md:text-sm">
                 Confirm Password
               </label>
               <input
-                type="password"
+                type={conshowPassword ? 'text' : 'password'}
                 placeholder="Type here"
                 {...register("confirmPassword", {
                   required: "Confirm Password is required",
                   validate: (value) =>
                     value === watch("password") || "Passwords do not match",
                 })}
-                className="input input-bordered  w-full max-w-xl lg:max-w-sm xl:max-w-md"
+                className="input input-bordered  w-full max-w-full lg:max-w-sm xl:max-w-md"
               />
+<span className='   absolute top-14 md:top-16 right-3 transform -translate-y-1/2 cursor-pointer ' onClick={togglePasswordVisibility2}>
+        {conshowPassword ?  <FaRegEyeSlash/>:<FaRegEye/>}
+      </span> 
               {errors.confirmPassword && (
-                <p className=" text-sm lg:text-xs xl:text-sm pt-1">
+                <span className=" text-sm lg:text-xs xl:text-sm pt-1 block">
                   {errors.confirmPassword.message}
-                </p>
+                </span>
               )}
             </div>
           </div>
+
+
+          </div>
+
 
           <div className="form-control">
             <label className="py-2 text-xs md:text-base ">
@@ -249,18 +259,10 @@ const SignupItem = () => {
                 colors={["#F4F4F3", "#FFF", "#EB4249", "#abbd81", "#849b87"]}
               />
             ) : (
-              "G"
+              <FaGoogle/>
             )}
           </button>
-          <button className="btn btn-circle btn-outline btn-primary mx-2">
-            in
-          </button>
-          <button
-            className="btn btn-circle btn-outline mx-2 btn-primary "
-            onClick={handleFacebook}
-          >
-            F
-          </button>
+        
         </div>
       </div>
     </div>
