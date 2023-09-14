@@ -9,12 +9,14 @@ const AllUserPage = () => {
   const router = useRouter();
   useEffect(() => {
     const allUser = async () => {
-      await fetch("/api/user")
+      await fetch("/api/user",{
+        cache:"no-store"
+      })
         .then((res) => res.json())
         .then((data) => setAllUser(data));
     };
     allUser();
-  }, [allUser]);
+  }, []);
 
   // handle delete donor
 

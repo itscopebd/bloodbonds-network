@@ -9,13 +9,15 @@ const AllAdminPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    fetch("/api/admin")
+    fetch("/api/admin",{
+      cache:"no-store"
+    })
       .then((res) => res.json())
       .then((data) => setAllAdmin(data))
       .catch((err) => {
         console.log(err);
       });
-  }, [allAdmin]);
+  }, []);
   // handle delete donor
 
   const hamdleDeleteAdmin = (id) => {
@@ -30,7 +32,7 @@ const AllAdminPage = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await fetch(`/api/admin/${id}`, {
-          cache: "no-cache",
+          cache: "no-store",
           method: "DELETE",
         });
         Swal.fire("Yes!", "This Admin is Delete.", "success");
