@@ -101,35 +101,30 @@ const Sidebar = () => {
                 </Link>
               </li>
             </>
-          ) : role === "donar" ? (
+          ) : role === "donor" ? (
             <>
               <li>
-                <Link href={"/dashboard/donar"}>
+                <Link href={"/dashboard/donor"}>
                   {" "}
-                  <FaHouse /> Dashboard Donar
+                  <FaHouse />  Donar Home
                 </Link>
               </li>
               <li>
-                <Link href={"/dashboard/donar"}>
+                <Link href={"/dashboard/donor/donorhistory"}>
                   {" "}
                   <FaHistory /> Track Donation{" "}
                 </Link>
               </li>
               <li>
-                <Link href={"/dashboard/donar"}>
+                <Link href={"/dashboard/donor/countdown"}>
                   {" "}
-                  <FaInfoCircle /> Donor Info
+                  <FaInfoCircle /> Blood countdown
                 </Link>
               </li>
             </>
           ) : role === "user" ? (
             <>
-              <li>
-                <Link href={"/dashboard/user"}>
-                  {" "}
-                  <FaUserCheck /> User Dashboard
-                </Link>
-              </li>
+            
               <li>
                 <Link href={"/dashboard/user"}>
                   {" "}
@@ -146,7 +141,7 @@ const Sidebar = () => {
               <li>
                 <Link href={"/dashboard/user/userhistory"}>
                   {" "}
-                  <FaWpforms />
+                  <FaHistory />
                   Activity log
                 </Link>
               </li>
