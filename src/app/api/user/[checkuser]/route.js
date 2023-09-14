@@ -14,24 +14,26 @@ export const GET = async (request, { params }) => {
   }
 };
 
-export async function PATCH(request, { params }) {
+// user update 
+
+export const PUT= async (request, { params })=> {
   const { checkuser } = params;
-  let { newrole: role } = await request.json();
+  const data = await request.json();
+  const query = { _id: new ObjectId(checkuser) };
   const { db } = await connectToDatabase();
-  const result = await db.collection("users").updateOne(
-    { email: checkuser },
-    {
-      $set: {
-        role,
-      },
-    }
-  );
+  const result = await db.collection("users").updateOne(query, {
+    $set: {
+      role:data
+    },
+  });
   return NextResponse.json(result, { message: "Updated" });
 }
+
+
 // delete user
 export const DELETE = async (request, { params }) => {
   const { checkuser } = params;
-console.log(checkuser)
+  console.log(checkuser);
   const query = { _id: new ObjectId(checkuser) };
 
   const { db } = await connectToDatabase();
