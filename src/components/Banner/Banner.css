@@ -6,7 +6,7 @@
 .field{
 
     box-sizing: border-box;
-    margin-top: 15px;
+    margin-top: 80px;
     width: 100%;
     height: 45px;
     display: flex;
@@ -17,7 +17,7 @@
 .search{
    padding: 13px 19px;
    
-   height: 100%;
+   
    width: 688px;
    border-radius: 2px;
    line-height: 1;
@@ -157,7 +157,7 @@
     color: #fff;
     text-shadow: 0 0 5px #999;
 }
-@media screen and (max-width:768px) {
+@media screen and (min-width:577px) and (max-width:992px) {
     .search{
         width: auto;
     }
@@ -170,4 +170,45 @@
         justify-content: center;
     }
 }
-
+@media screen and (max-width:576px){
+    .cards{
+        width: auto;
+        height: auto;
+       
+    }
+    .mod{
+        display: grid;
+        margin-bottom: 25px;
+        grid-template-columns: repeat(2,1fr);
+    }
+   
+    .contain{
+        display: flex;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+    }
+    .search{
+        width: auto;
+    }
+    .cards h3{
+        font-size: 8px;
+        color: #fff;
+        text-shadow: 0 0 5px #999;
+}
+.contain h1{
+    font-weight: 300;
+    font-size: medium;
+}
+.contain p{
+    font-weight: 200;
+    font-size: small;
+  
+}
+.contain button{
+   
+   width: auto;
+   margin-top: 5px;
+   
+}
+}
