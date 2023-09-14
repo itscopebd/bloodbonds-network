@@ -1,28 +1,26 @@
-import DeleteAdmin from "./DeleteAdmin";
-import MakeUser from "./MakeUser";
+import DeleteUser from "./DeleteUser";
+import MakeAdmin from "./MakeAdmin";
 import imgs from "../../../asset/DonationProcess/user_1144709.png";
 import Image from "next/image";
-const getAllAdmin = async () => {
-
-  let base_url = process.env.Base_URL;
+const getAllUser = async () => {
+  const baseUrl = process.env.Base_URL;
   try {
-    let res = await fetch(`${base_url}/api/admin`, { cache: "no-store" });
+    const res = await fetch(`${baseUrl}/api/user`, { cache: "no-store" });
     if (!res.ok) {
-      throw new Error("data load failed");
+      throw Error("User is no load");
     }
     return res.json();
   } catch (error) {
-    console.log(error.toString());
+    console.log(error)
   }
 };
 
-const AllAdmin = async () => {
-  let allAdmins = await getAllAdmin();
-
+const AllUser = async() => {
+    const allUser= await getAllUser()
   return (
     <div className="p-4">
       <div className="">
-        <h1 className="font-bold text-3xl uppercase py-4">All Admin</h1>
+        <h1 className="font-bold text-3xl uppercase py-4">All User</h1>
       </div>
       <div className="overflow-x-auto">
         <table className="table table-xs text-center">
@@ -36,12 +34,12 @@ const AllAdmin = async () => {
             </tr>
           </thead>
           <tbody>
-            {allAdmins.map((admin, index) => (
-              <tr key={admin._id}>
+            {allUser.map((user, index) => (
+              <tr key={index}>
                 <td className="flex items-center justify-center">
-                  {admin?.image ? (
+                {user?.image ? (
                     <Image
-                      src={admin?.image}
+                      src={user?.image}
                       alt="user"
                       width={80}
                       height={80}
@@ -56,25 +54,15 @@ const AllAdmin = async () => {
                       alt="user img"
                     ></Image>
                   )}
-                  {/* <img
-                    style={{
-                      width: "100px",
-                      height: "100px",
-                      borderRadius: "50px",
-                    }}
-                    src={admin?.image}
-                    alt="User image not found!"
-                  /> */}
                 </td>
-                <td className="text-black font-bold">{admin?.name}</td>
-                <td className="text-black font-bold">{admin?.email}</td>
-                <td className="text-black font-bold">{admin?.userId}</td>
-
-                <td>
-                  <DeleteAdmin id={admin?._id}></DeleteAdmin>
+                <td className="text-black font-bold">{user?.name}</td>
+                <td className="text-black font-bold">{user?.email}</td>
+                <td className="text-black font-bold">{user?.userId}</td>
+                 <td className="">
+                  <DeleteUser id={user?._id}></DeleteUser>
                   <span className="text-black font-bold">Or</span>
-                  <MakeUser id={admin?._id}></MakeUser>
-                </td>
+                <MakeAdmin id={user?._id}></MakeAdmin>
+                </td> 
               </tr>
             ))}
           </tbody>
@@ -83,5 +71,4 @@ const AllAdmin = async () => {
     </div>
   );
 };
-
-export default AllAdmin;
+export default AllUser;
