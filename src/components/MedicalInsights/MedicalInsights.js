@@ -36,7 +36,7 @@ const MedicalInsights = () => {
         <div className="card w-auto bg-base-100 shadow-xl">
           <div className="avatar">
             <div className="w-3/4 rounded mx-auto">
-              <Image src={pic1}></Image>
+              <Image src={pic1} alt="doctor"></Image>
             </div>
           </div>{" "}
           <div className="card-body">
@@ -57,7 +57,7 @@ const MedicalInsights = () => {
         <div className="card w-auto bg-base-100 shadow-xl">
           <div className="avatar">
             <div className="w-3/4 rounded mx-auto">
-          <Image src={pic2}></Image>    
+          <Image src={pic2} alt="doctor"></Image>    
         </div>
           </div>{" "}
           <div className="card-body">
@@ -78,7 +78,7 @@ const MedicalInsights = () => {
         <div className="card w-auto bg-base-100 shadow-xl">
           <div className="avatar">
             <div className="w-3/4  mx-auto  rounded">
-              <Image src={pic3}></Image>
+              <Image src={pic3} alt="doctor"></Image>
             </div>
           </div>{" "}
           <div className="card-body ">
