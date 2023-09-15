@@ -8,7 +8,7 @@ const baseUrl= process.env.Base_URL
 const getAllAppliedDonor= async()=>{
 
   try {
-    const res= await fetch(`${baseUrl}/api/donor/pending`,{cache:"no-store",next:{revalidate:0}})
+    const res= await fetch(`${baseUrl}/api/donor/pending`,{cache:"no-store"})
     if (!res.ok) {
       throw Error("Data no loading")
     }
