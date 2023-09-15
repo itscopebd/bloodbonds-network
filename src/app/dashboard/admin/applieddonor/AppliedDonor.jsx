@@ -15,7 +15,7 @@ const AppliedDonor = () => {
         .then((data) => setApplyDonors(data));
     };
     appliedDonor()
-  }, [applyDonors]);
+  }, []);
 
   // handle donor approve and pending
 
