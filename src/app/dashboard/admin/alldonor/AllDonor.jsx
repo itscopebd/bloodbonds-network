@@ -3,15 +3,16 @@ import DeleteDonor from "./DeleteDonor";
 import PendingDonor from "./PendingDonor";
 
 const getAllDonor = async () => {
+ 
   const baseUrl = process.env.Base_URL;
   try {
-    let res = await fetch(`${baseUrl}/api/approvedonor`, { cache: "no-store" });
+    const res = await fetch(`${baseUrl}/api/approvedonor`, { cache: "no-store" });
     if (!res.ok) {
-      throw Error("Donor is no load");
+      throw Error("User is no load");
     }
     return res.json();
   } catch (error) {
-    console.log(error);
+    console.log(error)
   }
 };
 
