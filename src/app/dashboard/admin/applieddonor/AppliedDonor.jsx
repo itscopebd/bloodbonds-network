@@ -1,5 +1,9 @@
 // "use client";
 
+import CommentPendingDonor from "./CommentPendingDonor"
+import DeletePendingDonor from "./DeletePendingDonor"
+import MakeDonor from "./MakeDonor"
+
 // import { useRouter } from "next/navigation";
 // import React, { useEffect, useState } from "react";
 // import { FaBeer, FaComments, FaTrash } from "react-icons/fa";
@@ -88,32 +92,13 @@ const applyDonors= await getAllAppliedDonor()
                   <td className="text-black font-bold">{applyDonor?.paraddress}</td>
                   <td className="text-black font-bold">{applyDonor?.phone}</td>
                   <td>
-                    {/* <select
-                      name=""
-                      id=""
-                      className="select select-bordered min-h-[2rem] h-[2rem]"
-                      onChange={(e) => handleDonor(e.target.value, applyDonor._id)}
-                    >
-                      <option value={applyDonor?.status}>{applyDonor?.status}</option>
-                      {applyDonor.status === "Pending" ? (
-                        <option value="Approve">Approve</option>
-                      ) : (
-                        <option value="Pending">Pending</option>
-                      )}
-                    </select> */}
+                    <MakeDonor id={applyDonor?._id} status={applyDonor?.status}></MakeDonor>
                   </td>
                   <td>
-                    {/* <button className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor">
-                      <FaComments className="w-full h-full p-2" />
-                    </button>
+                   <CommentPendingDonor></CommentPendingDonor>
                   </td>
                   <td>
-                    <button
-                      onClick={() => hamdleDeleteDonor(applyDonor._id)}
-                      className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor"
-                    >
-                      <FaTrash className="w-full h-full p-2" />
-                    </button> */}
+                   <DeletePendingDonor id={applyDonor?._id}></DeletePendingDonor>
                   </td>
                 </tr>
               </>
