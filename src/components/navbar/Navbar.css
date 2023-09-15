@@ -8,28 +8,19 @@
     color: red;
     font-weight: bold;
   }
-  @media screen and (max-width:400px){
-    .navbar {
-        width: auto;
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-right: 20px;
-        
-    }
-    .navbar-end{
-        width: auto;
-    }
-    .navbar-end button{
-        width: auto;
-        margin-left: 10px;
-        height: auto;
-    }
+  @media screen and (max-width:576px){
+   
+    
+   
     .navbar-start a{
         font-size: medium;
     }
-    .navbar-start {
-       width: auto;
-      
+  
+  }
+  @media screen and (min-width:577px) {
+    .head{
+        width: 100%;
     }
   }
+
 
