@@ -6,9 +6,9 @@ const getAllDonor = async () => {
  
   const baseUrl = process.env.Base_URL;
   try {
-    const res = await fetch(`${baseUrl}/api/approvedonor`, { cache: "no-store" });
+    const res = await fetch(`${baseUrl}/api/donor/approve`, { cache: "no-store" });
     if (!res.ok) {
-      throw Error("User is no load");
+      throw Error("Donor is no load");
     }
      const data = await res.json();
     return data;
