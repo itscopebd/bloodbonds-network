@@ -1,34 +1,32 @@
-import Comment from "./Comment"
-import DeleteDonor from "./DeleteDonor"
-import PendingDonor from "./PendingDonor"
+import Comment from "./Comment";
+import DeleteDonor from "./DeleteDonor";
+import PendingDonor from "./PendingDonor";
 
-const getAllDonor= async ()=>{
-    const baseUrl=process.env.Base_URL
-try {
-    let res= await fetch(`${baseUrl}/api/approvedonor`,{cache:"no-cache"})
-if (!res.ok) {
-    throw Error("Donor is no load")
-}
-return res.json()
-} catch (error) {
-    console.log(error)
-}
-}
+const getAllDonor = async () => {
+  const baseUrl = process.env.Base_URL;
+  try {
+    let res = await fetch(`${baseUrl}/api/approvedonor`, { cache: "no-store" });
+    if (!res.ok) {
+      throw Error("Donor is no load");
+    }
+    return res.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-const AllDonor= async()=>{
+const AllDonor = async () => {
+  let allDonor = await getAllDonor();
 
-let allDonor= await getAllDonor();
-
-
-if (allDonor?.length === 0) {
+  if (allDonor?.length === 0) {
     return (
       <div className="absolute top-1/2 left-1/2">
         <span className="loading loading-bars loading-lg"></span>
       </div>
     );
   }
-    return (
-<div className="p-4">
+  return (
+    <div className="p-4">
       <div className="">
         <h1 className="font-bold text-3xl uppercase py-4">All Donor</h1>
       </div>
@@ -53,49 +51,47 @@ if (allDonor?.length === 0) {
           </thead>
           <tbody>
             {allDonor?.map((donor) => (
-             
-                <tr key={donor?._id}>
-                  <td>
-                    <img
-                      style={{
-                        width: "100px",
-                        height: "100px",
-                        borderRadius: "50px",
-                      }}
-                      src={donor?.image}
-                      alt="donor image"
-                    />
-                  </td>
-                  <td className="text-black font-bold">{donor?.name}</td>
-                  <td className="text-black font-bold">{donor?.blood}</td>
-                  <td className="text-black font-bold">{donor?.hivStatus}</td>
-                  <td className="text-black font-bold">{donor?.gender}</td>
-                  <td className="text-black font-bold">
-                    {donor?.recent_illnesses}
-                  </td>
-                  <td className="text-black font-bold">
-                    {donor?.date_of_birth}
-                  </td>
-                  <td className="text-black font-bold">{donor?.paddress}</td>
-                  <td className="text-black font-bold">{donor?.paraddress}</td>
-                  <td className="text-black font-bold">{donor?.phone}</td>
-                  <td>
-                   <PendingDonor id={donor?._id} status={donor?.status}></PendingDonor>
-                  </td>
-                  <td>
+              <tr key={donor?._id}>
+                <td>
+                  <img
+                    style={{
+                      width: "100px",
+                      height: "100px",
+                      borderRadius: "50px",
+                    }}
+                    src={donor?.image}
+                    alt="donor image"
+                  />
+                </td>
+                <td className="text-black font-bold">{donor?.name}</td>
+                <td className="text-black font-bold">{donor?.blood}</td>
+                <td className="text-black font-bold">{donor?.hivStatus}</td>
+                <td className="text-black font-bold">{donor?.gender}</td>
+                <td className="text-black font-bold">
+                  {donor?.recent_illnesses}
+                </td>
+                <td className="text-black font-bold">{donor?.date_of_birth}</td>
+                <td className="text-black font-bold">{donor?.paddress}</td>
+                <td className="text-black font-bold">{donor?.paraddress}</td>
+                <td className="text-black font-bold">{donor?.phone}</td>
+                <td>
+                  <PendingDonor
+                    id={donor?._id}
+                    status={donor?.status}
+                  ></PendingDonor>
+                </td>
+                <td>
                   <Comment></Comment>
-                  </td>
-                  <td>
-                    <DeleteDonor id={donor?._id}></DeleteDonor>
-                  </td>
-                </tr>
-           
+                </td>
+                <td>
+                  <DeleteDonor id={donor?._id}></DeleteDonor>
+                </td>
+              </tr>
             ))}
           </tbody>
         </table>
       </div>
     </div>
-    )
-
-}
+  );
+};
 export default AllDonor;
