@@ -16,6 +16,12 @@ export const PUT = async (request, {params}) =>{
   );
     return NextResponse.json(result,{message:"Updated"})
   }
+
+
+  
+
+
+  
   // delete donor 
 export const DELETE = async (request, {params}) =>{
     const {id}= params;

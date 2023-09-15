@@ -1,0 +1,32 @@
+.poor{
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('../../app/asset/poorbg.jpg');
+   
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.donate{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+@media screen and (max-width:576px){
+    .donate{
+        flex-direction: column-reverse;
+    }
+    .font2 h2{
+        font-weight: 600;
+        font-size: medium;
+        padding-top: 15px;
+    }
+    .font2 p{
+        font-weight: 400;
+        font-size: small;
+        padding-bottom: 15px;
+    }
+    .svg2{
+        width: auto;
+    }
+}

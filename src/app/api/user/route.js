@@ -29,3 +29,12 @@ try {
 }
 }
 
+// delete user 
+// delete admin 
+export const DELETE = async (request) => {
+    const id = request.nextUrl.searchParams.get("id");
+    console.log(id);
+    const { db } = await connectToDatabase();
+    const res = await db.collection("users").deleteOne({ _id: new ObjectId(id) });
+    return NextResponse.json(res);
+  };

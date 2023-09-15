@@ -8,4 +8,19 @@
     color: red;
     font-weight: bold;
   }
+  @media screen and (max-width:576px){
+   
+    
+   
+    .navbar-start a{
+        font-size: medium;
+    }
+  
+  }
+  @media screen and (min-width:577px) {
+    .head{
+        width: 100%;
+    }
+  }
+
 

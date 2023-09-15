@@ -24,6 +24,9 @@ const Navbar = () => {
         <Link href="/donorlist">Donors</Link>
       </li>
       <li className="text-white font-semibold">
+        <Link href="/emergency">Emergency</Link>
+      </li>
+      <li className="text-white font-semibold">
         <Link href="/contact">Contact Us</Link>
       </li>
 
@@ -75,9 +78,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-black px-5 ">
+    <div className="bg-black lg:px-5 fixed z-10 head bg-opacity-10   ">
       <div className="container mx-auto">
-        <div className="navbar">
+        <div className="navbar w-auto ">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -119,7 +122,7 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1">{NavItems}</ul>
           </div>
           <div className="navbar-end">
-            <button className="btn">
+            <button className="btn ">
               {user && user ? (
                 <span onClick={handleLogout}>Logout</span>
               ) : (

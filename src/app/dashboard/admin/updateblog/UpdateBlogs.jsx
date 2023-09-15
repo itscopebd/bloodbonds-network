@@ -6,10 +6,10 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { FaArrowLeft } from 'react-icons/fa';
 
-const UpdateBlogs = ({id ,Singleblog}) => {
+const UpdateBlogs = ({id ,singleblog}) => {
     let {user}=UserAuth()
     const router = useRouter();
-    let {title,content,author,date,img,status,email}=Singleblog;
+    let {title,content,author,date,img,status,email}=singleblog;
     const { register, handleSubmit, control, formState: { errors } } = useForm()
     const onSubmit = async(data) => {
 
@@ -60,7 +60,7 @@ let {Newstatus,Newimg,Newdate,Newauthor,Newcontent,Newtitle,Newemail}=data
                                 <label className="label">
                                     <span className="label-text">Author</span>
                                 </label>
-                                <input type="text" placeholder="author"  {...register("Newauthor")} className="input input-bordered" />
+                                <input type="text" defaultValue={author} placeholder="author"  {...register("Newauthor")} className="input input-bordered" />
                              
                             </div>
 
@@ -69,7 +69,7 @@ let {Newstatus,Newimg,Newdate,Newauthor,Newcontent,Newtitle,Newemail}=data
                                 <label className="label">
                                     <span className="label-text">stock_quantity</span>
                                 </label>
-                                <input type="date"  placeholder="stock_quantity"  {...register("Newdate")} className="input input-bordered" />
+                                <input type="date" defaultValue={date} placeholder="stock_quantity"  {...register("Newdate")} className="input input-bordered" />
                                
                             </div>
                             <div>
@@ -77,7 +77,7 @@ let {Newstatus,Newimg,Newdate,Newauthor,Newcontent,Newtitle,Newemail}=data
                                     <label className="label">
                                         <span className="label-text">Select Category</span>
                                     </label>
-                                    <select className="select select-bordered w-full  "  {...register("Newstatus")}>
+                                    <select className="select select-bordered w-full  "  defaultValue={status} {...register("Newstatus")}>
                 <option value="" selected>Select Category</option>
   <option value="pending">pending</option>
   <option value="active">active</option>
