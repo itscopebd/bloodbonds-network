@@ -26,12 +26,12 @@ export const DELETE = async (request) => {
 
 // make user from admin 
 
-export const PUT = async (request) => {
-  const id = request.nextUrl.searchParams.get("id");
+// export const PUT = async (request) => {
+//   const id = request.nextUrl.searchParams.get("id");
 
-  const body= await request.json();
-  console.log(body);
-  const { db } = await connectToDatabase();
-  const res = await db.collection("users").updateOne({ _id: new ObjectId(id) });
-  return NextResponse.json(res);
-};
+//   const body= await request.json();
+//   console.log(body);
+//   const { db } = await connectToDatabase();
+//   const res = await db.collection("users").updateOne({ _id: new ObjectId(id) });
+//   return NextResponse.json(res);
+// };

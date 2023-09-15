@@ -86,7 +86,7 @@ const AppliedDonor = () => {
         <h1 className="font-bold text-3xl uppercase py-4">All Aplied Donor</h1>
       </div>
       <div className="overflow-x-auto">
-        <table className="table table-xs text-center">
+        <table className="table table-xs text-center overflow-x-scroll">
           <thead>
             <tr>
               <th className="font-bold text-md text-black">Image</th>

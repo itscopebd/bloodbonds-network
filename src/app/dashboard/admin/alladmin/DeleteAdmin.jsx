@@ -36,7 +36,7 @@ const DeleteAdmin = ({ id }) => {
       onClick={hamdleDeleteAdmin}
       className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor"
     title="Delete a Admin">
-      <FaTrash className="w-full h-full p-2" />
+      <FaTrash className="w-full" />
     </button>
   );
 };
