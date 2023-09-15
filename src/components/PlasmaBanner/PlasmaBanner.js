@@ -35,7 +35,7 @@ const PlasmaBanner = () => {
                 <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl '><Link href='/login'>Donate</Link> </button>
             </div>
             <div className='svg'>
-                <Image src={svg1}></Image>
+                <Image src={svg1} alt='svg person'></Image>
             </div>
             </div>
         </div>

@@ -351,7 +351,7 @@ const Banner = () => {
         {/* <div className="avatar">
             <div className="w-auto rounded"> */}
         <div className="w-1/2 lg:w-1/2 md:w-3/4">
-          <Image src={pic6} width=""></Image>
+          <Image src={pic6} width="" alt="about"></Image>
         </div>
         {/* <img src="https://i.ibb.co/3RRXjvG/about-1.jpg" /> */}
         {/* </div>
