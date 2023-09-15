@@ -35,7 +35,7 @@ const PendingDonor = ({id,status}) => {
       
      
     } catch (error) {
-        
+        console.log(error)
     }
   };
 

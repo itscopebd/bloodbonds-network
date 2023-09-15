@@ -17,7 +17,7 @@ return res.json()
 
 const AllDonor= async()=>{
 
-const allDonor= await getAllDonor();
+let allDonor= await getAllDonor();
 
 
 if (allDonor?.length === 0) {
