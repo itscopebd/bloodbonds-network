@@ -5,7 +5,7 @@ import PendingDonor from "./PendingDonor"
 const getAllDonor= async ()=>{
     const baseUrl=process.env.Base_URL
 try {
-    let res= await fetch(`${baseUrl}/api/approvedonor`,{cache:"no-store"})
+    let res= await fetch(`${baseUrl}/api/approvedonor`,{cache:"no-cache"})
 if (!res.ok) {
     throw Error("Donor is no load")
 }
