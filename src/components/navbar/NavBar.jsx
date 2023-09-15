@@ -24,6 +24,9 @@ const Navbar = () => {
         <Link href="/donorlist">Donors</Link>
       </li>
       <li className="text-white font-semibold">
+        <Link href="/emergency">Emergency</Link>
+      </li>
+      <li className="text-white font-semibold">
         <Link href="/contact">Contact Us</Link>
       </li>
 
@@ -123,7 +126,7 @@ const Navbar = () => {
               {user && user ? (
                 <span onClick={handleLogout}>Logout</span>
               ) : (
-                <Link href={"/login"}>Sign in</Link>
+                <Link href={"/login"}>Login</Link>
               )}
             </button>
           </div>

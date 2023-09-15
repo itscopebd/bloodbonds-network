@@ -9,6 +9,7 @@ import GetInTouch from '@/components/GetInTouch/GetInTouch';
 import HelpPoor from '@/components/HelpPoor/HelpPoor';
 import JoinUs from '@/components/JoinUs/JoinUs';
 import MedicalInsights from '@/components/MedicalInsights/MedicalInsights';
+import DonorStoryHome from '@/components/DonorStoryHome/DonorStoryHome'
 import Work from '@/components/Work/Work';
 import React from 'react';
 
@@ -21,6 +22,7 @@ const BannerPage = () => {
             <EmpoweringDonors></EmpoweringDonors>
             <Work></Work>
             <JoinUs></JoinUs>
+            <DonorStoryHome></DonorStoryHome>
             <HelpPoor></HelpPoor>
             <ContactUs></ContactUs>
             <FaqSection></FaqSection>
