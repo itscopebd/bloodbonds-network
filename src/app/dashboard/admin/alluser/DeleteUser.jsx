@@ -37,7 +37,7 @@ const DeleteUser = ({ id }) => {
       onClick={handleDeleteUser}
       className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor"
     >
-      <FaTrash className="w-full h-full p-2" />
+      <FaTrash className="w-full" />
     </button>
   );
 };
