@@ -7,7 +7,7 @@ const DonatePlasma = () => {
                 <h1 className=' text-red-500 text-center font-bold text-5xl'>Why Donate Plasma?</h1>
                 <div className='mt-10  grid lg:grid-cols-2  gap-16  '>
                     <div>
-                        <Image className="rounded" src={donate}></Image>
+                        <Image className="rounded" src={donate} alt="a bag of plasma"></Image>
                     </div>
                     <div className="my-auto">
                         <ul>

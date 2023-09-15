@@ -6,6 +6,7 @@ import DonationProcess from '@/components/DonationProcess/DonationProcess';
 import EmpoweringDonors from '@/components/EmpoweringDonors/EmpoweringDonors';
 import FaqSection from '@/components/FaqSection/FaqSection';
 import GetInTouch from '@/components/GetInTouch/GetInTouch';
+import HelpPoor from '@/components/HelpPoor/HelpPoor';
 import JoinUs from '@/components/JoinUs/JoinUs';
 import MedicalInsights from '@/components/MedicalInsights/MedicalInsights';
 import Work from '@/components/Work/Work';
@@ -20,6 +21,7 @@ const BannerPage = () => {
             <EmpoweringDonors></EmpoweringDonors>
             <Work></Work>
             <JoinUs></JoinUs>
+            <HelpPoor></HelpPoor>
             <ContactUs></ContactUs>
             <FaqSection></FaqSection>
             <GetInTouch></GetInTouch>

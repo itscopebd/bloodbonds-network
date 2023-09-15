@@ -157,7 +157,7 @@
     color: #fff;
     text-shadow: 0 0 5px #999;
 }
-@media screen and (min-width:577px) and (max-width:992px) {
+@media screen and (min-width:742px) and (max-width:992px) {
     .search{
         width: auto;
     }
@@ -170,7 +170,7 @@
         justify-content: center;
     }
 }
-@media screen and (max-width:576px){
+@media screen and (max-width:742px){
     .cards{
         width: auto;
         height: auto;
@@ -211,4 +211,12 @@
    margin-top: 5px;
    
 }
+
+
+}
+@media screen and (min-width:993px) and (max-width:1113px){
+    .cards{
+        
+        height: auto;
+    }
 }
