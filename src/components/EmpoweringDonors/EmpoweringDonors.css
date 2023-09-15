@@ -8,3 +8,17 @@
         padding-bottom: 50px;
     }
 }
+.p2{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('../../app/asset/pic-77.jpg');
+   
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.d2{
+    
+    height: 88%;
+    align-items: center;
+}
