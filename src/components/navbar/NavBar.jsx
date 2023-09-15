@@ -123,7 +123,7 @@ const Navbar = () => {
               {user && user ? (
                 <span onClick={handleLogout}>Logout</span>
               ) : (
-                <Link href={"/login"}>Sign in</Link>
+                <Link href={"/login"}>Login</Link>
               )}
             </button>
           </div>
