@@ -38,7 +38,7 @@ const MakeUser = ({ id }) => {
       className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor"
       title="Make a user"
     >
-      <FaUser className="w-full h-full p-2" />
+      <FaUser className="w-full" />
     </button>
   );
 };
