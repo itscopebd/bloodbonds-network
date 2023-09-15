@@ -94,6 +94,7 @@ const applyDonors= await getAllAppliedDonor()
                   <td>
                     <MakeDonor id={applyDonor?._id} status={applyDonor?.status}></MakeDonor>
                   </td>
+                  
                   <td>
                    <CommentPendingDonor></CommentPendingDonor>
                   </td>
