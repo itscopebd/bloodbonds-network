@@ -1,6 +1,6 @@
 import { connectToDatabase } from "@/utils/database";
 import { NextResponse } from "next/server";
-export const revalidate = 1;
+export const revalidate = 0;
 export const GET = async () => {
   const query = { status: "Pending" };
  
