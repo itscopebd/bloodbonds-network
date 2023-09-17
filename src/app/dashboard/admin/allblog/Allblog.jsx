@@ -28,20 +28,20 @@ const Allblog = async() => {
 let allblogs= await getallblog()
 
     return (
-        <div >
-             <div className='ps-10 pb-5 pt-5 '>
+        <div  >
+             <div className='ps-10 pb-5 pt-5 items-center  '>
                 <h1 className='text-4xl uppercase font-semibold'>
                 All Blog Posts
                 </h1>
             </div>
-            <div className='place-items-center'>
+            <div className=' max-w-full'>
 
 {
-  allblogs.map( ({date,title,author,content,email,status,img,_id}) => (
+  allblogs.map( ({date,title,author,content,email,status,image,_id}) => (
     <div className="alert shadow-lg mb-4 mx-auto" key={_id}>
     <div className="avatar">
       <div className="w-8 rounded">
-        <Image src={img} width={50} height={50} alt='blogs'></Image>
+        <Image src={image} width={50} height={50} alt='blogs'></Image>
       </div>
     </div>
       <div>
@@ -49,12 +49,12 @@ let allblogs= await getallblog()
     <div className="text-xs">{content.slice(0,120)}....</div>
       <div className="text-xs">{author}</div>
           <div className="text-xs">{email}</div>
-      <div className={`text-xs ${status=== 'active'? 'text-green-400':'text-red-500'}`}>{status}</div>
+      <div className={`text-xs  font-bold ${status=== 'active'? 'text-green-600 ':'text-red-500'}`}>{status}</div>
   
   </div>
-  <button className="btn btn-sm">
+  <div className="btn btn-sm">
     <DeletButton id={_id}></DeletButton>
-  </button>
+  </div>
   <button className="btn btn-sm">
     <Link href={`/dashboard/admin/updateblog/${_id}`}>
       <FaEdit/>

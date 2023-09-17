@@ -5,10 +5,12 @@ import { NextResponse } from "next/server";
 export const POST = async (request) => {
 
     const blogData = await request.json();
+    
     const { db } = await connectToDatabase();
     try {
 
         const result = await db.collection('blogs').insertOne(blogData);
+        console.log(result);
         return NextResponse.json(result);
 
     } catch (err) {

@@ -24,7 +24,7 @@ export async function PUT(request, {params}) {
    Newcontent:content,
    Newauthor: author,
    Newdate: date,
-   Newimg : img,
+   image : image,
 Newstatus : status,
 Newemail: email
 
@@ -33,7 +33,7 @@ Newemail: email
    const result = await db.collection('blogs').updateOne(
     { _id: new ObjectId(id) },
    {$set:{
-    title,content,author,date,img,status,email
+    title,content,author,date,image,status,email
    }}
   );
     return NextResponse.json(result,{message:"Updated"})
