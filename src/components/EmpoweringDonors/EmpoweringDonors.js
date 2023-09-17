@@ -4,8 +4,9 @@ const EmpoweringDonors = () => {
   return (
     <>
       <section className="mt-20">
-      <div className="h-96 p-24 w-full bg bg7  ">
-      <h1 className="text-5xl text-center font-bold text-red-500 ">
+      <div className="h-full  w-full p2  ">
+     <div className="d2 lg:py-36 md:py-36" >
+     <h1 className="text-5xl text-center font-bold text-red-500 ">
           Empowering Donors
         </h1>
         <p className="text-white text-center py-10 ">
@@ -14,6 +15,7 @@ const EmpoweringDonors = () => {
           donation journey. <br /> And how your generosity saves lives and
           create bright future of others.
         </p> 
+     </div>
           </div>
        
       </section>

@@ -1,0 +1,89 @@
+.poor2{
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('../../app/asset/poor3.jpg');
+   
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.donate2{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+.field2{
+
+    box-sizing: border-box;
+    
+    
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.search{
+   padding: 13px 19px;
+   
+   
+   width: 688px;
+   border-radius: 2px;
+   line-height: 1;
+   letter-spacing: 0;
+   border: none;
+   outline: none;
+   box-shadow: none;
+   background: #f4eeee;
+   color: #212121;
+   font-size: 14px;
+   
+
+}
+.btn-field{
+   
+    line-height: 1;
+}
+.btn-search{
+    width: 45px;
+    height: 45px;
+    border:none;
+    text-indent: -9999px;
+    outline: none;
+    box-shadow: none;
+    background-color: rgb(255, 61, 61);
+    border-radius: 0 2px 2px 0;
+}
+@media screen and (max-width:576px){
+    .font h2{
+        font-weight: 600;
+        font-size: medium;
+        padding-top: 15px;
+    }
+    .font p{
+        font-weight: 400;
+        font-size: small;
+        padding-bottom: 15px;
+    }
+    .svg3{
+        width: auto;
+    }
+
+    .donate2{
+        flex-direction: column-reverse;
+    }
+   .search{
+    width: auto;
+   }
+    
+}
+
+@media screen and (min-width:577px) and (max-width:992px){
+    .svg3{
+        width: auto;
+    }
+    .search{
+        width: auto;
+       }
+}

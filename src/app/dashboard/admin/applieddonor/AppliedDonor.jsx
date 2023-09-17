@@ -1,77 +1,36 @@
-"use client";
+// "use client";
 
-import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
-import { FaBeer, FaComments, FaTrash } from "react-icons/fa";
-import Swal from "sweetalert2";
-const AppliedDonor = () => {
-  const [applyDonors, setApplyDonors] = useState([]);
-  const router= useRouter()
-  useEffect(() => {
-    const appliedDonor = async () => {
-      await fetch('/api/donor/pending',
-      { cache: 'no-store' })
-        .then((res) => res.json())
-        .then((data) => setApplyDonors(data));
-    };
-    appliedDonor()
-  }, [applyDonors]);
+import CommentPendingDonor from "./CommentPendingDonor"
+import DeletePendingDonor from "./DeletePendingDonor"
+import MakeDonor from "./MakeDonor"
 
-  // handle donor approve and pending
+// import { useRouter } from "next/navigation";
+// import React, { useEffect, useState } from "react";
+// import { FaBeer, FaComments, FaTrash } from "react-icons/fa";
+// import Swal from "sweetalert2";
+const baseUrl= process.env.Base_URL
+const getAllAppliedDonor= async()=>{
 
-  const handleDonor = async (value, id) => {
-    if (value == "Approve") {
-      Swal.fire({
-        title: "Are you sure?",
-        text: "This Donor is Approve!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, Approved it!",
-      }).then( async(result) => {
-        if (result.isConfirmed) {
-          const res= await fetch(`/api/donor/${id}`, {
-            cache: 'no-store' ,
-            method: "PUT",
-            body: JSON.stringify(value),
-          })
-          if (res.ok) {
-            
-            Swal.fire("Approved!", "This Donor is Approved.", "success");  
-            router.refresh()
-          }
-           
-        
-        }
-      });
-    } 
-  };
+  try {
+    const res= await fetch(`${baseUrl}/api/donor/pending`,{cache:"no-store"})
+    if (!res.ok) {
+      throw Error("Data no loading")
+    }
 
-  // handle delete donor
+    const data = await res.json()
+    return data;
 
-  const hamdleDeleteDonor = (id) => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "This Donor is Delete!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, Delete it!",
-    }).then( async(result) => {
-      if (result.isConfirmed) {
-        const res= await fetch(`/api/donor/${id}`, {
-          method: "DELETE",
-        })
-        if (res.ok) {
-          Swal.fire("Yes!", "This Donor is Delete.", "success");
-          router.refresh()
-        }
-       
-      }
-    });
-  };
+  } catch (error) {
+    console.log(error)
+  }
+
+}
+
+
+
+const AppliedDonor = async() => {
+
+const applyDonors= await getAllAppliedDonor()
 
   if (applyDonors.length === 0) {
     return (
@@ -86,7 +45,7 @@ const AppliedDonor = () => {
         <h1 className="font-bold text-3xl uppercase py-4">All Aplied Donor</h1>
       </div>
       <div className="overflow-x-auto">
-        <table className="table table-xs text-center">
+        <table className="table table-xs text-center overflow-x-scroll">
           <thead>
             <tr>
               <th className="font-bold text-md text-black">Image</th>
@@ -133,32 +92,14 @@ const AppliedDonor = () => {
                   <td className="text-black font-bold">{applyDonor?.paraddress}</td>
                   <td className="text-black font-bold">{applyDonor?.phone}</td>
                   <td>
-                    <select
-                      name=""
-                      id=""
-                      className="select select-bordered min-h-[2rem] h-[2rem]"
-                      onChange={(e) => handleDonor(e.target.value, applyDonor._id)}
-                    >
-                      <option value={applyDonor?.status}>{applyDonor?.status}</option>
-                      {applyDonor.status === "Pending" ? (
-                        <option value="Approve">Approve</option>
-                      ) : (
-                        <option value="Pending">Pending</option>
-                      )}
-                    </select>
+                    <MakeDonor id={applyDonor?._id} status={applyDonor?.status}></MakeDonor>
+                  </td>
+                  
+                  <td>
+                   <CommentPendingDonor></CommentPendingDonor>
                   </td>
                   <td>
-                    <button className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor">
-                      <FaComments className="w-full h-full p-2" />
-                    </button>
-                  </td>
-                  <td>
-                    <button
-                      onClick={() => hamdleDeleteDonor(applyDonor._id)}
-                      className="btn btn-sm capitalize hover:bg-black hover:text-white text-white bg-secondaryColor"
-                    >
-                      <FaTrash className="w-full h-full p-2" />
-                    </button>
+                   <DeletePendingDonor id={applyDonor?._id}></DeletePendingDonor>
                   </td>
                 </tr>
               </>
