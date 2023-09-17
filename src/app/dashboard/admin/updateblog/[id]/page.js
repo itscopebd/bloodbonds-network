@@ -5,7 +5,9 @@ const getOneBlog = async (id)=>{
     let baseURl=process.env.Base_URL;
 
     try {
-        const res = await fetch(`${baseURl}/api/blog/${id}`)
+        const res = await fetch(`${baseURl}/api/blog/${id}`,{
+            cache:'no-store'
+        })
         if (!res.ok) {
             throw  new Error("data load failed")
         }

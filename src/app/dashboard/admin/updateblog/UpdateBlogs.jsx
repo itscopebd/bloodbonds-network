@@ -1,19 +1,91 @@
 'use client'
 import { UserAuth } from '@/context/authContext';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaArrowLeft } from 'react-icons/fa';
+import { ThreeDots } from 'react-loader-spinner';
+import Swal from 'sweetalert2';
+const image_secrect__key= process.env.NEXT_PUBLIC_image_host;
 
 const UpdateBlogs = ({id ,singleblog}) => {
     let {user}=UserAuth()
-    const router = useRouter();
-    let {title,content,author,date,img,status,email}=singleblog;
-    const { register, handleSubmit, control, formState: { errors } } = useForm()
-    const onSubmit = async(data) => {
 
-let {Newstatus,Newimg,Newdate,Newauthor,Newcontent,Newtitle,Newemail}=data
+    const [isUpdatingImage, setIsUpdatingImage] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const toggleImageUpdate = () => {
+      setIsUpdatingImage(!isUpdatingImage);
+    };
+    const router = useRouter();
+    const today = new Date();
+    const formattedDate = today.toISOString().split('T')[0];
+    let {title,content,author,date,image,status,email}=singleblog;
+    const hostUrl = `https://api.imgbb.com/1/upload?key=${image_secrect__key}`;
+ const { register, handleSubmit, control, formState: { errors } ,setValue} = useForm()
+   
+    const onSubmit = async(data) => {
+       setIsSubmitting(true)
+try {
+  let imgUrl = image; 
+
+    if (isUpdatingImage) {
+      const formData = new FormData();
+      formData.append("image", data.Nimage[0]);
+      const imgResponse = await fetch(hostUrl, {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!imgResponse.ok) {
+        throw new Error("Image upload failed");
+      }
+
+      const imgData = await imgResponse.json();
+      imgUrl = imgData?.data?.display_url;
+    }
+    
+    const udateinfo ={
+        image: imgUrl,
+        Newstatus:data.Newstatus,
+        Newdate:date ,
+        Newauthor:data.Newauthor
+        ,Newcontent:data.Newcontent 
+        ,Newtitle:data.Newtitle 
+        ,Newemail:email?email: user?.email
+    }
+
+    const res = await fetch(`/api/blog/${id}`,{
+    method: "PUT",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify(udateinfo),
+})
+if (!res.ok) {
+     setIsSubmitting(false)
+    throw new Error("Failed to update topic");
+ 
+  }
+  else{
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Successfully updated',
+        showConfirmButton: false,
+        timer: 1500
+      })
+  }
+  setIsSubmitting(false)
+router.refresh()
+
+} catch (error) {
+console.log(error);
+setIsSubmitting(false)
+}
+
 
 
     }
@@ -33,29 +105,60 @@ let {Newstatus,Newimg,Newdate,Newauthor,Newcontent,Newtitle,Newemail}=data
                         <h1 className="text-5xl font-bold ">Update Your Blog</h1>
                         <p className="py-6">Welcome back to the blog editing interface! This is where you have the power to keep your content fresh,<br></br> engaging, and up-to-date. </p>
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm md:max-w-full  shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-full max-w-sm md:max-w-full  bg-base-100">
                         <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
-                            <div className="form-control">
+                         
+                           
+<div>
+                 {isUpdatingImage ? (
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Image Upload</span>
+                  </label>
+                  <input
+                    type="file"
+                    {...register("Nimage", {
+                      required: "Image is required",
+                    })}
+                  placeholder='upload '
+                    className="file-input  file-input-ghost w-full max-w-full"
+                 
+                  />
+                 <div className='text-start mt-2'>
+                 <button
+                   className='btn btn-sm'
+                    onClick={toggleImageUpdate}
+                  >
+                   cancel
+                  </button>
+                 </div>
+                </div>
+              ) : (
+                <div className="form-control">
+                <div className='avatar  h-96'>
+               
+                    <Image src={image} width={500} height={300} alt='blog '></Image>
+                 
+                
+                </div>
+                 <div className='text-start mt-2'>
+                 <button
+                   className='btn btn-sm'
+                    onClick={toggleImageUpdate}
+                  >
+                    Change Image
+                  </button>
+                 </div>
+                </div>
+              )} 
+</div>
+             
+            <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Title</span>
                                 </label>
                                 <input type="text" defaultValue={title} placeholder="product name" className="input input-bordered"  {...register("Newtitle")}  />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">email</span>
-                                </label>
-                                <input type="text" defaultValue={email? email : user?.email} placeholder="email" className="input input-bordered"  {...register("Newemail")}  />
-                            </div>
-
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Image url</span>
-                                </label>
-                                <input type="text" placeholder="author"  {...register("Newimg")} className="input input-bordered" />
-                             
-                            </div>
-                     
+                            </div>            
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Author</span>
@@ -67,18 +170,19 @@ let {Newstatus,Newimg,Newdate,Newauthor,Newcontent,Newtitle,Newemail}=data
                             
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">stock_quantity</span>
+                                    <span className="label-text">Date</span>
                                 </label>
-                                <input type="date" defaultValue={date} placeholder="stock_quantity"  {...register("Newdate")} className="input input-bordered" />
+                                <input type="date" defaultValue={date?date:formattedDate}  className="input input-bordered" readOnly/>
                                
                             </div>
                             <div>
                                 <div className='form-control'>
                                     <label className="label">
-                                        <span className="label-text">Select Category</span>
+                                        <span className="label-text">Select status</span>
+                                     
                                     </label>
-                                    <select className="select select-bordered w-full  "  defaultValue={status} {...register("Newstatus")}>
-                <option value="" selected>Select Category</option>
+                                    <select className="select select-bordered w-full  "  defaultValue={status}  {...register("Newstatus")}>
+                                   
   <option value="pending">pending</option>
   <option value="active">active</option>
   
@@ -91,14 +195,29 @@ let {Newstatus,Newimg,Newdate,Newauthor,Newcontent,Newtitle,Newemail}=data
                                     <span className="label-text">description</span>
                                 </label>
                                
-                                <textarea className="textarea textarea-secondary" placeholder="description"
+                                <textarea className="textarea h-96 textarea-secondary" placeholder="description"
                                  {...register("Newcontent")}
                                 defaultValue={content}
                                 ></textarea>
 
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-secondary">Save change</button>
+                                <button className="btn btn-secondary">
+                                {
+                                  isSubmitting ? (
+                                    <ThreeDots 
+height="20" 
+width="50" 
+radius="9"
+color="#ffff" 
+ariaLabel="three-dots-loading"
+wrapperStyle={{}}
+visible={true}
+ />
+                                  ):
+                                  "save change"
+                                }
+                                  </button>
                             </div>
                             
                         </form>
