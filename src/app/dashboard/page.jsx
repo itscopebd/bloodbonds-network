@@ -6,7 +6,7 @@ const DashboardPage = () => {
 
  
     return (
-        <div>
+        <div className='mx-auto'>
             
             <DashBoardHome />
         </div>
