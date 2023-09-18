@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Comment from "./Comment";
 import DeleteDonor from "./DeleteDonor";
 import PendingDonor from "./PendingDonor";
@@ -55,15 +56,11 @@ const AllDonor = async () => {
             {allDonor?.map((donor) => (
               <tr key={donor?._id}>
                 <td>
-                  <img
-                    style={{
-                      width: "100px",
-                      height: "100px",
-                      borderRadius: "50px",
-                    }}
-                    src={donor?.image}
-                    alt="donor image"
-                  />
+                <div className="avatar">
+  <div className="w-10 rounded-full">
+    <Image src={donor?.image} width={50} height={50} alt="donor  image"></Image>
+  </div>
+</div>
                 </td>
                 <td className="text-black font-bold">{donor?.name}</td>
                 <td className="text-black font-bold">{donor?.blood}</td>

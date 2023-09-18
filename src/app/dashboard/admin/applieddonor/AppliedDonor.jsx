@@ -1,5 +1,6 @@
 // "use client";
 
+import Image from "next/image"
 import CommentPendingDonor from "./CommentPendingDonor"
 import DeletePendingDonor from "./DeletePendingDonor"
 import MakeDonor from "./MakeDonor"
@@ -45,7 +46,7 @@ const applyDonors= await getAllAppliedDonor()
         <h1 className="font-bold text-3xl uppercase py-4">All Aplied Donor</h1>
       </div>
       <div className="overflow-x-auto">
-        <table className="table table-xs text-center overflow-x-scroll">
+        <table className="table table-xs text-center overflow-x-scroll ">
           <thead>
             <tr>
               <th className="font-bold text-md text-black">Image</th>
@@ -68,7 +69,7 @@ const applyDonors= await getAllAppliedDonor()
               <>
                 <tr>
                   <td>
-                    <img
+                    {/* <img
                       style={{
                         width: "100px",
                         height: "100px",
@@ -76,7 +77,12 @@ const applyDonors= await getAllAppliedDonor()
                       }}
                       src={applyDonor?.image}
                       alt="donor image"
-                    />
+                    /> */}
+                    <div className="avatar">
+  <div className="w-10 rounded-full">
+    <Image src={applyDonor?.image} width={50} height={50} alt="donor  image"></Image>
+  </div>
+</div>
                   </td>
                   <td className="text-black font-bold">{applyDonor?.name}</td>
                   <td className="text-black font-bold">{applyDonor?.blood}</td>
