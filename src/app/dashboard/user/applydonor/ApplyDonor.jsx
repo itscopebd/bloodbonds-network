@@ -141,6 +141,7 @@ const ApplyDonor = () => {
                     validate: positiveNumberValidation,
                   })}
                   className="input input-bordered"
+                  maxLength={11}
                 />
                 {errors.phone && (
                   <p className="text-error pt-1">{errors.phone.message}</p>
