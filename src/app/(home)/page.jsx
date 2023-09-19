@@ -12,12 +12,14 @@ import MedicalInsights from '@/components/MedicalInsights/MedicalInsights';
 import DonorStoryHome from '@/components/DonorStoryHome/DonorStoryHome'
 import Work from '@/components/Work/Work';
 import React from 'react';
+import About from '@/components/About/About';
 
 
 const BannerPage = () => {
     return (
         <div>
             <Banner></Banner>
+            <About></About>
             <MedicalInsights></MedicalInsights>
             <EmpoweringDonors></EmpoweringDonors>
             <Work></Work>

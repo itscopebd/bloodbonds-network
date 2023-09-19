@@ -52,33 +52,32 @@
     background-size: cover;
     padding-left: 8%;
     padding-right: 8%;
-    box-sizing: border-box;
 }
 .bg1{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-55.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-5555.jpg');
 
 }
 .bg2{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-66.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-8888.jpg');
 
 }
 .bg3{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-44.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-9999.jpg');
 
 }
 .bg4{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-77.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-7777.jpg');
 
 }
 .bg5{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-11.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-1111.jpg');
 
 }
 .bg6{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-33.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-3333.jpg');
 }
 .bg7{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-44.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../app/asset/pic-1010.jpg');
 
 }
 .contain{
@@ -95,7 +94,6 @@
     display: inline-block;
     border-radius: 10px;
     padding: 15px 25px;
-    box-sizing: border-box;
     margin: 10px 15px;
     cursor: pointer;
     background-position: center;
@@ -103,51 +101,51 @@
     transition: transform 0.5s;
 }
 .cards1{
-    background-image: url(../../app//asset/card-1.jpg);
+    background-image: url(../../app//asset/card-123.jpg);
 
 }
 .cards2{
-    background-image: url(../../app//asset/card-2.jpg);
+    background-image: url(../../app//asset/card-22.jpg);
 
 }
 .cards3{
-    background-image: url(../../app//asset/card-3.jpg);
+    background-image: url(../../app//asset/card-33.jpg);
 
 }
 .cards4{
-    background-image: url(../../app//asset/card-4.jpg);
+    background-image: url(../../app//asset/card-44.jpg);
 
 }
 .cards5{
-    background-image: url(../../app//asset/card-5.jpg);
+    background-image: url(../../app//asset/card-55.jpg);
 
 }
 .cards6{
-    background-image: url(../../app//asset/card-6.jpg);
+    background-image: url(../../app//asset/card-66.jpg);
 
 }
 .cards7{
-    background-image: url(../../app//asset/card-7.jpg);
+    background-image: url(../../app//asset/card-77.jpg);
 
 }
 .cards8{
-    background-image: url(../../app//asset/card-8.jpg);
+    background-image: url(../../app//asset/card-88.jpg);
 
 }
 .cards9{
-    background-image: url(../../app//asset/card-9.jpg);
+    background-image: url(../../app//asset/card-99.jpg);
 
 }
 .cards10{
-    background-image: url(../../app//asset/card-10.jpg);
+    background-image: url(../../app//asset/card-1010.jpg);
 
 }
 .cards11{
-    background-image: url(../../app//asset/card-11.jpg);
+    background-image: url(../../app//asset/card-1111.jpg);
 
 }
 .cards12{
-    background-image: url(../../app//asset/card-12.jpg);
+    background-image: url(../../app//asset/card-1212.jpg);
 
 }
 .cards:hover{
