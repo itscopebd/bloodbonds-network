@@ -2,25 +2,25 @@ import Image from 'next/image';
 import React from 'react';
 
 
-const getApproveDonor = async()=>{
-    let baseURl=process.env.Base_URL;
-    try {
-        const res= await fetch(`${baseURl}/api/donor/approve`,{
-            cache:'no-cache'
-        })
-        if (!res.ok) {
-            throw new Error('faild to fetch')
-        }
+// const getApproveDonor = async()=>{
+//     let baseURl=process.env.Base_URL;
+//     try {
+//         const res= await fetch(`${baseURl}/api/donor/approve`,{
+//             cache:'no-cache'
+//         })
+//         if (!res.ok) {
+//             throw new Error('faild to fetch')
+//         }
 
-        return res.json()
-    } catch (error) {
-        console.log(error);
-    }
-}
+//         return res.json()
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
-const Donorlist = async () => {
-const alldonor= await getApproveDonor();
-
+const Donorlist =  ({donor}) => {
+// const alldonor= await getApproveDonor();
+console.log(donor)
     return (
         <div className='my-10'>
             <div>
@@ -28,7 +28,7 @@ const alldonor= await getApproveDonor();
             </div>
             <div className='grid grid-cols-1    lg:grid-cols-2   gap-3 mx-auto justify-center p-10'>
 {
-    alldonor.map(ad =>(
+    donor && donor.map(ad =>(
         <div className="card xl:card-side  max-w-full h-full bg-base-100 shadow-xl" key={ad._id}>
  
   <div className="avatar">
