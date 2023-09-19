@@ -3,7 +3,8 @@
 import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
 
-const MakeDonor = ({ id, status }) => {
+const MakeDonor = ({ id, status,email }) => {
+
     const router= useRouter()
   const handleAppliedDonor = async (value) => {
     Swal.fire({
@@ -23,7 +24,17 @@ const MakeDonor = ({ id, status }) => {
           },
           body: JSON.stringify(value),
         });
-        if (res.ok) {
+       const data = "donor";
+       const res2= await fetch(`/api/user/${email}`,
+    {   method: "PATCH",
+       headers: {
+         "content-type": "application/json",
+       },
+       body: JSON.stringify(data),
+    }
+       )
+
+        if (res.ok && res2.ok) {
           router.refresh();
           Swal.fire("Yes!", "This Donor is Approve.", "success");
         }

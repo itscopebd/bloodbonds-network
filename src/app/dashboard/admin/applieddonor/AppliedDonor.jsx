@@ -69,15 +69,7 @@ const applyDonors= await getAllAppliedDonor()
               <>
                 <tr>
                   <td>
-                    {/* <img
-                      style={{
-                        width: "100px",
-                        height: "100px",
-                        borderRadius: "50px",
-                      }}
-                      src={applyDonor?.image}
-                      alt="donor image"
-                    /> */}
+                   
                     <div className="avatar">
   <div className="w-10 rounded-full">
     <Image src={applyDonor?.image} width={50} height={50} alt="donor  image"></Image>
@@ -98,7 +90,7 @@ const applyDonors= await getAllAppliedDonor()
                   <td className="text-black font-bold">{applyDonor?.paraddress}</td>
                   <td className="text-black font-bold">{applyDonor?.phone}</td>
                   <td>
-                    <MakeDonor id={applyDonor?._id} status={applyDonor?.status}></MakeDonor>
+                    <MakeDonor id={applyDonor?._id} status={applyDonor?.status} email={applyDonor?.email} ></MakeDonor>
                   </td>
                   
                   <td>
