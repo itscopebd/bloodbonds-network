@@ -23,6 +23,13 @@ const Navbar = () => {
       <li className="text-white font-semibold">
         <Link href="/donorlist">Donors</Link>
       </li>
+     {
+      user && (
+      <li className="text-white font-semibold">
+      <Link href="/plasma">Plasma</Link>
+    </li>
+      )
+     } 
       <li className="text-white font-semibold">
         <Link href="/emergency">Emergency</Link>
       </li>

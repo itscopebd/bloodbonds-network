@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import pic1 from '../../app/asset/exp-1.jpg'
-import pic2 from '../../app/asset/ex-2.jpg'
-import pic3 from '../../app/asset/exp-3.jpg'
+import pic1 from '../../app/asset/exp-11.jpg'
+import pic2 from '../../app/asset/ex-22.jpg'
+import pic3 from '../../app/asset/exp-33.jpg'
 
 const MedicalInsights = () => {
   const initialSliceLength = 100; 
