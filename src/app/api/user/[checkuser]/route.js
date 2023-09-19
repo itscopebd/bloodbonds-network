@@ -28,6 +28,18 @@ export const PUT= async (request, { params })=> {
   });
   return NextResponse.json(result, { message: "Updated" });
 }
+export const PATCH= async (request, { params })=> {
+  const { checkuser } = params;
+  const data = await request.json();
+  const query = { email: checkuser };
+  const { db } = await connectToDatabase();
+  const result = await db.collection("users").updateOne(query, {
+    $set: {
+      role:data
+    },
+  });
+  return NextResponse.json(result, { message: "Updated" });
+}
 
 
 // delete user
