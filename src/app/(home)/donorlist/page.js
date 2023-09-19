@@ -8,7 +8,10 @@ const AlldOnorList = () => {
 const [filterDonor,setFilterDonor]=useState("A+")
   useEffect(() => {
     const getDonor = async () => {
-      await fetch(`/api/donor/approve/${filterDonor}`)
+      await fetch(`/api/donor/approve/${filterDonor}`,
+      {
+        cache:"no-store"
+      })
         .then((res) => res.json())
         .then((data) => setDonor(data));
     };
