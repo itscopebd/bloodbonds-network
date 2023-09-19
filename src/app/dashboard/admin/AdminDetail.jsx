@@ -11,6 +11,7 @@ const AdminDetail = () => {
   const [allDonor, setAllDonor] = useState([]);
   const [pendingDonor, setPendingDonor] = useState([]);
   const [allUser, setAllUser] = useState([]);
+  const [allBlog, setAllBlog] = useState([]);
   const router= useRouter()
   useEffect(() => {
     const allDonorApprove = async () => {
@@ -37,6 +38,14 @@ const AdminDetail = () => {
         
     };
     allUser();
+   const allBlogs = async () => {
+      await fetch("/api/blog",
+      { cache: 'no-store' })
+        .then((res) => res.json())
+        .then((data) => setAllBlog(data));
+        
+    };
+    allBlogs();
 
   },[]);
   // all donor
@@ -50,7 +59,9 @@ const AdminDetail = () => {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
               <div className="card  bg-[#2196f3] text-white shadow-xl">
                 <div className="card-body">
-                  <h2 className="font-bold text-5xl">0</h2>
+                  <h2 className="font-bold text-5xl">
+                    {allBlog.length}
+                  </h2>
                   <p>Total blog</p>
                   <Image src={img4} width={180} height={120} alt=""></Image>
                 </div>
@@ -62,7 +73,7 @@ const AdminDetail = () => {
                   <Image src={img3} width={180} height={120} alt=""></Image>
                 </div>
               </div>
-              <div className="card  bg-[#03045e] text-white shadow-xl">
+              <div className="card  bg-[#f15bb5] text-white shadow-xl">
                 <div className="card-body">
                   <h2 className="font-bold text-5xl">{pendingDonor.length}</h2>
                   <p>Applied Total Donor</p>
