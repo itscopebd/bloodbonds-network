@@ -7,7 +7,6 @@ export const GET = async (request, { params }) => {
 
   try {
     const query = { blood: filter };
-    console.log(query)
     const result = await db.collection("donors").find(query).toArray();
     return NextResponse.json(result);
   } catch (err) {

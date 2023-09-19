@@ -1,8 +1,6 @@
-"use client";
+"use client"
 
-import DonorBanner from "@/components/Donorlist/DonorBanner";
 import Donorlist from "@/components/Donorlist/Donorlist";
-import PlasmaBanner from "@/components/PlasmaBanner/PlasmaBanner";
 import React, { useEffect, useState } from "react";
 
 const AlldOnorList = () => {
@@ -21,19 +19,19 @@ const [filterDonor,setFilterDonor]=useState("A+")
     setFilterDonor(value);
     
   };
-console.log(filterDonor)
+
+
   return (
     <div>
-      {/* <DonorBanner></DonorBanner> */}
       <div
-        className="hero min-h-screen"
+        className="hero h-96"
         style={{
           backgroundImage:
             "url(https://i.ibb.co/JnXWzXd/27577817-ravi24-may-7-1.jpg)",
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
-        <div className="hero-content text-center text-neutral-content">
+        <div className="hero-content text-center text-white">
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">
               Blood Heroes: Find Your Lifesaver
@@ -41,10 +39,7 @@ console.log(filterDonor)
             <p className="mb-5">
               Search Donors by Blood Type and Save Lives Today
             </p>
-            <select
-              onChange={(e) => getGroup(e.target.value)}
-              className="select select-secondary w-full max-w-xs text-black "
-            >
+            <select onChange={(e)=>getGroup(e.target.value)} className="select select-secondary w-full max-w-xs text-black  dark:text-white">
               <option selected>Search your Blood</option>
               <option value="A+">A+</option>
               <option value="A-">A-</option>
