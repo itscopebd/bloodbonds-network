@@ -1,9 +1,9 @@
 import React from "react";
 import './HelpCard.css'
-import poor1 from '../../app/asset/poor2.jpg'
-import poor2 from '../../app/asset/poor3.jpg'
-import poor3 from '../../app/asset/poor1.jpg'
-import poor4 from '../../app/asset/poorbg.jpg'
+import poor1 from '../../app/asset/poor22.jpg'
+import poor2 from '../../app/asset/poor33.jpg'
+import poor3 from '../../app/asset/poor11.jpg'
+import poor4 from '../../app/asset/poorbg1.jpg'
 import Link from "next/link";
 import Image from "next/image";
 const HelpCard = () => {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import donate from '../../app/asset/DonatePlasma.jpg'
+import donate from '../../app/asset/DonatePlasma11.jpg'
 const DonatePlasma = () => {
     return (
         <div>
