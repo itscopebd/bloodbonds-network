@@ -77,6 +77,7 @@ const AllDonor = async () => {
                   <PendingDonor
                     id={donor?._id}
                     status={donor?.status}
+                    email={donor?.email}
                   ></PendingDonor>
                 </td>
                 <td>
