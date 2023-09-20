@@ -3,7 +3,7 @@
 
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
-const PendingDonor = ({id,status}) => {
+const PendingDonor = ({id,status,email}) => {
     const router= useRouter()
   const handlePendingDonor = async (value) => {
     try {
@@ -25,8 +25,16 @@ const PendingDonor = ({id,status}) => {
                 },
                 body: JSON.stringify(value),
               });
-      
-              if (res.ok) {
+              const data = "user";
+              const res2= await fetch(`/api/user/${email}`,
+           {   method: "PATCH",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(data),
+           }
+              )
+              if (res.ok &&  res2.ok) {
                 router.refresh();
                 Swal.fire("Yes!", "This Donor is Pending.", "success");
               }

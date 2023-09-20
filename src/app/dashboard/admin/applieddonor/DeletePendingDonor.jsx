@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
-const DeletePendingDonor=({id})=>{
+const DeletePendingDonor=({id,email})=>{
     const router= useRouter()
     const handleDeletePendingDonor= async()=>{
         try {
@@ -19,8 +19,16 @@ const DeletePendingDonor=({id})=>{
                 const res = await fetch(`/api/donor/${id}`, {
                   method: "DELETE",
                 });
-      
-                if (res.ok) {
+
+                const data = "user";
+                const res2= await fetch(`/api/user/${email}`,
+             {   method: "PATCH",
+                headers: {
+                  "content-type": "application/json",
+                },
+                body: JSON.stringify(data),
+             })
+                if (res.ok && res2.ok) {
                   router.refresh();
                   Swal.fire("Yes!", "This Donor is Delete.", "success");
                 }
