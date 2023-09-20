@@ -97,7 +97,7 @@ const applyDonors= await getAllAppliedDonor()
                    <CommentPendingDonor></CommentPendingDonor>
                   </td>
                   <td>
-                   <DeletePendingDonor id={applyDonor?._id}></DeletePendingDonor>
+                   <DeletePendingDonor id={applyDonor?._id}  email={applyDonor?.email}></DeletePendingDonor>
                   </td>
                 </tr>
               </>

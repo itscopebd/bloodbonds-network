@@ -20,8 +20,15 @@ const DeleteDonor = ({id}) => {
                 const res = await fetch(`/api/donor/${id}`, {
                   method: "DELETE",
                 });
-      
-                if (res.ok) {
+                const data = "user";
+                const res2= await fetch(`/api/user/${email}`,
+             {   method: "PATCH",
+                headers: {
+                  "content-type": "application/json",
+                },
+                body: JSON.stringify(data),
+             })
+                if (res.ok && res2.ok) {
                   router.refresh();
                   Swal.fire("Yes!", "This Donor is Delete.", "success");
                 }

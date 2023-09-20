@@ -2,6 +2,8 @@
 
 import Donorlist from "@/components/Donorlist/Donorlist";
 import React, { useEffect, useState } from "react";
+import img from  '../../asset/DonationProcess/donorbanner.jpg'
+import Image from "next/image";
 
 const AlldOnorList = () => {
   const [donor, setDonor] = useState([]);
@@ -27,16 +29,16 @@ const [filterDonor,setFilterDonor]=useState("A+")
   return (
     <div>
       <div
-        className="hero h-96"
-        style={{
-          backgroundImage:
-            "url(https://i.ibb.co/JnXWzXd/27577817-ravi24-may-7-1.jpg)",
+        className="hero h-full mb-5 "  style={{
+          backgroundImage: `url(${img.src})`, 
         }}
       >
-        <div className="hero-overlay bg-opacity-60"></div>
-        <div className="hero-content text-center text-white">
+       
+        <div className="hero-overlay bg-opacity-60">
+        </div>
+        <div className="hero-content p-24 text-center text-white ">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">
+            <h1 className="mb-5 text-xl md:text-5xl font-bold">
               Blood Heroes: Find Your Lifesaver
             </h1>
             <p className="mb-5">
