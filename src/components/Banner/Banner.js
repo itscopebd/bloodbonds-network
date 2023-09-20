@@ -28,24 +28,9 @@ const Banner = () => {
         >
           {/* banner section */}
           <div className="   w-full h-full   bg bg1">
-          <div className="field sm:w-auto ">
-        <div className="headSearch ">
-          <input
-            type="text"
-            placeholder="Search Your Location"
-            className="search"
-          />
-        </div>
-
-        <div className="btn-field">
-          <button className="btn-search">
-            <FcSearch className=" text-3xl"></FcSearch>
-          </button>
-        </div>
-      </div>
-           
+      
             <div className=" contain">
-              <div className="">
+              <div className="sm:mt-5">
                 <h1 className=" text-5xl font-bold text-white">
                   Donate <span className="font-bold text-red-500">blood</span>.
                 </h1>
@@ -79,24 +64,10 @@ const Banner = () => {
             </div>
           </div>
           <div className=" h-full w-full   bg bg2 ">
-          <div className="field sm:w-auto ">
-        <div className="headSearch ">
-          <input
-            type="text"
-            placeholder="Search Your Location"
-            className="search"
-          />
-        </div>
-
-        <div className="btn-field">
-          <button className="btn-search">
-            <FcSearch className=" text-3xl"></FcSearch>
-          </button>
-        </div>
-      </div>
+        
            
             <div className=" contain">
-              <div className="">
+              <div className="sm:mt-5">
                 <h1 className=" text-5xl font-bold text-white">
                   Donate <span className="font-bold text-red-500">blood</span>.
                 </h1>
@@ -128,24 +99,10 @@ const Banner = () => {
             </div>
           </div>
           <div className=" h-full w-full  bg bg3  ">
-          <div className="field sm:w-auto ">
-        <div className="headSearch ">
-          <input
-            type="text"
-            placeholder="Search Your Location"
-            className="search"
-          />
-        </div>
-
-        <div className="btn-field">
-          <button className="btn-search">
-            <FcSearch className=" text-3xl"></FcSearch>
-          </button>
-        </div>
-      </div>
+       
          
             <div className=" contain">
-              <div className="">
+              <div className="sm:mt-5">
                 <h1 className=" text-5xl font-bold text-white">
                   Donate <span className="font-bold text-red-500">blood</span>.
                 </h1>
@@ -176,24 +133,10 @@ const Banner = () => {
           </div>
          
                 <div className=" h-full w-full  bg bg4  ">
-          <div className="field sm:w-auto ">
-        <div className="headSearch ">
-          <input
-            type="text"
-            placeholder="Search Your Location"
-            className="search"
-          />
-        </div>
-
-        <div className="btn-field">
-          <button className="btn-search">
-            <FcSearch className=" text-3xl"></FcSearch>
-          </button>
-        </div>
-      </div>
+        
         
             <div className=" contain">
-              <div className="">
+              <div className="sm:mt-5">
                 <h1 className=" text-5xl font-bold text-white">
                   Donate <span className="font-bold text-red-500">blood</span>.
                 </h1>
@@ -223,24 +166,10 @@ const Banner = () => {
             </div>
           </div>
           <div className=" h-full w-full  bg bg5   ">
-          <div className="field sm:w-auto ">
-        <div className="headSearch ">
-          <input
-            type="text"
-            placeholder="Search Your Location"
-            className="search"
-          />
-        </div>
-
-        <div className="btn-field">
-          <button className="btn-search">
-            <FcSearch className=" text-3xl"></FcSearch>
-          </button>
-        </div>
-      </div>
+        
           
             <div className="contain">
-              <div className="">
+              <div className="sm:mt-5">
                 <h1 className=" text-5xl font-bold text-white">
                   Donate <span className="font-bold text-red-500">blood</span>.
                 </h1>
@@ -273,24 +202,10 @@ const Banner = () => {
             </div>
           </div>
           <div className=" h-full w-full  bg bg6   ">
-          <div className="field sm:w-auto ">
-        <div className="headSearch ">
-          <input
-            type="text"
-            placeholder="Search Your Location"
-            className="search"
-          />
-        </div>
-
-        <div className="btn-field">
-          <button className="btn-search">
-            <FcSearch className=" text-3xl"></FcSearch>
-          </button>
-        </div>
-      </div>
+      
           
             <div className="contain">
-              <div className="">
+              <div className="sm:mt-5">
                 <h1 className=" text-5xl font-bold text-white">
                   Donate <span className="font-bold text-red-500">blood</span>.
                 </h1>
