@@ -9,7 +9,7 @@ import Link from 'next/link';
 const PlasmaBanner = () => {
     return (
         <div className=' bg-fixed h-full w-full pbg '>
-             <div className="field2 sm:w-auto py-20">
+             {/* <div className="field2 sm:w-auto py-20">
         <div className="headSearch ">
           <input
             type="text"
@@ -23,7 +23,7 @@ const PlasmaBanner = () => {
             <FcSearch className=" text-3xl"></FcSearch>
           </button>
         </div>
-      </div>
+      </div> */}
             <div className='plasma'>
 
             <div className='font'>

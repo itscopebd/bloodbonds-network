@@ -17,7 +17,7 @@
     }
   
   }
-  @media screen and (min-width:577px) {
+  @media screen and (min-width:450px) {
     .head{
         width: 100%;
     }

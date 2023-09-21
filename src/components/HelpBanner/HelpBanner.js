@@ -8,7 +8,7 @@ const HelpBanner = () => {
     return (
        <section>
         <div className='poor2 h-full w-full bg-fixed'>
-        <div className="field2 sm:w-auto py-20">
+        {/* <div className="field2 sm:w-auto py-20">
         <div className="headSearch ">
           <input
             type="text"
@@ -22,7 +22,7 @@ const HelpBanner = () => {
             <FcSearch className=" text-3xl"></FcSearch>
           </button>
         </div>
-      </div>
+      </div> */}
 
         <div className='donate2'>
             <div>
