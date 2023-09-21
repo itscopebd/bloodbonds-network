@@ -9,6 +9,7 @@ import Link from 'next/link';
 
 const Blogs = () => {
   return (
+    // The bloge page section 
     <div className='text-center py-20 container mx-auto'>
       <h1 className="text-5xl text-center font-bold text-red-500 ">Our Blogs</h1>
       <hr className='w-44 mt-2 mb-4 rounded mx-auto border border-red-500' />
@@ -33,7 +34,7 @@ const Blogs = () => {
             </div>
           </div>
         </div>
-
+{/* second card  */}
         <div className="card w-96 mt-4 mx-auto bg-base-100 shadow-xl rounded-none">
           <figure>
             <Image src={img2} alt="Food" className='p-2 w-screen h-[242px]' />
@@ -51,7 +52,7 @@ const Blogs = () => {
             </div>
           </div>
         </div>
-
+{/* third card  */}
         <div className="card w-96 mt-4 mx-auto bg-base-100 shadow-xl rounded-none">
           <figure>
             <Image src={img3} alt="Food" className='p-2 w-screen h-[242px]' />

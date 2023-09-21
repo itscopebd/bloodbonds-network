@@ -3,12 +3,13 @@ import React from 'react';
 
 const JoinUs = () => {
     return (
+        // join us section 
         <div className='my-20'>
             <h1 className="text-5xl text-center font-bold text-red-500 ">Join Us</h1>
             <p className="text-gray-500 pt-10 text-center">we believe in the extraordinary impact individuals can have when they come <br /> together for a common purpose saving lives through blood donation.
             </p>
 
-
+            {/* full join us section  */}
 
             <div className="hero lg:w-full h-[900px] mx-auto mt-10 rounded" style={{ backgroundImage: 'url(https://shorturl.at/egEG4)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
