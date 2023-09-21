@@ -1,7 +1,4 @@
 import React from 'react';
-import img1 from '../../app/asset/work/bloode.jpeg'
-import Image from 'next/image';
-import { FaBriefcaseMedical } from "react-icons/fa6";
 import { TbHeartPlus } from "react-icons/tb";
 import { MdOutlineLocalHospital } from "react-icons/md";
 
@@ -10,7 +7,7 @@ const BenefitsOfPlasma = () => {
         <section className="container mx-auto rounded-2xl p-16 mt-20">
             <h1 className="text-5xl text-center font-bold text-red-500 ">Benefits of Plasma Donation</h1>
             <div className="lg:grid-cols-2 grid grid-cols-1 gap-10 mt-10">
-
+        {/* plasma donation section  */}
                 <div>
                     <div>
                         <span><TbHeartPlus color='red' size='50px' /></span>
@@ -29,7 +26,7 @@ const BenefitsOfPlasma = () => {
                         </div>
                     </div>
                 </div>
-
+{/* second part   */}
                 <div>
                     <div>
                         <span><MdOutlineLocalHospital color='red' size='50px' /></span>
