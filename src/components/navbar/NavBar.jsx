@@ -23,22 +23,25 @@ const Navbar = () => {
       <li className="text-white font-semibold">
         <Link href="/donorlist">Donors</Link>
       </li>
-     {
-      user && (
-      <li className="text-white font-semibold">
-      <Link href="/plasma">Plasma</Link>
-    </li>
-      )
-     } 
+      {
+        user && (
+          <li className="text-white font-semibold">
+            <Link href="/plasma">Plasma</Link>
+          </li>
+        )
+      }
       <li className="text-white font-semibold">
         <Link href="/emergency">Emergency</Link>
+      </li>
+      <li className="text-white font-semibold">
+        <Link href="/blog">Blogs</Link>
       </li>
       <li className="text-white font-semibold">
         <Link href="/contact">Contact Us</Link>
       </li>
 
-      
-{/* <ActiveLink className="font-semibold" href="/">Home</ActiveLink>
+
+      {/* <ActiveLink className="font-semibold" href="/">Home</ActiveLink>
 <ActiveLink href="/about">About</ActiveLink>
 <ActiveLink href="/donorlist">Donors</ActiveLink>
 <ActiveLink href="/contact">Contact Us</ActiveLink>  */}
@@ -57,30 +60,30 @@ const Navbar = () => {
   // handle user logout
 
   const handleLogout = async () => {
-  try {
-    await logout();
-    const res= await fetch("/api/auth/logout",{
-      method:"POST"
-    })
-    const data = await res.json();
+    try {
+      await logout();
+      const res = await fetch("/api/auth/logout", {
+        method: "POST"
+      })
+      const data = await res.json();
 
-    Swal.fire({
-      position: "top-end",
-      icon: "success",
-      title: "Your Logout Success!",
-      showConfirmButton: false,
-      timer: 1500,
-    });
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your Logout Success!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
 
-    replace("/")
+      replace("/")
 
-  } catch (error) {
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Your Logout Not Success!",
-    });
-  }
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Your Logout Not Success!",
+      });
+    }
 
   };
 
