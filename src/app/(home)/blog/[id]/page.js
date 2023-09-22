@@ -1,34 +1,58 @@
 import React from 'react';
 import Image from 'next/image';
-import img1 from '../../../asset/blog/image (1).jpeg'
+import Link from 'next/link';
+import { FaArrowLeft } from 'react-icons/fa';
 
-const page = ({ parms }) => {
+const getActiveOneBlog = async (id)=>{
+    let baseURl=process.env.Base_URL;
+
+    try {
+        const res = await fetch(`${baseURl}/api/blog/${id}`,{
+            cache:'no-store'
+        })
+        if (!res.ok) {
+            throw  new Error("data load failed")
+        }
+        return res.json()
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const page =  async({ params }) => {
+    let {id}=params
+let blogDetail = await getActiveOneBlog(id)
+const{image,title,author,date,content,email}=blogDetail
     return (
-        <div className='container mx-auto mt-12'>
-            {/* tittle */}
-            <h1 className='mt-4 text-5xl text-center font-bold'>A Comprehensive Guide to Blood Donation</h1>
-            <p className='mt-4 text-center'>Learn everything you need to know about the lifesaving act of blood donation, from eligibility requirements</p>
-            {/* bloge images */}
-            <Image className='rounded w-[800px] h-[600px] mt-10 mx-auto' src={img1} alt='image' />
-            <p className='mt-10 text-center'>In a world where countless lives depend on the kindness and generosity of strangers, there exists a noble and selfless act that can make a profound impact – blood donation. "A Comprehensive Guide to Blood Donation" is your all-encompassing resource for understanding this vital, life-saving process. <br />
+        <div className='container mx-auto pt-16 px-10'>
 
-                This comprehensive guide goes beyond the surface to provide you with a deep understanding of the entire blood donation journey. Whether you are a potential donor or simply curious about the process, this guide offers a wealth of information to help you navigate this important aspect of healthcare.
-                <br />
+<div className='p-5'>
+                <button>
+                   <Link href={'/blog'}> <FaArrowLeft/> </Link>
+                </button>
+            </div>
 
-                Inside the pages of this guide, you will discover:
-                <br />
-                1. The Basics of Blood Donation:
-                <br />
-                Learn about the fundamental principles of blood donation, including why it's so crucial for healthcare and who can donate.
-                2. Eligibility Requirements:
-                <br />
-                Find out if you are eligible to donate blood, as we delve into factors like age, weight, and health considerations.
-                3. Preparation Tips:
-                <br />
-                Discover valuable insights on how to prepare for your donation, including dietary recommendations and lifestyle choices.
-                4. The Donation Process:
-                <br />
-                Gain a step-by-step understanding of what happens during a blood donation, from registration to post-donation care.</p>
+
+<div className='card mx-auto'>
+
+
+            <div className='rounded avatar w-full h-96'>
+                   <Image  src={image} width={1000} height={1000} alt='image' />
+            </div>
+            <h1 className='mt-4 text-5xl text-center font-bold'>{blogDetail.title}</h1>
+
+            <div className='pt-6'>
+                <p className='text-2xl font-bold'>{author}</p>
+                <p className='text-sm'>{date}</p>
+                <p className='text-sm'>{email}</p>
+            </div>
+            
+         <div>
+             <p className='mt-10'>{content}</p>
+         </div>
+           
+            
+            </div>
         </div>
     );
 };
