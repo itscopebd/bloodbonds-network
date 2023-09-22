@@ -10,7 +10,7 @@ import member5 from '../../app/asset/volunteer.jpg'
 import member6 from '../../app/asset/volunteer2.jpg'
 import member7 from '../../app/asset/person5.jpg'
 import member8 from '../../app/asset/person4.jpg'
-import member9 from '../../app/asset/person7.jpg'
+import member9 from '../../app/asset/person.png'
 
 
 const initialData = [

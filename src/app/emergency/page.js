@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2'
 import Link from 'next/link';
-import Footer from '@/components/footer/Footer';
 
 const Emergency = () => {
   const [message, setMessage] = useState('');
