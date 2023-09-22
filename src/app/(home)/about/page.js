@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 // import banner from "@/app/asset/AboutPage Banner.jpg";
-import banner from '../../asset/AboutPage Banner.jpg'
+import banner from '../../asset/AboutPage Banner.png'
 import './about.css'
 import MeetTheTeam from '@/components/MeetTheTeam/MeetTheTeam';
 import TestimonialSection from '@/components/Testimonial/Testimonial';
