@@ -23,7 +23,9 @@ try {
 }
 
 const Blogs = async() => {
-  let blogs= await getActiveBlog()
+
+  let activeblog= await getActiveBlog()
+
   return (
     // The bloge page section 
     <div className='text-center py-20 container mx-auto'>
@@ -34,7 +36,7 @@ const Blogs = async() => {
       <div className='grid  grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-3'>
 
      {
-blogs.map(blg => (
+activeblog.map((blg) => (
   <div className="card w-96 h-full mt-4 mx-auto bg-base-100 shadow-xl rounded-none" key={blg._id}>
   <figure>
     <Image src={blg.image} width={400} height={400} alt="Food" className='p-2 w-screen h-[242px]' />
@@ -44,7 +46,7 @@ blogs.map(blg => (
       {blg.title}
     </h1>
     <p>{blg.content.slice(0,150)}
-    <Link href={`/blog/${blg._id}`}> <span className=" text-red-500 ">Read full</span>  </Link>
+    <Link href={`/blog/blogdetail/${blg._id}`}> <span className=" text-red-500 ">Read full</span>  </Link>
     </p>
     <hr className='border-red-400 border w-14 mx-auto my-2' />
     <div className="card-actions mx-auto text-slate-400">
