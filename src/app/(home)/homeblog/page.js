@@ -1,7 +1,7 @@
 import Blog from '@/components/Blog/Blog';
 import React from 'react';
 
-const page = async () => {
+const HomeBLogs = async () => {
     return (
         <div>
             <Blog/>
@@ -9,4 +9,4 @@ const page = async () => {
     );
 };
 
-export default page;
+export default HomeBLogs;

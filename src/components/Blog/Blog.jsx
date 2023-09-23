@@ -22,6 +22,7 @@ if (!res.ok) {
 const Blog = async () => {
 
   const allblogs= await getActiveBlog()
+
   return (
     <div>
         <div className='text-center py-20 container mx-auto'>
@@ -42,7 +43,7 @@ allblogs.map((blg) => (
       {blg.title}
     </h1>
     <p>{blg.content.slice(0,150)}
-    <Link href={`/homeblog/blogdetail/${blg._id}`}> <span className=" text-red-500 ">Read full</span>  </Link>
+    <Link href={`/blogdetail/${blg._id}`}> <span className=" text-red-500 ">Read full</span>  </Link>
     </p>
     <hr className='border-red-400 border w-14 mx-auto my-2' />
     <div className="card-actions mx-auto text-slate-400">
