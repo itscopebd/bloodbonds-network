@@ -3,7 +3,7 @@ import React from 'react';
 const getallactive = async()=>{
     const baseUrl = process.env.Base_URL
     try {
-        const res = await fetch(`${baseUrl}/api/blog/active`,{
+        const res = await fetch(`${baseUrl}/api/activeblog`,{
             cache:"no-store"
         })
 if (!res.ok) {
@@ -19,7 +19,7 @@ const Blog = async() => {
     return (
         <div>
            {
-            activeBlog.map((b)=> (
+            activeBlog?.map((b)=> (
                 <div key={b._id}>
 <h1>{b.title}</h1>
                 </div>
