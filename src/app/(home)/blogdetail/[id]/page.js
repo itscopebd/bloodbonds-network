@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 
-const getActiveOneBlog = async (id)=>{
+const getActiveOneBlog = async (id)=> {
     let baseURl=process.env.Base_URL;
 
     try {
@@ -28,7 +28,7 @@ const{image,title,author,date,content,email}=blogDetail
 
 <div className='p-5'>
                 <button>
-                   <Link href={'/blog'}> <FaArrowLeft/> </Link>
+                   <Link href={'/allblogs'}> <FaArrowLeft/> </Link>
                 </button>
             </div>
 

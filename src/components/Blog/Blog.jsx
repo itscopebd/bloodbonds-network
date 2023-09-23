@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaUserAlt } from 'react-icons/fa';
 
-const getActiveBlog = async()=>{
+const getActiveBlog = async  () =>{
   let base_url = process.env.Base_URL;
 try {
   let res= await fetch(`${base_url}/api/blog/active`,{
@@ -24,7 +24,7 @@ try {
 
 const Blog = async() => {
 
-  let activeblog= await getActiveBlog()
+  let activeblog = await getActiveBlog()
 
   return (
     // The bloge page section 
