@@ -20,15 +20,16 @@ if (!res.ok) {
 const Blog = async() => {
     const activeBlog = await getallactive()
     return (
-        <div className='p-10 mx-auto container'>
-            <div className='pt-10 font-bold text-xl uppercase'>
-                <h1>Our Blogs</h1>
-            </div>
-        <div className='grid grid-cols-2 lg:grid-cols-3 gap-3'>
+        <div className='p-16'>
+             <div className='text-center pt-5  container mx-auto'>
+      <h1 className="text-5xl text-center font-bold text-red-500 ">Our Blogs</h1>
+      <hr className='w-44 mt-2 mb-4 rounded mx-auto border border-red-500' />
+      <p className=' font-bold'>Let's all serve everyone by donating blood..</p></div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
            {
             activeBlog?.map((b)=> (
                 <div key={b._id}>
- <div className="card w-96 h-full mt-4 mx-auto bg-base-100 shadow-xl rounded-none" key={b?._id}>
+ <div className="card mx-w-sm h-full mt-4 mx-auto bg-base-100 shadow-xl rounded-none" key={b?._id}>
  <figure>
      <Image src={b?.image} width={400} height={400} alt="Food" className='p-2 w-screen h-[242px]' />
   </figure>
