@@ -12,7 +12,8 @@ const getallactive = async()=>{
 if (!res.ok) {
     throw new Error("error")
 }
-        return res.json()
+const data = await res.json()
+        return data
     } catch (error) {
         console.log(error);
     }
