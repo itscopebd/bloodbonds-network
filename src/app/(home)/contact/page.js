@@ -20,7 +20,7 @@ const Contact = () => {
       <div className="info grid grid-cols-1 md:grid-cols-3 gap-10 mt-20">
         <div className="phone rounded-lg">
           <div className="flex items-center justify-center text-center mb-3">
-            <BsTelephone className='me-3 text-red-700 text-3xl'></BsTelephone>
+            <BsTelephone className='me-3 text-red-500 text-3xl'></BsTelephone>
             <p className='text-2xl'><span className='font-bold'>Phone:</span></p>
           </div>
           <div className='text-2xl text-center'>
@@ -31,7 +31,7 @@ const Contact = () => {
 
         <div className="mail">
           <div className="flex items-center justify-center text-center mb-3">
-            <AiOutlineMail className='me-3 text-3xl text-red-700'></AiOutlineMail>
+            <AiOutlineMail className='me-3 text-3xl text-red-500'></AiOutlineMail>
             <p className='text-2xl'><span className='font-bold'>Email:</span> </p>
           </div>
           <div className='text-2xl text-center'>
@@ -42,7 +42,7 @@ const Contact = () => {
 
         <div className="address">
           <div className="flex items-center justify-center mb-3">
-            <MdOutlineLocationOn className='me-3 text-red-700 text-3xl'></MdOutlineLocationOn>
+            <MdOutlineLocationOn className='me-3 text-red-500 text-3xl'></MdOutlineLocationOn>
             <p className='text-2xl'><span className='font-bold'>Address:</span></p>
           </div>
           <div className='text-2xl text-center'>

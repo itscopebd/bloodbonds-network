@@ -5,13 +5,13 @@ import story from '../../app/asset/Our story.jpg';
 const OurStory = () => {
     return (
         <div className='mt-20 container mx-auto'>
-            <h2 className='text-center text-2xl md:text-3xl text-red-700 font-bold mb-5'>Our Story</h2>
+            <h2 className='text-center text-2xl md:text-3xl text-red-500 font-bold mb-5'>Our Story</h2>
             <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-5'>
                 <div className='flex justify-center items-center'>
                     <Image src={story} alt='image' className='rounded-lg px-0 w-full' height={500} />
                 </div>
                 <div className='text-md pt-2 md:text-lg mx-auto px-5 md:px-0'>
-                    <p className='first-letter:text-4xl first-letter:font-bold first-letter:text-red-700 first-letter:mr-1 first-letter:float-left  w-12/12 md:w-12/12 text-justify text-md md:text-lg'>
+                    <p className='first-letter:text-4xl first-letter:font-bold first-letter:text-red-500 first-letter:mr-1 first-letter:float-left  w-12/12 md:w-12/12 text-justify text-md md:text-lg'>
                     B<span className='font-bold'>loodBond Network</span> is the result of a dedicated team united by a common purpose – saving lives through the gift of blood. Our journey began when a group of passionate individuals came together, inspired by the incredible impact of blood donations. <br />
                     Since our humble beginnings, BloodBond Network has grown beyond our wildest dreams. We've partnered with hospitals, communities, and dedicated volunteers to organize countless blood drives, saving countless lives in the process. We've faced challenges along the way, but each obstacle only strengthened our resolve.
                     </p>

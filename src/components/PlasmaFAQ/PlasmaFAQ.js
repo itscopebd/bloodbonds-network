@@ -35,7 +35,7 @@ const PlasmaFAQ = () => {
 
   return (
     <div className='container mx-auto mt-20'>
-      <h2 className='text-center text-2xl md:text-3xl text-red-700 font-bold mb-5'>
+      <h2 className='text-center text-2xl md:text-3xl text-red-500 font-bold mb-5'>
         Frequently Asked Questions
       </h2>
       <div className='join join-vertical w-full'>
