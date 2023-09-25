@@ -45,9 +45,11 @@ const blogDetail = await getSingleblog(id)
     <p className='text-sm'>{blogDetail?.email}</p>
 </div>
 
-<div>
- <p className='mt-10'>{blogDetail?.content}</p>
+<div className="pt-5">
+   <div dangerouslySetInnerHTML={{ __html: blogDetail?.content }} /> 
 </div>
+
+
 
 
 </div>

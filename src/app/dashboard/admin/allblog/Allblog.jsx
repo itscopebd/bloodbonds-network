@@ -37,7 +37,7 @@ let allblogs= await getallblog()
             <div className=' max-w-full'>
 
 {
-  allblogs.map( ({date,title,author,content,email,status,image,_id}) => (
+  allblogs?.map( ({date,title,author,content,email,status,image,_id}) => (
     <div className="alert shadow-lg mb-4 mx-auto" key={_id}>
     <div className="avatar">
       <div className="w-8 rounded">
@@ -46,7 +46,6 @@ let allblogs= await getallblog()
     </div>
       <div>
     <h3 className="font-bold">{title}</h3>
-    <div className="text-xs">{content.slice(0,120)}....</div>
       <div className="text-xs">{author}</div>
           <div className="text-xs">{email}</div>
       <div className={`text-xs  font-bold ${status=== 'active'? 'text-green-600 ':'text-red-500'}`}>{status}</div>
