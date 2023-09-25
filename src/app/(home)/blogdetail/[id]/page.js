@@ -1,3 +1,4 @@
+import RecentBlog from '@/components/RecentBlog/RecentBlog';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -37,7 +38,7 @@ const blogDetail = await getSingleblog(id)
 <div className='rounded avatar w-full h-96'>
        <Image  src={blogDetail?.image} width={1000} height={1000} alt='image' />
 </div>
-<h1 className='mt-4 text-5xl text-center font-bold'>{blogDetail.title}</h1>
+<h1 className='mt-4 text-base md:text-5xl text-center font-bold'>{blogDetail?.title}</h1>
 
 <div className='pt-6'>
     <p className='text-2xl font-bold'>{blogDetail?.author}</p>
@@ -53,6 +54,7 @@ const blogDetail = await getSingleblog(id)
 
 
 </div>
+<RecentBlog></RecentBlog>
         </div>
     );
 };
