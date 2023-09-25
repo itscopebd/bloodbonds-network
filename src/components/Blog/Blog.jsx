@@ -21,18 +21,15 @@ const data = await res.json()
 const Blog = async() => {
     const activeBlog = await getallactive()
     return (
-        <div className='p-16'>
-             <div className='text-center pt-5  container mx-auto'>
-      <h1 className="text-5xl text-center font-bold text-red-500 ">Our Blogs</h1>
-      <hr className='w-44 mt-2 mb-4 rounded mx-auto border border-red-500' />
-      <p className=' font-bold'>Let's all serve everyone by donating blood..</p></div>
+        <div className=''>
+            
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
            {
             activeBlog?.map((b)=> (
                 <div key={b._id}>
- <div className="card mx-w-sm h-full mt-4 mx-auto bg-base-100 shadow-xl rounded-none" key={b?._id}>
+ <div className="card mx-w-sm h-full mt-4 mx-auto bg-base-100 shadow-xl rounded-none hover:shadow-2xl " key={b?._id}>
  <figure>
-     <Image src={b?.image} width={400} height={400} alt="Food" className='p-2 w-screen h-[242px]' />
+     <Image src={b?.image} width={400} height={400} alt="Food" className='p-2 max-w-full h-[242px]' />
   </figure>
    <div className="card-body">
     <h1 className="card-title text-red-500 mx-auto">
@@ -44,7 +41,7 @@ const Blog = async() => {
      </div>
   
    
-    
+    <p></p>
     <hr className='border-red-400 border w-14 mx-auto my-2' />
     <div className="card-actions mx-auto text-slate-400">
     <p className='flex items-center'><FaRegCalendar className='mr-2' />{b?.date}</p>
