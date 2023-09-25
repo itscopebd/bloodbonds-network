@@ -7,6 +7,8 @@ import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaArrowLeft } from 'react-icons/fa';
 import { ThreeDots } from 'react-loader-spinner';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 import Swal from 'sweetalert2';
 const image_secrect__key= process.env.NEXT_PUBLIC_image_host;
 
@@ -23,6 +25,8 @@ const UpdateBlogs = ({id ,singleblog}) => {
     const today = new Date();
     const formattedDate = today.toISOString().split('T')[0];
     let {title,content,author,date,image,status,email}=singleblog;
+    const [editorContent, setEditorContent] = useState(content);
+
     const hostUrl = `https://api.imgbb.com/1/upload?key=${image_secrect__key}`;
  const { register, handleSubmit, control, formState: { errors } ,setValue} = useForm()
    
@@ -52,7 +56,7 @@ try {
         Newstatus:data.Newstatus,
         Newdate:date ,
         Newauthor:data.Newauthor
-        ,Newcontent:data.Newcontent 
+        ,Newcontent:editorContent
         ,Newtitle:data.Newtitle 
         ,Newemail:email?email: user?.email
     }
@@ -195,17 +199,23 @@ setIsSubmitting(false)
                                     <span className="label-text">description</span>
                                 </label>
                                
-                                <textarea className="textarea h-96 textarea-secondary" placeholder="description"
-                                 {...register("Newcontent")}
-                                defaultValue={content}
-                                ></textarea>
+                                <ReactQuill
+                  value={editorContent}
+                  onChange={setEditorContent}
+                  theme="snow"
+                  className="h-96 textarea-secondary"
+                  modules={{ toolbar: true }}
+                  placeholder="Description"
+                />
 
                             </div>
-                            <div className="form-control mt-6">
-                                <button className="btn btn-secondary">
+                            <div className="form-control mt-10  ">
+                                <button className="bg-black  text-white text-base py-3 px-4 rounded-md w-52 uppercase  flex justify-center items-center">
                                 {
                                   isSubmitting ? (
-                                    <ThreeDots 
+                                    <div className='flex items-center'>
+
+                                       <ThreeDots 
 height="20" 
 width="50" 
 radius="9"
@@ -214,7 +224,9 @@ ariaLabel="three-dots-loading"
 wrapperStyle={{}}
 visible={true}
  />
-                                  ):
+                              
+                                    </div>
+                                       ):
                                   "save change"
                                 }
                                   </button>
