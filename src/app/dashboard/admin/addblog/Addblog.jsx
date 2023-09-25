@@ -4,10 +4,13 @@ import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { ThreeDots } from 'react-loader-spinner';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 import Swal from 'sweetalert2';
   const image_secrect__key= process.env.NEXT_PUBLIC_image_host;
 const Addblog = () => {
     let { user } = UserAuth()
+    const [editorContent, setEditorContent] = useState('');
     const router = useRouter();
        const hostUrl = `https://api.imgbb.com/1/upload?key=${image_secrect__key}`;
 
@@ -42,14 +45,7 @@ const Addblog = () => {
 
   const imgUrl = imgData?.data?.display_url;
   
-// let blogdata={
-//     status:'pending',
-//     image:imgUrl,
-//     date:data.date,
-//     title:data.title,
-//     author:data.author,
-//     content:data.content
-// }
+
 
         const result= await fetch('/api/blog',
         {
@@ -62,7 +58,7 @@ const Addblog = () => {
               date:data.date,
               title:data.title,
               author:data.author,
-              content:data.content,
+              content:editorContent,
             email:data.email})
         }
         )
@@ -96,7 +92,7 @@ const Addblog = () => {
                 <h1 className="text-5xl font-bold py-5 px-4 ">Post a Blog</h1>  
 
                 <div className=" hero-content mx-auto ">
-                    <div className="card  w-full max-w-2xl 2xl:max-w-full shadow-2xl bg-base-100">
+                    <div className="card  w-full max-w-4xl 2xl:max-w-full shadow-md bg-base-100">
                           
 
                         <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
@@ -148,23 +144,24 @@ const Addblog = () => {
                                 <label className="label">
                                     <span className="label-text">description</span>
                                 </label>
-                               
-                                <textarea className="textarea h-48 textarea-secondary" placeholder="description"
-                                 {...register("content",{
-                                    required: "content is required",
-                                 })}
-                                
-                                ></textarea>
-{errors.content && <p className="text-error pt-1">{errors.content.message}</p>}
+                                <ReactQuill
+                  value={editorContent}
+                  onChange={setEditorContent}
+                  theme="snow"
+                  className="h-96 textarea-secondary"
+                  modules={{ toolbar: true }}
+                  placeholder="Description"
+                />
                             </div>
      
 
-                            <div className="form-control mt-6">
-                                <button className="btn btn-secondary">
+                            <div className="form-control mt-10">
+                                <button className="bg-black text-base text-white  py-3 px-4 rounded-md w-52 uppercase  flex justify-center items-center">
                                     
                                   {
                                     isSbmited ?(
-                                        <ThreeDots 
+                                        <div className='flex  items-center'>
+                                             <ThreeDots 
                                         height="20" 
                                         width="50" 
                                         radius="9"
@@ -173,7 +170,9 @@ const Addblog = () => {
                                         wrapperStyle={{}}
                                         visible={true}
                                          />
-                                    ):   "Submit"
+                                        </div>
+                                       
+                                    ):   "Post"
                                   }
                                     
                                     </button>

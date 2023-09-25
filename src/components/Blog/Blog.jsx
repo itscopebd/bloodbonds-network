@@ -38,9 +38,13 @@ const Blog = async() => {
     <h1 className="card-title text-red-500 mx-auto">
      {b?.title}
      </h1>
-    <p>{b?.content.slice(0,150)}
-   <Link href={`/blogdetail/${b?._id}`}> <span className=" text-red-500 ">Read full</span>  </Link>
-    </p>
+     <div>
+          <div dangerouslySetInnerHTML={{ __html: b?.content.slice(0,200)+'......' }} /> 
+<Link href={`/blogdetail/${b?._id}`}> <span className=" text-red-500 ">Read full</span>  </Link> 
+     </div>
+  
+   
+    
     <hr className='border-red-400 border w-14 mx-auto my-2' />
     <div className="card-actions mx-auto text-slate-400">
     <p className='flex items-center'><FaRegCalendar className='mr-2' />{b?.date}</p>
