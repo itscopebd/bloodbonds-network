@@ -3,20 +3,15 @@ import Image from "next/image";
 import React from "react";
 
 const Donorlist = ({ donor }) => {
-  if (donor.length === 0) {
-    return (
-      <div className="h-96">
-        <div className="absolute top-1/2 left-1/2">
-        <span className="loading loading-bars loading-lg"></span>
-      </div>
-      </div>
-    );
-  }
+ 
   return (
     <div className="my-10 container mx-auto">
       <div>
         <h1 className="px-12 font-medium uppercase py-5 text-xl">All Donor</h1>
       </div>
+    { donor.length === 0 ? (
+      <div>no data</div>
+    ) : (
       <div className="grid grid-cols-1    lg:grid-cols-3  gap-3 mx-auto justify-center p-5">
         {donor.map((ad) => (
           <div
@@ -52,6 +47,7 @@ const Donorlist = ({ donor }) => {
           </div>
         ))}
       </div>
+      ) }
     </div>
   );
 };
