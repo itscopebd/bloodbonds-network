@@ -31,7 +31,7 @@ const stories = [
 const DonorStories = () => {
     return (
         <div className='container mx-auto mt-10'>
-            <h2 className='text-center text-2xl md:text-3xl text-red-700 font-bold mb-5'>Donor Stories</h2>
+            <h2 className='text-center text-2xl md:text-3xl text-red-500 font-bold mb-5'>Donor Stories</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-7 mx-auto justify-between'>
                 {stories.map(story => (
                     <div key={story.id} className="card bg-base-100 shadow-xl">

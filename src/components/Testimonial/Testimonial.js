@@ -1,6 +1,6 @@
 import React from 'react';
 import person from '../../app/asset/volunteer.jpg'
-import person2 from '../../app/asset/person2.jpg'
+import person2 from '../../app/asset/person4.jpg'
 import person3 from '../../app/asset/person3.jpg'
 import Image from 'next/image';
 
@@ -9,21 +9,21 @@ const TestimonialSection = () => {
         {
             id: 1,
             name: 'John Doe',
-            role: 'Patient, CEO, Company A',
+            role: 'Patient',
             img: person,
             content: 'BloodBond Network has been a true lifesaver for my family. When my son needed a blood transfusion, we were overwhelmed and did not know where to turn. The network connected us with a donor in our community, and it made all the difference. Thank you for giving us hope when we needed it most'
         },
         {
             id: 2,
             name: 'Jane Smith',
-            role: 'Regular Blood Donor, Designer, Company B',
+            role: 'Regular Blood Donor',
             img: person2,
             content: 'I have been a regular blood donor for years, and BloodBond Network has made the process incredibly easy. Knowing that my donations are making a direct impact on saving lives in my community is incredibly rewarding. It is more than just a network; it is a lifeline.'
         },
         {
             id: 3,
             name: 'Mary Smith',
-            role: 'Volunteer, Designer, Company B',
+            role: 'Volunteer',
             img: person3,
             content: 'I have seen firsthand the dedication and compassion of the BloodBond Network team. Their commitment to ensuring that no one faces a medical crisis without access to donated blood is truly inspiring. It is a privilege to volunteer with such a wonderful organization that is making a real difference in the world.'
         }
@@ -32,7 +32,7 @@ const TestimonialSection = () => {
     return (
         <section className="testimonial-section bg-red-50 py-10 mt-10">
             <div className="container mx-auto">
-                <h2 className="text-2xl lg:text-3xl font-bold text-center mb-5 text-red-700">What People Say</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold text-center mb-5 text-red-500">What People Say</h2>
                 <div className="grid grid-cols-1 px-4 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {testimonials.map(testimonial => (
                         <div key={testimonial.id} className="testimonial-card bg-white shadow-md p-6 rounded-md">

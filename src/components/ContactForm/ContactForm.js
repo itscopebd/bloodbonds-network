@@ -2,14 +2,14 @@ import React from 'react';
 
 const ContactForm = () => {
   return (
-    <div className="flex flex-col items-center justify-center mt-20">
+    <div className="flex flex-col items-center justify-center mt-20 px-5 md:px-0">
       <h2 className="text-2xl md:text-3xl font-bold text-red-700 text-center md:mb-5">
         Get In Touch
       </h2>
 
-      <form className="mx-auto">
-        <div className="flex">
-          <div className="mb-3 me-10">
+      <form className="mx-auto w-full md:w-3/4 lg:w-1/2">
+        <div className="mb-3 md:flex md:flex-row">
+          <div className="mb-3 md:mb-0 me-0 md:me-10 w-full md:w-1/2">
             <label htmlFor="name" className="block text-gray-600">
               Your Name
             </label>
@@ -22,7 +22,7 @@ const ContactForm = () => {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="mb-3 me-0 md:me-10 w-full md:w-1/2">
             <label htmlFor="email" className="block text-gray-600">
               Your Email
             </label>
@@ -41,17 +41,17 @@ const ContactForm = () => {
             Message
           </label>
           <textarea
-            className="p-3 rounded border border-red-500"
+            className="p-3 rounded border border-red-500 w-full md:w-11/12"
             name="message"
             id="message"
-            cols="55"
+            cols="30"
             rows="5"
             placeholder="Your message here..."
             required
           ></textarea>
         </div>
-        <div className="text-center"> {/* Center the button */}
-          <button className="btn btn-error mx-auto" type="submit">
+        <div className="text-center">
+          <button className="btn btn-outline btn-error mx-auto" type="submit">
             Send
           </button>
         </div>

@@ -1,20 +1,20 @@
 import React from 'react';
 import volunteer1 from '../../app/asset/volunteer.jpg'
 import volunteer2 from '../../app/asset/volunteer2.jpg'
-import volunteer3 from '../../app/asset/volunteer4.jpg'
+import volunteer3 from '../../app/asset/person.png'
 import Image from 'next/image';
 
 const stories = [
     {
         id: 1,
-        name: 'Sarah Johnson',
+        name: 'Michael Rodriguez',
         role: 'Blood Donor',
         img: volunteer1,
         content: 'My journey as a blood donor began when I learned about the critical shortage of blood in our community. I realized that a simple act of donating blood could save lives. Every time I donate, I imagine the impact it has on patients and their families. It is a small sacrifice for me, but it can mean everything to someone in need.'
     },
     {
         id: 2,
-        name: 'Michael Rodriguez',
+        name: 'Sarah Johnson',
         role: 'Blood Donor Advocate',
         img: volunteer2,
         content: 'I have been a regular blood donor for years, but my commitment deepened when my son was born prematurely and needed multiple blood transfusions to survive. It was a wake-up call for me. Now, I actively promote blood donation and encourage others to join this lifesaving cause. It is not just a donation; it is an act of love and compassion.'
