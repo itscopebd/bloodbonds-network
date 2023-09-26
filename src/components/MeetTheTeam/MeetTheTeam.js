@@ -1,170 +1,16 @@
 'use client'
 
-// import React from 'react';
-// import Image from 'next/image';
-// import volunteer from '../../app/asset/volunteer.jpg';
-// import volunteer2 from '../../app/asset/volunteer2.jpg';
-// import doctor from '../../app/asset/doctor.jpg';
-// import doctor2 from '../../app/asset/doctor2.jpg';
-
-// const MeetTheTeam = () => {
-
-//     // const [showAllCards, setShowAllCards] = useState(false);
-
-//     // const toggleShowAllCards = () => {
-//     //     setShowAllCards(!showAllCards);
-//     // };
-   
-
-//     return (
-//         <div className='mt-10 container mx-auto'>
-//             <h2 className='text-2xl lg:text-3xl font-bold text-red-700 text-center lg:mb-5'>Meet Our Team</h2>
-//             <div className='flex justify-center '>
-//             <div className="cards grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-7 mx-auto justify-between">
-//             <div className="card  bg-base-100 shadow-xl">
-//                 <figure className="px-10 pt-10">
-//                     <Image className='rounded' src={volunteer} alt='volunteer'></Image>
-//                 </figure>
-//             <div className="card-body items-center text-center">
-//                 <h2 className="card-title">Joe Keith</h2>
-//                 <p>Director</p>
-//                 <p>He is the director of our team. He is the one who first came up with this idea to create a team from where we can help people who needs blood</p>
-//          </div>
-//             </div>
-//             <div className="card  bg-base-100 shadow-xl">
-//                 <figure className="px-10 pt-10">
-//                     <Image className='rounded' src={volunteer2} alt='volunteer'></Image>
-//                 </figure>
-//             <div className="card-body items-center text-center">
-//                 <h2 className="card-title">Rosy Watson</h2>
-//                 <p>Manager</p>
-//                 <p>She is the manager of our team. Managing the team very dedicatedly from the beginning.</p>
-//          </div>
-//             </div>
-//             <div className="card  bg-base-100 shadow-xl">
-//                 <figure className="px-10 pt-10">
-//                     <Image className='rounded' src={doctor} alt='volunteer'></Image>
-//                 </figure>
-//             <div className="card-body items-center text-center">
-//                 <h2 className="card-title">John Keith</h2>
-//                 <p>Medical Advisor</p>
-//                 <p>She is a docrtor who gives all the medical advise to the team.</p>
-//          </div>
-//             </div>
-//             <div className="card  bg-base-100 shadow-xl">
-//                 <figure className="px-10 pt-10">
-//                     <Image className='rounded' src={doctor2} alt='volunteer'></Image>
-//                 </figure>
-//             <div className="card-body items-center text-center">
-//                 <h2 className="card-title">Rosy Watson</h2>
-//                 <p>Medical Consultant</p>
-//                 <p>He is a doctor who gives all the medical supports to the team.</p>
-//          </div>
-//             </div>
-//             <div className="card  bg-base-100 shadow-xl">
-//                 <figure className="px-10 pt-10">
-//                     <Image className='rounded' src={volunteer} alt='volunteer'></Image>
-//                 </figure>
-//             <div className="card-body items-center text-center">
-//                 <h2 className="card-title">Joe Keith</h2>
-//                 <p>Donor</p>
-//                 <p>Donating blood since 3 years and saved life of a lot of patiets.</p>
-//          </div>
-//             </div>
-//             <div className="card  bg-base-100 shadow-xl">
-//                 <figure className="px-10 pt-10">
-//                     <Image className='rounded' src={volunteer2} alt='volunteer'></Image>
-//                 </figure>
-//             <div className="card-body items-center text-center">
-//                 <h2 className="card-title">Rosy Watson</h2>
-//                 <p>Donor</p>
-//                 <p>Donating blood since 3 years and saved life of a lot of patiets.</p>
-//          </div>
-//             </div>
-//             <div className="card  bg-base-100 shadow-xl">
-//                 <figure className="px-10 pt-10">
-//                     <Image className='rounded' src={volunteer} alt='volunteer'></Image>
-//                 </figure>
-//             <div className="card-body items-center text-center">
-//                 <h2 className="card-title">John Keith</h2>
-//                 <p>Donor</p>
-//                 <p>Donating blood since 3 years and saved life of a lot of patiets.</p>
-//          </div>
-//             </div>
-//             <div className="card  bg-base-100 shadow-xl">
-//                 <figure className="px-10 pt-10">
-//                     <Image className='rounded' src={volunteer2} alt='volunteer'></Image>
-//                 </figure>
-//             <div className="card-body items-center text-center">
-//                 <h2 className="card-title">Rosy Watson</h2>
-//                 <p>Donor</p>
-//                 <p>Donating blood since 3 years and saved life of a lot of patiets.</p>
-//          </div>
-//             </div>
-//             <div className="card  bg-base-100 shadow-xl">
-//                 <figure className="px-10 pt-10">
-//                     <Image className='rounded' src={doctor2} alt='volunteer'></Image>
-//                 </figure>
-//             <div className="card-body items-center text-center">
-//                 <h2 className="card-title">Rosy Watson</h2>
-//                 <p>Volunteer</p>
-//                 <p>A university student.</p>
-//          </div>
-//             </div>
-//             <div className="card  bg-base-100 shadow-xl">
-//                 <figure className="px-10 pt-10">
-//                     <Image className='rounded' src={volunteer} alt='volunteer'></Image>
-//                 </figure>
-//             <div className="card-body items-center text-center">
-//                 <h2 className="card-title">Joe Keith</h2>
-//                 <p>Volunteer</p>
-//                 <p>A university student.</p>
-//          </div>
-//             </div>
-//             <div className="card  bg-base-100 shadow-xl">
-//                 <figure className="px-10 pt-10">
-//                     <Image className='rounded' src={volunteer2} alt='volunteer'></Image>
-//                 </figure>
-//             <div className="card-body items-center text-center">
-//                 <h2 className="card-title">Rosy Watson</h2>
-//                 <p>Volunteer</p>
-//                 <p>A college student.</p>
-//          </div>
-//             </div>
-//             <div className="card  bg-base-100 shadow-xl">
-//                 <figure className="px-10 pt-10">
-//                     <Image className='rounded' src={volunteer} alt='volunteer'></Image>
-//                 </figure>
-//             <div className="card-body items-center text-center">
-//                 <h2 className="card-title">John Keith</h2>
-//                 <p>Volunteer</p>
-//                 <p>A job holder</p>
-//          </div>
-//             </div>
-//             </div>
-//             </div>
-//                 <div className='flex justify-center mt-5'>
-//                 <button className='btn btn-error'>See More</button>
-//                 </div>
-            
-            
-//         </div>
-//     );
-// };
-
-// export default MeetTheTeam;
-
-
-
-
 import React, { useState } from 'react';
 import Image from 'next/image';
-import member1 from '../../app/asset/volunteer.jpg'
-import member2 from '../../app/asset/volunteer2.jpg'
-import member3 from '../../app/asset/volunteer.jpg'
-import member4 from '../../app/asset/volunteer4.jpg'
-import member5 from '../../app/asset/doctor.jpg'
-import member6 from '../../app/asset/doctor2.jpg'
+import member1 from '../../app/asset/person2.jpg'
+import member2 from '../../app/asset/volunteer5.jpg'
+import member3 from '../../app/asset/doctor.jpg'
+import member4 from '../../app/asset/doctor2.jpg'
+import member5 from '../../app/asset/volunteer.jpg'
+import member6 from '../../app/asset/volunteer2.jpg'
+import member7 from '../../app/asset/person5.jpg'
+import member8 from '../../app/asset/person4.jpg'
+import member9 from '../../app/asset/person.png'
 
 
 const initialData = [
@@ -214,45 +60,23 @@ const initialData = [
         "name": "John Keith",
         "role": "Donor",
         "description": "Donating blood since 3 years and saved life of a lot of patients.",
-        "imageSrc": member6,
+        "imageSrc": member7,
         "type": "Donor"
     },
     {
         "name": "Rosy Watson",
-        "role": "Donor",
+        "role": "Volunteer",
         "description": "Donating blood since 3 years and saved life of a lot of patients.",
-        "imageSrc": member6,
+        "imageSrc": member8,
         "type": "Donor"
     },
     {
         "name": "Rosy Watson",
         "role": "Volunteer",
         "description": "A university student.",
-        "imageSrc": member6,
-        "type": "Volunteer"
-    },
-    {
-        "name": "Joe Keith",
-        "role": "Volunteer",
-        "description": "A university student.",
-        "imageSrc": member6,
-        "type": "Volunteer"
-    },
-    {
-        "name": "Rosy Watson",
-        "role": "Volunteer",
-        "description": "A college student.",
-        "imageSrc": member6,
-        "type": "Volunteer"
-    },
-    {
-        "name": "John Keith",
-        "role": "Volunteer",
-        "description": "A job holder.",
-        "imageSrc": member6,
+        "imageSrc": member9,
         "type": "Volunteer"
     }
-    
 ];
 
 const MeetTheTeam = () => {
@@ -267,7 +91,7 @@ const MeetTheTeam = () => {
     return (
         <div>
             <div className='mt-10 container mx-auto'>
-                <h2 className='text-2xl lg:text-3xl font-bold text-red-700 text-center lg:mb-5'>Meet Our Team</h2>
+                <h2 className='text-2xl lg:text-3xl font-bold text-red-500 text-center lg:mb-5'>Meet Our Team</h2>
                 <div className='flex justify-center'>
                     <div className="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-7 mx-auto justify-between">
                         {items.slice(0, visible).map((item, index) => (
@@ -286,7 +110,7 @@ const MeetTheTeam = () => {
                 </div>
                 {visible < items.length && (
                     <div className='flex justify-center mt-5'>
-                        <button className='btn btn-error' onClick={showMore}>See More</button>
+                        <button className='btn btn-outline btn-error' onClick={showMore}>See More</button>
                     </div>
                    
                     
