@@ -10,12 +10,19 @@ const AlldOnorList = () => {
 const [filterDonor,setFilterDonor]=useState("A+")
   useEffect(() => {
     const getDonor = async () => {
-      await fetch(`/api/donor/approve/${filterDonor}`,
-      {
-        cache:"no-store"
-      })
-        .then((res) => res.json())
-        .then((data) => setDonor(data));
+      try {
+        const res = await fetch(`/api/donor/approve/${filterDonor}`,{
+          cache: 'no-store'
+        })
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const data = await res.json();
+        setDonor(data);
+      } catch (error) {
+        console.log(error);
+      }
     };
     getDonor();
   },[filterDonor]);
