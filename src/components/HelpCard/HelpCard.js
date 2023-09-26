@@ -19,7 +19,7 @@ const HelpCard = () => {
           <h2 className="card-title">Help Poor</h2>
           <p>Sustainable economic growth plays a crucial role in poverty reduction. Encouraging job creation through policies that support small and medium-sized enterprises (SMEs), promoting entrepreneurship, and investing in infrastructure can stimulate economic development in impoverished areas. Moreover, providing vocational training and enhancing employability skills can empower people to access decent work.</p>
           <div className="card-actions justify-end">
-          <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl '><Link href='/login'>Donate</Link> </button>
+          <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl '><Link href='/donateForm'>Donate</Link> </button>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@ const HelpCard = () => {
           <h2 className="card-title">Help Poor</h2>
           <p>Sustainable economic growth plays a crucial role in poverty reduction. Encouraging job creation through policies that support small and medium-sized enterprises (SMEs), promoting entrepreneurship, and investing in infrastructure can stimulate economic development in impoverished areas. Moreover, providing vocational training and enhancing employability skills can empower people to access decent work.</p>
           <div className="card-actions justify-end">
-          <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl '><Link href='/login'>Donate</Link> </button>
+          <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl '><Link href='/donateForm'>Donate</Link> </button>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ const HelpCard = () => {
           <h2 className="card-title">Help Poor</h2>
           <p>Sustainable economic growth plays a crucial role in poverty reduction. Encouraging job creation through policies that support small and medium-sized enterprises (SMEs), promoting entrepreneurship, and investing in infrastructure can stimulate economic development in impoverished areas. Moreover, providing vocational training and enhancing employability skills can empower people to access decent work.</p>
           <div className="card-actions justify-end">
-          <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl '><Link href='/login'>Donate</Link> </button>
+          <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl '><Link href='/donateForm'>Donate</Link> </button>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@ const HelpCard = () => {
           <h2 className="card-title">Help Poor</h2>
           <p>Sustainable economic growth plays a crucial role in poverty reduction. Encouraging job creation through policies that support small and medium-sized enterprises (SMEs), promoting entrepreneurship, and investing in infrastructure can stimulate economic development in impoverished areas. Moreover, providing vocational training and enhancing employability skills can empower people to access decent work.</p>
           <div className="card-actions justify-end">
-          <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl '><Link href='/login'>Donate</Link> </button>
+          <button className='w-[180px] text-red-400 font-semibold bg-white py-[5px] px-[12px] my-8 rounded-xl '><Link href='/donateForm'>Donate</Link> </button>
           </div>
         </div>
       </div>
