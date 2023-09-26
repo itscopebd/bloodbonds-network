@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useContext } from "react";
 import "./Navbar.css";
 import Image from "next/image";
-import logo from "../../app/asset/Blood (2).png";
+import logo from "../../app/asset/Logo.png";
 import { AuthContext } from "@/context/authContext";
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
@@ -40,12 +40,6 @@ const Navbar = () => {
         <Link href="/contact">Contact Us</Link>
       </li>
 
-
-      {/* <ActiveLink className="font-semibold" href="/">Home</ActiveLink>
-<ActiveLink href="/about">About</ActiveLink>
-<ActiveLink href="/donorlist">Donors</ActiveLink>
-<ActiveLink href="/contact">Contact Us</ActiveLink>  */}
-
       {/* when user registration then show dashboard  */}
       {user && (
         <li className="text-white font-semibold">
@@ -70,7 +64,7 @@ const Navbar = () => {
       Swal.fire({
         position: "top-end",
         icon: "success",
-        title: "Your Logout Success!",
+        title: "You Loggged Out Successfully!",
         showConfirmButton: false,
         timer: 1500,
       });
@@ -81,14 +75,14 @@ const Navbar = () => {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Your Logout Not Success!",
+        text: "Your logout was not successful!",
       });
     }
 
   };
 
   return (
-    <div className="bg-black lg:px-5 fixed z-10 head bg-opacity-10   ">
+    <div className="bg-black lg:px-5 fixed z-10 head bg-opacity-10">
       <div className="container mx-auto">
         <div className="navbar w-auto ">
           <div className="navbar-start">
