@@ -17,6 +17,9 @@ const Donorlist = () => {
   
       const res = await fetch(`/api/donor/approve/${selectedBloodGroup}`, {
         cache: 'no-store',
+        next: {
+          tags: ['donor'] 
+        }
       });
       if (!res.ok) {
         throw new Error('Network response was not ok');
@@ -95,7 +98,7 @@ const Donorlist = () => {
    { loading ? (
         <div className="text-center">Loading...</div>
       ) :  
-    donor === 0 ? (
+    donor.length === 0 ? (
       <div>no data</div>
     ) : (
       <div className="grid grid-cols-1    lg:grid-cols-3  gap-3 mx-auto justify-center p-5">
