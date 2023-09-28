@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
 
-const DeleteDonor = ({id}) => {
+const DeleteDonor = ({id ,email}) => {
     const router= useRouter()
     const handleDeleteDonor= async()=>{
         try {

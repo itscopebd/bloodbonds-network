@@ -84,7 +84,7 @@ const AllDonor = async () => {
                   <Comment></Comment>
                 </td>
                 <td>
-                  <DeleteDonor id={donor?._id}></DeleteDonor>
+                  <DeleteDonor id={donor?._id}  email={donor?.email}></DeleteDonor>
                 </td>
               </tr>
             ))}
