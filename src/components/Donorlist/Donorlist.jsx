@@ -17,6 +17,7 @@ const Donorlist = () => {
   
       const res = await fetch(`/api/donor/approve/${selectedBloodGroup}`, {
         cache: 'no-store',
+      
       });
       if (!res.ok) {
         throw new Error('Network response was not ok');
