@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+#  BloodBond Network.
 
-First, run the development server:
+Blood donation website is usually used to save the life of a comatose patient. Any person from any part of the country can take the service of this website. And any person can donate blood through this website and stand next to the injured people. This website will play a special role in reducing blood harassment for the injured person.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Features :
+- The main feature has the Navigation bar ,Main part and Footer.
+- After the  navigation bar there is a search option.
+- Users can search for donors according to their location.
+- Then they can find the donor according to the blood group in their location .
+- Then a list of how many  people can donate blood will come.
+- From there they can go to the profile of any donor on the list.
+- By clicking the details button  there , the user can know about the donor’s last donation and physical status.
+- Users will know donor details only if the user is logged in.
+- If the user is new then he needs to register.
+- Once the user registers , a new dashboard will be created.
+- Any user can add his name as a donor if he wants.
+- The main part contains the opinions and suggestions of various doctors.
+- The next part contains various programs conducted by our volunteers.
+- Then there is the contact part . Users can also contact us if they want.
+- This website is responsive for small and medium devices.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# Technology  used 
+ - Next js
+ - React JS
+ - Firebase
+ - MongoDB
+ - React Quil
+ - Tailwind Css
+ - daisyui
+ - Tanstack Query
+ - React-hook-form
+ - JWT
+ - ImgBB
+ - React-loader-spinner
+ - Vercel
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ # Live Link:
+ - https://bloodbonds-network.vercel.app/
